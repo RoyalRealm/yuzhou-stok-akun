@@ -12,6 +12,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
+            /* Gradasi background monokrom dari hitam pekat ke abu-abu gelap */
             background: linear-gradient(180deg, #000000 0%, #1c1c1c 50%, #2e2e2e 100%);
             color: #ffffff;
             min-height: 100vh;
@@ -124,11 +125,11 @@
             overflow: hidden;
             border: 1px solid #333333;
             position: relative;
-            aspect-ratio: 16 / 5; /* Proporsi horizontal khas banner website game */
+            aspect-ratio: 16 / 5;
         }
         .carousel-slide {
             display: flex;
-            width: 300%; /* Karena ada 3 banner */
+            width: 300%;
             height: 100%;
             transition: transform 0.6s ease-in-out;
         }
@@ -136,11 +137,6 @@
             width: 33.333%;
             height: 100%;
             object-fit: cover;
-            filter: grayscale(100%); /* Efek monokrom */
-            transition: filter 0.3s ease;
-        }
-        .carousel-slide img:hover {
-            filter: grayscale(0%); /* Balik berwarna pas diarahkan mouse */
         }
 
         /* --- KATALOG AKUN GRID --- */
@@ -169,7 +165,7 @@
             width: 100%;
             height: 180px;
             object-fit: cover;
-            filter: grayscale(100%);
+            /* Efek monokrom gambar akun sudah dihapus dari sini, jadi warnanya normal kembali */
         }
         .card-body {
             padding: 15px;
@@ -249,7 +245,7 @@
                 gap: 12px;
             }
             .carousel-wrapper {
-                aspect-ratio: 16 / 7; /* Menyesuaikan rasio di HP biar gak terlalu gepeng */
+                aspect-ratio: 16 / 7;
             }
         }
     </style>
@@ -283,7 +279,6 @@
     <div class="carousel-container">
         <div class="carousel-wrapper">
             <div class="carousel-slide" id="slider">
-                <!-- Memanggil gambar langsung dari dalam folder 'banner/' yang lu bikin -->
                 <img src="banner/banner1.png" alt="Banner 1">
                 <img src="banner/banner2.png" alt="Banner 2">
                 <img src="banner/banner3.png" alt="Banner 3">
@@ -297,6 +292,7 @@
 
             <!-- KARTU AKUN 1 -->
             <div class="card">
+                <!-- Nanti ganti tautan di bawah ini dengan gambar spek akun lu yang berwarna ya! -->
                 <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500" alt="Akun ML">
                 <div class="card-body">
                     <span class="badge-status">Anti Hackback</span>
@@ -328,20 +324,19 @@
         </div>
     </div>
 
-    <!-- LOGIKA OTOMATIS GESER (JAVASCRIPT) -->
+    <!-- LOGIKA OTOMATIS GESER -->
     <script>
         const slider = document.getElementById('slider');
         let index = 0;
 
         function nextSlide() {
             index++;
-            if (index > 2) { // Balik lagi ke banner pertama jika sudah mentok di banner ketiga
+            if (index > 2) {
                 index = 0;
             }
             slider.style.transform = `translateX(-${(index * 100) / 3}%)`;
         }
 
-        // Jalankan fungsi geser otomatis setiap 4000 milidetik (4 detik)
         setInterval(nextSlide, 4000);
     </script>
 
