@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuzhou Store JB MLBB - Aman & Terpercaya</title>
+    <title>Yuzhou Market JB MLBB - Aman & Terpercaya</title>
     <style>
         * {
             margin: 0;
@@ -41,6 +41,7 @@
             color: #ffffff;
             text-transform: uppercase;
             letter-spacing: 1px;
+            text-decoration: none;
         }
         .search-box {
             background-color: #222222;
@@ -149,7 +150,6 @@
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 25px;
         }
-        /* Menjadikan link pembungkus kartu agar rapi */
         .card-link {
             text-decoration: none;
             color: inherit;
@@ -244,12 +244,12 @@
     <!-- NAVBAR ATAS MANTAP -->
     <nav class="navbar">
         <div class="nav-kiri">
-            <div class="logo-placeholder">YUZHOU MARKET</div>
+            <a href="index.html" class="logo-placeholder">YUZHOU MARKET</a>
             <input type="text" class="search-box" placeholder="Cari produk di sini...">
         </div>
         <ul class="nav-menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Produk</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Produk</a></li>
             <li><a href="#">Cek Pesanan</a></li>
             <li><a href="#">Artikel</a></li>
             <li><a href="https://yuzhoustore.vcpanel.id/" target="_blank" class="btn-topup-nav">Top Up Game</a></li>
@@ -261,7 +261,7 @@
     <!-- KONTEN HERO TEXT -->
     <div class="hero-section">
         <div class="hero-title">Jual Beli Akun Mobile Legends Murah & Aman</div>
-        <div class="hero-desc">Mau cari Akun ML Premium atau Akun Smurf GG? Yuzhou Store tempatnya! Tersedia berbagai macam jenis akun dengan jaminan Anti Hackback dan pelayanan terpercaya.</div>
+        <div class="hero-desc">Mau cari Akun ML Premium atau Akun Smurf GG? Yuzhou Market tempatnya! Tersedia berbagai macam jenis akun dengan jaminan Anti Hackback dan pelayanan terpercaya.</div>
     </div>
 
     <!-- CAROUSEL ANIMASI SLIDE BANNER -->
@@ -279,7 +279,7 @@
     <div class="container">
         <div class="grid-akun">
 
-            <!-- KARTU AKUN 1 (Sekarang mengarah ke akun1.html) -->
+            <!-- KARTU AKUN 1 -->
             <a href="akun1.html" class="card-link">
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500" alt="Akun ML">
@@ -295,7 +295,7 @@
                 </div>
             </a>
 
-            <!-- KARTU AKUN 2 (Sekarang mengarah ke akun2.html) -->
+            <!-- KARTU AKUN 2 -->
             <a href="akun2.html" class="card-link">
                 <div class="card">
                     <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500" alt="Akun ML">
@@ -314,7 +314,7 @@
         </div>
     </div>
 
-    <!-- LOGIKA OTOMATIS GESER (VERSI FIX) -->
+    <!-- LOGIKA OTOMATIS GESER (SUDAH DIPERBAIKI) -->
     <script>
         const slider = document.getElementById('slider');
         let index = 0;
