@@ -112,6 +112,85 @@
             .grid-hotsale { grid-template-columns: repeat(2, 1fr); gap: 10px; }
             .grid-main-akun { grid-template-columns: repeat(2, 1fr); gap: 10px; }
         }
+        /* --- FAQ SECTION SYSTEM --- */
+        .faq-wrapper {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .faq-layout {
+            display: flex;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .faq-kiri {
+            flex: 1;
+            max-width: 350px;
+        }
+        .faq-kiri h2 {
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+        .faq-kiri span {
+            color: #3b82f6; /* Warna biru kalem untuk teks penekanan */
+        }
+        .faq-kanan {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .faq-item {
+            background-color: #121212;
+            border: 1px solid #282828;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: border-color 0.3s;
+        }
+        .faq-item:hover {
+            border-color: #3b82f6;
+        }
+        .faq-header {
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .faq-icon {
+            font-size: 18px;
+            transition: transform 0.3s;
+            color: #aaaaaa;
+        }
+        .faq-body {
+            max-height: 0; /* Mulai dari ketutup rapat */
+            overflow: hidden;
+            transition: max-height 0.3s ease-out; /* Animasi geser naik turun halus */
+            background-color: #181818;
+        }
+        .faq-content {
+            padding: 20px;
+            font-size: 13px;
+            color: #cccccc;
+            line-height: 1.6;
+            border-top: 1px solid #282828;
+        }
+        /* Style saat FAQ kebuka */
+        .faq-item.active .faq-body {
+            max-height: 500px; /* Nilai maksimal tinggi box saat kebuka */
+        }
+        .faq-item.active {
+            border-color: #3b82f6;
+        }
+
+        @media (max-width: 768px) {
+            .faq-layout { flex-direction: column; gap: 20px; }
+            .faq-kiri { max-width: 100%; }
+        }
     </style>
 </head>
 <body>
@@ -283,7 +362,61 @@
             <div class="pagination-container" id="paginationBox"></div>
         </div>
     </div>
+<!-- SECTION FAQ MONOKROM BLUE -->
+    <div class="faq-wrapper">
+        <div class="section-title-box">❓ FAQ</div>
+        
+        <div class="faq-layout">
+            <!-- Sisi Kiri: Judul Text -->
+            <div class="faq-kiri">
+                <h2>Punya Pertanyaan?<br>Kami Punya<br><span>Jawabannya</span></h2>
+            </div>
 
+            <!-- Sisi Kanan: Daftar Pertanyaan -->
+            <div class="faq-kanan">
+                
+                <!-- Pertanyaan 1 -->
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <div>Apakah Beli Akun MLBB di Yuzhou Market aman?</div>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-body">
+                        <div class="faq-content">
+                            Sangat aman! Setiap transaksi jual beli akun Mobile Legends di Yuzhou Market dilengkapi dengan jaminan 100% Anti Hackback. Kami memastikan seluruh data login diserahkan sepenuhnya setelah proses administrasi selesai, aman dari penarikan kembali oleh pihak pertama.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pertanyaan 2 -->
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <div>Bagaimana proses serah terima akun setelah pembayaran?</div>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-body">
+                        <div class="faq-content">
+                            Setelah pembayaran lu terverifikasi, admin kami akan langsung menghubungi lu via WhatsApp untuk memberikan data akun berupa email dan password. Admin juga bakal memandu lu langkah demi langkah sampai akun teramankan penuh di HP lu.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pertanyaan 3 -->
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <div>Apakah harga akun di katalog masih bisa dinego?</div>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-body">
+                        <div class="faq-content">
+                            Sebagian besar akun bertanda status "Nego Tipis" bisa lu tanyakan langsung ke admin untuk potongan harganya bre. Hubungi kontak WA resmi kami yang tertera untuk melakukan penawaran secara langsung.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <!-- SCRIPT LOGIKA BACKEND -->
     <script>
         // Carousel Banner
@@ -405,6 +538,27 @@
 
         // Jalankan sistem saat pertama kali dibuka
         window.addEventListener('DOMContentLoaded', () => { applyFilters(); });
+    // --- LOGIKA ANIMASI ACCORDION FAQ ---
+        function toggleFaq(headerElement) {
+            const faqItem = headerElement.parentElement;
+            const icon = headerElement.querySelector('.faq-icon');
+            
+            // Cek apakah item ini udah kebuka sebelumnya
+            const isOpen = faqItem.classList.contains('active');
+            
+            // Tutup semua FAQ yang barangkali lagi kebuka biar rapi
+            const allItems = document.querySelectorAll('.faq-item');
+            allItems.forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-icon').innerText = '+';
+            });
+            
+            // Kalau tadinya ketutup, sekarang buka dan ubah icon jadi minus
+            if (!isOpen) {
+                faqItem.classList.add('active');
+                icon.innerText = '−';
+            }
+        }
     </script>
 </body>
 </html>
