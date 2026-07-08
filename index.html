@@ -365,8 +365,13 @@
             for (let i = 1; i <= pageCount; i++) {
                 const btn = document.createElement('button');
                 btn.innerText = i;
+                // DI SINI PERBAIKANNYA: Cek status halaman aktif biar warnanya ikut pindah saat dirender ulang
                 btn.className = `page-btn ${i === currentPage ? 'active' : ''}`;
-                btn.onclick = () => { currentPage = i; displayPageItems(visibleItems); };
+                btn.onclick = () => { 
+                    currentPage = i; 
+                    // Render ulang filternya biar tombol yang aktif dapet kelas .active yang baru
+                    applyFilters(); 
+                };
                 pBox.appendChild(btn);
             }
 
