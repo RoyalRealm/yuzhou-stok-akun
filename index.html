@@ -29,34 +29,10 @@
             z-index: 100;
             border-bottom: 2px solid #333333;
         }
-        .nav-kiri {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            flex: 1;
-        }
-        .search-box {
-            background-color: #222222;
-            border: 1px solid #444444;
-            padding: 8px 15px;
-            border-radius: 6px;
-            color: #fff;
-            width: 250px;
-            font-size: 14px;
-        }
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            list-style: none;
-        }
-        .nav-menu a {
-            color: #aaaaaa;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
+        .nav-kiri { display: flex; align-items: center; gap: 20px; flex: 1; }
+        .search-box { background-color: #222222; border: 1px solid #444444; padding: 8px 15px; border-radius: 6px; color: #fff; width: 250px; font-size: 14px; }
+        .nav-menu { display: flex; align-items: center; gap: 20px; list-style: none; }
+        .nav-menu a { color: #aaaaaa; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
         .nav-menu a:hover { color: #ffffff; }
         .btn-beli-nav { background-color: #ffffff; color: #000000 !important; padding: 6px 12px; border-radius: 6px; font-weight: bold; }
         .btn-topup-nav { background-color: #cccccc; color: #000000 !important; padding: 6px 12px; border-radius: 6px; font-weight: bold; transition: background 0.2s; }
@@ -80,40 +56,29 @@
         .hotsale-title { font-weight: 800; font-size: 18px; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
         .hotsale-title::before { content: "🔥"; }
         .timer-box { background-color: #000000; color: #3b82f6; font-family: 'Courier New', monospace; font-weight: bold; font-size: 16px; padding: 4px 12px; border-radius: 4px; border: 1px solid #1d4ed8; }
-
-        /* GRID UNTUK HOT SALE (5 KOLOM KECIL) */
         .grid-hotsale { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; max-width: 1200px; margin: 0 auto 40px auto; padding: 0 20px; }
 
-        /* --- SECTION AKUN LAINNYA (DENGAN FILTER SIDEBAR) --- */
-        .section-title-box {
-            background: linear-gradient(90deg, #111827 0%, #1f2937 100%);
-            border-left: 4px solid #3b82f6; border-radius: 4px; padding: 12px 20px; margin-bottom: 20px; font-weight: bold; font-size: 18px;
-        }
+        /* --- SECTION MAIN LAYOUT --- */
+        .section-title-box { background: linear-gradient(90deg, #111827 0%, #1f2937 100%); border-left: 4px solid #3b82f6; border-radius: 4px; padding: 12px 20px; margin-bottom: 20px; font-weight: bold; font-size: 18px; }
         .main-layout { display: flex; gap: 25px; max-width: 1200px; margin: 0 auto 50px auto; padding: 0 20px; }
         
-        /* SIDEBAR FILTER (MONOKROM LIST BIRU) */
-        .sidebar-filter {
-            width: 300px; background-color: #121212; border: 1px solid #282828; border-radius: 12px; padding: 20px; height: fit-content; position: sticky; top: 90px;
-        }
+        /* SIDEBAR FILTER MONOKROM BLUE */
+        .sidebar-filter { width: 300px; background-color: #121212; border: 1px solid #282828; border-radius: 12px; padding: 20px; height: fit-content; position: sticky; top: 90px; }
         .filter-group { margin-bottom: 20px; }
         .filter-group label { display: block; font-size: 13px; font-weight: bold; color: #aaaaaa; margin-bottom: 8px; text-transform: uppercase; }
-        .filter-select, .filter-input {
-            width: 100%; background-color: #1c1c1c; border: 1px solid #333333; padding: 10px; border-radius: 6px; color: #fff; font-size: 14px;
-        }
+        .filter-select, .filter-input { width: 100%; background-color: #1c1c1c; border: 1px solid #333333; padding: 10px; border-radius: 6px; color: #fff; font-size: 14px; }
         .filter-select:focus, .filter-input:focus { border-color: #3b82f6; outline: none; }
         .radio-label { display: flex; align-items: center; gap: 8px; font-size: 14px; color: #ffffff; margin-bottom: 8px; cursor: pointer; }
-        .btn-filter { width: 100%; background: linear-gradient(90deg, #1d4ed8, #2563eb); color: #fff; border: none; padding: 12px; border-radius: 6px; font-weight: bold; cursor: pointer; margin-bottom: 10px; transition: opacity 0.2s; }
-        .btn-filter:hover { opacity: 0.9; }
+        .btn-filter { width: 100%; background: linear-gradient(90deg, #1d4ed8, #2563eb); color: #fff; border: none; padding: 12px; border-radius: 6px; font-weight: bold; cursor: pointer; margin-bottom: 10px; }
         .btn-reset { width: 100%; background-color: #222222; color: #fff; border: 1px solid #333333; padding: 10px; border-radius: 6px; font-weight: bold; cursor: pointer; }
-        .btn-reset:hover { background-color: #333333; }
 
-        /* KONTEN UTAMA AKUN LAINNYA */
+        /* CONTENT & GRID */
         .content-area { flex: 1; }
         .search-bar-container { margin-bottom: 20px; display: flex; gap: 10px; }
         .search-input-main { flex: 1; background-color: #121212; border: 1px solid #282828; padding: 12px; border-radius: 6px; color: #fff; }
         .grid-main-akun { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
 
-        /* GENERAL CARD STRUCTURE */
+        /* CARDS */
         .card-link { text-decoration: none; color: inherit; display: block; }
         .card { background-color: #181818; border-radius: 12px; overflow: hidden; border: 1px solid #282828; transition: transform 0.3s, border-color 0.3s; height: 100%; }
         .card:hover { transform: translateY(-5px); border-color: #3b82f6; }
@@ -125,18 +90,24 @@
         .harga-coret { font-size: 11px; color: #555555; text-decoration: line-through; }
         .harga-asli { font-size: 16px; font-weight: bold; }
 
-        /* RESPONSIVE */
-        @media (max-width: 1024px) {
-            .grid-hotsale { grid-template-columns: repeat(3, 1fr); }
-            .grid-main-akun { grid-template-columns: repeat(2, 1fr); }
+        /* --- PAGINATION STYLING --- */
+        .pagination-container { display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 30px; }
+        .page-btn {
+            background-color: #121212; border: 1px solid #333333; color: #ffffff; padding: 8px 14px; font-weight: bold;
+            border-radius: 6px; cursor: pointer; transition: all 0.2s;
         }
+        .page-btn.active {
+            background: linear-gradient(90deg, #1d4ed8, #2563eb); border-color: #3b82f6;
+        }
+        .page-btn:hover:not(.active) { background-color: #222222; border-color: #888888; }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) { .grid-hotsale { grid-template-columns: repeat(3, 1fr); } .grid-main-akun { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 768px) {
             .navbar { padding: 15px 20px; flex-direction: column; gap: 15px; }
-            .nav-kiri { width: 100%; justify-content: space-between; }
-            .search-box { display: none; }
+            .nav-kiri { width: 100%; justify-content: space-between; } .search-box { display: none; }
             .nav-menu { width: 100%; justify-content: center; flex-wrap: wrap; gap: 12px; }
-            .carousel-wrapper { aspect-ratio: 16 / 7; }
-            .main-layout { flex-direction: column; }
+            .carousel-wrapper { aspect-ratio: 16 / 7; } .main-layout { flex-direction: column; }
             .sidebar-filter { width: 100%; position: static; }
             .grid-hotsale { grid-template-columns: repeat(2, 1fr); gap: 10px; }
             .grid-main-akun { grid-template-columns: repeat(2, 1fr); gap: 10px; }
@@ -190,44 +161,39 @@
         </div>
     </div>
 
-    <!-- GRID HOT SALE (5 AKUN TERATAS) -->
+    <!-- GRID HOT SALE -->
     <div class="grid-hotsale">
-        <!-- HOT SALE 1 -->
         <a href="mlyzs-000005.html" class="card-link">
             <div class="card">
                 <img src="produk/mlyzs-000005_1.png" alt="Akun ML">
                 <div class="card-body">
                     <span class="badge-status">Nego Tipis</span>
-                    <div class="judul-akun">Legend Jhonson | Kalea Sakura | Prime Granger | 2 Sanrio | Akun Smurf Owner Yuzhou Store</div>
-                    <div class="detail-akun">Winrate: 54% | Total Skin: 373 | Rank: Glory 70</div>
+                    <div class="judul-akun">Legend Jhonson | Prime Granger | Owner Slot</div>
+                    <div class="detail-akun">Winrate: 54% | 373 Skin | Rank: Glory</div>
                     <div class="harga-box"><div class="harga-coret">Rp 1.850.000</div><div class="harga-asli">Rp 1.565.500</div></div>
                 </div>
             </div>
         </a>
-        <!-- HOT SALE 2 -->
         <a href="mlyzs-000006.html" class="card-link">
             <div class="card">
                 <img src="produk/mlyzs-000006.png" alt="Akun ML">
                 <div class="card-body">
                     <span class="badge-status">Hot Item</span>
-                    <div class="judul-akun">Akun Smurf Murah | Gusion Epic | Pas buat Gendong Solo Rank</div>
-                    <div class="detail-akun">Winrate: 80% | Total Skin: 20+ | Rank: Epic</div>
+                    <div class="judul-akun">Akun Smurf Murah | Gusion Epic | Pas buat Gendong Solo</div>
+                    <div class="detail-akun">Winrate: 80% | 20+ Skin | Rank: Epic</div>
                     <div class="harga-box"><div class="harga-coret">Rp 80.000</div><div class="harga-asli">Rp 49.000</div></div>
                 </div>
             </div>
         </a>
-        <!-- HOT SALE 3 -->
         <div class="card" style="opacity:0.6;"><img src="banner/banner2.png"><div class="card-body"><div class="judul-akun">Slot Hot Sale 3</div><div class="harga-asli">Rp 150.000</div></div></div>
-        <!-- HOT SALE 4 -->
         <div class="card" style="opacity:0.6;"><img src="banner/banner3.png"><div class="card-body"><div class="judul-akun">Slot Hot Sale 4</div><div class="harga-asli">Rp 250.000</div></div></div>
-        <!-- HOT SALE 5 -->
         <div class="card" style="opacity:0.6;"><img src="banner/banner1.png"><div class="card-body"><div class="judul-akun">Slot Hot Sale 5</div><div class="harga-asli">Rp 350.000</div></div></div>
     </div>
 
-    <!-- MAIN LAYOUT: FILTER SIDEBAR & KATALOG UTAMA -->
+    <!-- MAIN LAYOUT -->
     <div class="main-layout">
         
-        <!-- SIDEBAR FILTER (BISA LU EDIT DI HP NANTI, MESIN JALAN OTOMATIS) -->
+        <!-- SIDEBAR FILTER -->
         <div class="sidebar-filter">
             <div class="filter-group">
                 <label>Rank Tertinggi</label>
@@ -256,7 +222,7 @@
             <button class="btn-reset" onclick="resetFilters()">Reset Filter</button>
         </div>
 
-        <!-- CONTENT AREA: SEARCH & 25 KATALOG AKUN -->
+        <!-- CONTENT AREA -->
         <div class="content-area">
             <div class="section-title-box">🔍 Temukan Akun Lainnya</div>
             
@@ -264,51 +230,14 @@
                 <input type="text" class="search-input-main" id="searchMain" placeholder="Cari Judul Akun, Skin, Effect Recall dll..." onkeyup="applyFilters()">
             </div>
 
-            <!-- WRAPPER UTAMA KARTU AKUN (TOTAL 25 SLOT) -->
-            <!-- Note buat lu pas edit di HP: Atur 'data-rank' pake huruf kecil (epic/legend/mythic/immortal) & 'data-harga' pake angka polos! -->
+            <!-- GRID KATALOG (TOTAL 40 SLOT DUMMY SIAP PAKAI DI HP) -->
             <div class="grid-main-akun" id="mainAccountGrid">
-
-                <!-- AKUN 1 -->
-                <a href="mlyzs-000005.html" class="card-link product-item" data-rank="mythic" data-harga="1565500">
-                    <div class="card">
-                        <img src="produk/mlyzs-000005_1.png" alt="Akun ML">
-                        <div class="card-body">
-                            <span class="badge-status">Ready</span>
-                            <div class="judul-akun">Legend Jhonson | Prime Granger | Owner Slot</div>
-                            <div class="detail-akun">Winrate: 54% | 373 Skin | Rank: Mythic</div>
-                            <div class="harga-box"><div class="harga-coret">Rp 1.850.000</div><div class="harga-asli">Rp 1.565.500</div></div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- AKUN 2 -->
-                <a href="mlyzs-000006.html" class="card-link product-item" data-rank="epic" data-harga="49000">
-                    <div class="card">
-                        <img src="produk/mlyzs-000006.png" alt="Akun ML">
-                        <div class="card-body">
-                            <span class="badge-status">Nego</span>
-                            <div class="judul-akun">Akun Smurf Murah | Gusion Epic | Pas Solo Rank</div>
-                            <div class="detail-akun">Winrate: 80% | 20+ Skin | Rank: Epic</div>
-                            <div class="harga-box"><div class="harga-coret">Rp 80.000</div><div class="harga-asli">Rp 49.000</div></div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- LOOPING SLOT DUMMY (TOTAL SLOT SAMPAI 25 BIAR LU TINGGAL EDIT DI HP) -->
-                <!-- AKUN 3 -->
-                <a href="#" class="card-link product-item" data-rank="legend" data-harga="120000">
-                    <div class="card"><img src="banner/banner2.png"><div class="card-body"><span class="badge-status">Ready</span><div class="judul-akun">MLYZS-000007 | Contoh Akun Spek Legend Murah</div><div class="detail-akun">30+ Skin | Rank: Legend</div><div class="harga-asli">Rp 120.000</div></div></div>
-                </a>
-                <!-- AKUN 4 -->
-                <a href="#" class="card-link product-item" data-rank="immortal" data-harga="2500000">
-                    <div class="card"><img src="banner/banner3.png"><div class="card-body"><span class="badge-status">Sultan</span><div class="judul-akun">MLYZS-000008 | Akun All KOF Full Skin Max</div><div class="detail-akun">400 Skin | Rank: Immortal</div><div class="harga-asli">Rp 2.500.000</div></div></div>
-                </a>
-                <!-- AKUN 5 -->
-                <a href="#" class="card-link product-item" data-rank="mythic" data-harga="350000">
-                    <div class="card"><img src="banner/banner1.png"><div class="card-body"><span class="badge-status">Ready</span><div class="judul-akun">MLYZS-000009 | Promo Akun Spesial Mythic Murah</div><div class="detail-akun">80 Skin | Rank: Mythic</div><div class="harga-asli">Rp 350.000</div></div></div>
-                </a>
-
-                <!-- AKUN 6 s/id 25 (Gua sediain kosongan melimpah, tinggal isi teks pas di HP bre!) -->
+                <!-- HALAMAN 1 OTOMATIS (Slot 1-12) -->
+                <a href="mlyzs-000005.html" class="card-link product-item" data-rank="mythic" data-harga="1565500"><div class="card"><img src="produk/mlyzs-000005_1.png"><div class="card-body"><span class="badge-status">Ready</span><div class="judul-akun">Legend Jhonson | Owner Slot 1</div><div class="detail-akun">373 Skin | Rank: Mythic</div><div class="harga-asli">Rp 1.565.500</div></div></div></a>
+                <a href="mlyzs-000006.html" class="card-link product-item" data-rank="epic" data-harga="49000"><div class="card"><img src="produk/mlyzs-000006.png"><div class="card-body"><span class="badge-status">Nego</span><div class="judul-akun">Akun Smurf Murah | Slot 2</div><div class="detail-akun">20+ Skin | Rank: Epic</div><div class="harga-asli">Rp 49.000</div></div></div></a>
+                <a href="#" class="card-link product-item" data-rank="legend" data-harga="120000"><div class="card"><img src="banner/banner2.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 3</div><div class="harga-asli">Rp 120.000</div></div></div></a>
+                <a href="#" class="card-link product-item" data-rank="immortal" data-harga="2500000"><div class="card"><img src="banner/banner3.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 4</div><div class="harga-asli">Rp 2.500.000</div></div></div></a>
+                <a href="#" class="card-link product-item" data-rank="mythic" data-harga="350000"><div class="card"><img src="banner/banner1.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 5</div><div class="harga-asli">Rp 350.000</div></div></div></a>
                 <a href="#" class="card-link product-item" data-rank="epic" data-harga="75000"><div class="card"><img src="banner/banner1.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 6</div><div class="harga-asli">Rp 75.000</div></div></div></a>
                 <a href="#" class="card-link product-item" data-rank="epic" data-harga="85000"><div class="card"><img src="banner/banner1.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 7</div><div class="harga-asli">Rp 85.000</div></div></div></a>
                 <a href="#" class="card-link product-item" data-rank="legend" data-harga="150000"><div class="card"><img src="banner/banner2.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 8</div><div class="harga-asli">Rp 150.000</div></div></div></a>
@@ -316,6 +245,8 @@
                 <a href="#" class="card-link product-item" data-rank="mythic" data-harga="450000"><div class="card"><img src="banner/banner3.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 10</div><div class="harga-asli">Rp 450.000</div></div></div></a>
                 <a href="#" class="card-link product-item" data-rank="mythic" data-harga="550000"><div class="card"><img src="banner/banner3.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 11</div><div class="harga-asli">Rp 550.000</div></div></div></a>
                 <a href="#" class="card-link product-item" data-rank="immortal" data-harga="1200000"><div class="card"><img src="banner/banner1.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 12</div><div class="harga-asli">Rp 1.200.000</div></div></div></a>
+                
+                <!-- HALAMAN 2 OTOMATIS (Slot 13-24) -->
                 <a href="#" class="card-link product-item" data-rank="immortal" data-harga="1800000"><div class="card"><img src="banner/banner1.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 13</div><div class="harga-asli">Rp 1.800.000</div></div></div></a>
                 <a href="#" class="card-link product-item" data-rank="epic" data-harga="99000"><div class="card"><img src="banner/banner2.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 14</div><div class="harga-asli">Rp 99.000</div></div></div></a>
                 <a href="#" class="card-link product-item" data-rank="legend" data-harga="220000"><div class="card"><img src="banner/banner2.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 15</div><div class="harga-asli">Rp 220.000</div></div></div></a>
@@ -328,20 +259,38 @@
                 <a href="#" class="card-link product-item" data-rank="mythic" data-harga="490000"><div class="card"><img src="banner/banner3.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 22</div><div class="harga-asli">Rp 490.000</div></div></div></a>
                 <a href="#" class="card-link product-item" data-rank="immortal" data-harga="3500000"><div class="card"><img src="banner/banner3.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 23</div><div class="harga-asli">Rp 3.500.000</div></div></div></a>
                 <a href="#" class="card-link product-item" data-rank="legend" data-harga="175000"><div class="card"><img src="banner/banner1.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 24</div><div class="harga-asli">Rp 175.000</div></div></div></a>
-                <a href="#" class="card-link product-item" data-rank="mythic" data-harga="890000"><div class="card"><img src="banner/banner1.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 25</div><div class="harga-asli">Rp 890.000</div></div></div></a>
 
+                <!-- HALAMAN 3 OTOMATIS (Slot 25-40) -->
+                <a href="#" class="card-link product-item" data-rank="mythic" data-harga="890000"><div class="card"><img src="banner/banner1.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 25</div><div class="harga-asli">Rp 890.000</div></div></div></a>
+                <a href="#" class="card-link product-item" data-rank="epic" data-harga="50000"><div class="card"><img src="banner/banner1.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 26</div><div class="harga-asli">Rp 50.000</div></div></div></a>
+                <a href="#" class="card-link product-item" data-rank="epic" data-harga="65000"><div class="card"><img src="banner/banner2.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 27</div><div class="harga-asli">Rp 650.00</div></div></div></a>
+                <a href="#" class="card-link product-item" data-rank="legend" data-harga="210000"><div class="card"><img src="banner/banner2.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 28</div><div class="harga-asli">Rp 210.000</div></div></div></a>
+                <a href="#" class="card-link product-item" data-rank="legend" data-harga="230000"><div class="card"><img src="banner/banner3.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 29</div><div class="harga-asli">Rp 230.000</div></div></div></a>
+                <a href="#" class="card-link product-item" data-rank="mythic" data-harga="420000"><div class="card"><img src="banner/banner3.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 30</div><div class="harga-asli">Rp 420.000</div></div></div></a>
+                <a href="#" class="card-link product-item" data-rank="mythic" data-harga="480000"><div class="card"><img src="banner/banner1.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 31</div><div class="harga-asli">Rp 480.000</div></div></div></a>
+                <a href="#" class="card-link product-item" data-rank="immortal" data-harga="1500000"><div class="card"><img src="banner/banner1.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 32</div><div class="harga-asli">Rp 1.500.000</div></div></div></a>
+                <a href="#" class="card-link product-item" data-rank="immortal" data-harga="2200000"><div class="card"><img src="banner/banner2.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 33</div><div class="harga-asli">Rp 2.200.000</div></div></div></a>
+                <a href="#" class="card-link product-item" data-rank="epic" data-harga="95000"><div class="card"><img src="banner/banner2.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 34</div><div class="harga-asli">Rp 95.000</div></div></div></a>
+                <a href="#" class="card-link product-item" data-rank="legend" data-harga="185000"><div class="card"><img src="banner/banner3.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 35</div><div class="harga-asli">Rp 185.000</div></div></div></a>
+                <a href="#" class="card-link product-item" data-rank="mythic" data-harga="690000"><div class="card"><img src="banner/banner3.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 36</div><div class="harga-asli">Rp 690.000</div></div></div></a>
+                <a href="#" class="card-link product-item" data-rank="mythic" data-harga="790000"><div class="card"><img src="banner/banner1.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 37</div><div class="harga-asli">Rp 790.000</div></div></div></a>
+                <a href="#" class="card-link product-item" data-rank="immortal" data-harga="4000000"><div class="card"><img src="banner/banner1.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 38</div><div class="harga-asli">Rp 4.000.000</div></div></div></a>
+                <a href="#" class="card-link product-item" data-rank="epic" data-harga="55000"><div class="card"><img src="banner/banner2.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 39</div><div class="harga-asli">Rp 55.000</div></div></div></a>
+                <a href="#" class="card-link product-item" data-rank="legend" data-harga="145000"><div class="card"><img src="banner/banner2.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 40</div><div class="harga-asli">Rp 145.000</div></div></div></a>
             </div>
+
+            <!-- TOMBOL DIKLIK HALAMAN (PAGINATION BOX) -->
+            <div class="pagination-container" id="paginationBox"></div>
         </div>
     </div>
 
-    <!-- ENGINE LOGIKA BACKEND FILTER & CAROUSEL (DILARANG UBAH BAGIAN INI) -->
+    <!-- SCRIPT LOGIKA BACKEND -->
     <script>
         // Carousel Banner
-        const slider = document.getElementById('slider');
-        let index = 0;
+        const slider = document.getElementById('slider'); let index = 0;
         setInterval(() => { index++; if (index > 2) { index = 0; } slider.style.transform = `translateX(-${(index * 100) / 3}%)`; }, 4000);
 
-        // Timer Hot Sale 32 Jam
+        // Timer 32 Jam Loop
         function startHotSaleTimer() {
             const DURATION = 32 * 60 * 60 * 1000; let target = localStorage.getItem('hotsale_target_time');
             if (!target || Date.now() > target) { target = Date.now() + DURATION; localStorage.setItem('hotsale_target_time', target); }
@@ -359,7 +308,10 @@
         }
         window.addEventListener('DOMContentLoaded', startHotSaleTimer);
 
-        // SCRIPT SYSTEM UTAMA FILTER & URUTKAN HARGA AUTOMATIC
+        // LOGIKA FILTER + PAGINATION GABUNGAN INSTAN
+        const ITEMS_PER_PAGE = 12;
+        let currentPage = 1;
+
         function applyFilters() {
             const rank = document.getElementById('filterRank').value;
             const minPrice = parseFloat(document.getElementById('priceMin').value) || 0;
@@ -369,6 +321,8 @@
             const grid = document.getElementById('mainAccountGrid');
             const items = Array.from(grid.getElementsByClassName('product-item'));
 
+            // Filter item yang aktif sesuai kriteria pembeli
+            let visibleItems = [];
             items.forEach(item => {
                 const itemRank = item.getAttribute('data-rank');
                 const itemPrice = parseFloat(item.getAttribute('data-harga'));
@@ -379,22 +333,58 @@
                 const matchSearch = itemTitle.includes(searchKeyword);
 
                 if (matchRank && matchPrice && matchSearch) {
-                    item.style.display = 'block';
+                    visibleItems.push(item);
                 } else {
                     item.style.display = 'none';
                 }
             });
 
-            // Logika Sorting (Termurah/Termahal)
+            // Logika Urutkan Harga
             const sortOrder = document.querySelector('input[name="sortPrice"]:checked')?.value;
             if (sortOrder) {
-                items.sort((a, b) => {
+                visibleItems.sort((a, b) => {
                     const priceA = parseFloat(a.getAttribute('data-harga'));
                     const priceB = parseFloat(b.getAttribute('data-harga'));
                     return sortOrder === 'low' ? priceA - priceB : priceB - priceA;
                 });
-                items.forEach(item => grid.appendChild(item));
+                visibleItems.forEach(item => grid.appendChild(item));
             }
+
+            // Render Pagination khusus untuk item yang lolos filter
+            setupPagination(visibleItems);
+        }
+
+        function setupPagination(visibleItems) {
+            const pageCount = Math.ceil(visibleItems.length / ITEMS_PER_PAGE) || 1;
+            if (currentPage > pageCount) currentPage = pageCount;
+
+            const pBox = document.getElementById('paginationBox');
+            pBox.innerHTML = '';
+
+            // Bikin angka tombol halaman otomatis
+            for (let i = 1; i <= pageCount; i++) {
+                const btn = document.createElement('button');
+                btn.innerText = i;
+                btn.className = `page-btn ${i === currentPage ? 'active' : ''}`;
+                btn.onclick = () => { currentPage = i; displayPageItems(visibleItems); };
+                pBox.appendChild(btn);
+            }
+
+            displayPageItems(visibleItems);
+        }
+
+        function displayPageItems(visibleItems) {
+            const allItems = Array.from(document.getElementsByClassName('product-item'));
+            allItems.forEach(item => item.style.display = 'none'); // Sembunyikan semua dulu
+
+            const start = (currentPage - 1) * ITEMS_PER_PAGE;
+            const end = start + ITEMS_PER_PAGE;
+            const pageItems = visibleItems.slice(start, end);
+
+            pageItems.forEach(item => item.style.display = 'block'); // Munculkan 12 akun saja per halaman
+
+            // Otomatis bikin efek scroll halus kembali ke batas atas katalog biar user ga bingung
+            document.querySelector('.section-title-box').scrollIntoView({ behavior: 'smooth' });
         }
 
         function resetFilters() {
@@ -404,11 +394,12 @@
             document.getElementById('searchMain').value = '';
             const radio = document.querySelector('input[name="sortPrice"]:checked');
             if (radio) radio.checked = false;
-            
-            const items = Array.from(document.getElementsByClassName('product-item'));
-            items.forEach(item => item.style.display = 'block');
+            currentPage = 1;
             applyFilters();
         }
+
+        // Jalankan sistem saat pertama kali dibuka
+        window.addEventListener('DOMContentLoaded', () => { applyFilters(); });
     </script>
 </body>
 </html>
