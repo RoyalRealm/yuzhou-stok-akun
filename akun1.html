@@ -12,70 +12,130 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
-            background: linear-gradient(180deg, #000000 0%, #1c1c1c 100%);
+            /* Background gradasi monokrom konsisten dengan Beranda */
+            background: linear-gradient(180deg, #000000 0%, #1c1c1c 50%, #2e2e2e 100%);
             color: #ffffff;
             min-height: 100vh;
-            padding: 20px;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
+
+        /* --- NAVBAR TETEP ADA BIAR PROFESSIONAL --- */
+        .navbar {
             background-color: #121212;
-            border: 1px solid #333333;
-            border-radius: 12px;
-            padding: 25px;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid #333333;
         }
-        .btn-kembali {
-            display: inline-block;
+        .nav-kiri {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex: 1;
+        }
+        .logo-placeholder {
+            font-weight: bold;
+            font-size: 20px;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+        .search-box {
+            background-color: #222222;
+            border: 1px solid #444444;
+            padding: 8px 15px;
+            border-radius: 6px;
+            color: #fff;
+            width: 250px;
+            font-size: 14px;
+        }
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            list-style: none;
+        }
+        .nav-menu a {
             color: #aaaaaa;
             text-decoration: none;
             font-size: 14px;
-            margin-bottom: 20px;
+            font-weight: 500;
             transition: color 0.2s;
         }
-        .btn-kembali:hover {
+        .nav-menu a:hover {
             color: #ffffff;
+        }
+        .btn-beli-nav {
+            background-color: #ffffff;
+            color: #000000 !important;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+        .btn-topup-nav {
+            background-color: #cccccc;
+            color: #000000 !important;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        /* --- LAYOUT DETAIL PRODUK MEWAH --- */
+        .wrapper-detail {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .main-box {
+            background-color: #121212;
+            border: 1px solid #282828;
+            border-radius: 14px;
+            padding: 30px;
         }
         h1 {
             font-size: 24px;
-            margin-bottom: 15px;
-            border-bottom: 1px solid #333333;
-            padding-bottom: 10px;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            font-weight: 700;
         }
-        
-        /* --- GALERI FOTO SPEK --- */
         .foto-spek-utama {
             width: 100%;
-            border-radius: 8px;
-            border: 1px solid #444444;
-            margin-bottom: 15px;
+            border-radius: 10px;
+            border: 1px solid #333333;
+            margin-bottom: 25px;
         }
-        
-        /* --- TABEL DETAIL SPEK --- */
+
+        /* --- TABEL DETAIL --- */
         .tabel-spek {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
+            margin-bottom: 30px;
         }
         .tabel-spek td {
-            padding: 12px;
+            padding: 14px;
             border-bottom: 1px solid #222222;
             font-size: 15px;
         }
+        .tabel-spek tr:hover td {
+            background-color: #181818;
+        }
         .tabel-spek td:first-child {
-            color: #aaaaaa;
+            color: #888888;
             font-weight: 500;
             width: 30%;
         }
-        
-        /* --- BOX HARGA & BELI --- */
-        .harga-box {
+
+        /* --- HARGA DAN TOMBOL WA --- */
+        .harga-section {
             background-color: #181818;
             border: 1px solid #282828;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 25px;
+            border-radius: 10px;
             text-align: center;
-            margin-top: 30px;
         }
         .harga-coret {
             font-size: 14px;
@@ -84,76 +144,104 @@
             margin-bottom: 5px;
         }
         .harga-asli {
-            font-size: 26px;
+            font-size: 28px;
             font-weight: bold;
-            color: #ffffff;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         .btn-wa {
             display: block;
             background-color: #ffffff;
             color: #000000;
             text-align: center;
-            padding: 12px;
+            padding: 14px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
             font-size: 16px;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.2s;
         }
         .btn-wa:hover {
-            background-color: #cccccc;
+            background-color: #e6e6e6;
+            transform: translateY(-2px);
+        }
+
+        /* RESPONSIVE LAYAR HP */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-kiri { width: 100%; justify-content: space-between; }
+            .search-box { display: none; }
+            .nav-menu { width: 100%; justify-content: center; flex-wrap: wrap; gap: 12px; }
+            .tabel-spek td { font-size: 14px; padding: 10px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Tombol balik ke halaman utama -->
-        <a href="index.html" class="btn-kembali">&larr; Kembali ke Katalog</a>
-        
-        <h1>3 Legend | 2 Aspirants | KOF Chou | Emblem MAX</h1>
-        
-        <!-- FOTO SPEK AKUN (Nanti kita arahkan ke folder foto lu) -->
-        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800" class="foto-spek-utama" alt="Spek Akun">
-        
-        <!-- DETAIL SPESIFIKASI -->
-        <table class="tabel-spek">
-            <tr>
-                <td>Platform</td>
-                <td>Android / iOS (Moonton Sepaket)</td>
-            </tr>
-            <tr>
-                <td>Rank Sekarang</td>
-                <td>Mythic</td>
-            </tr>
-            <tr>
-                <td>Winrate Overall</td>
-                <td>65%</td>
-            </tr>
-            <tr>
-                <td>Total Hero</td>
-                <td>120 (Max)</td>
-            </tr>
-            <tr>
-                <td>Total Skin</td>
-                <td>150+ Skin</td>
-            </tr>
-            <tr>
-                <td>Skin Langka</td>
-                <td>Chou KOF, Lancelot Bren, Gusion Legend, 2 Aspirants</td>
-            </tr>
-            <tr>
-                <td>Status Akun</td>
-                <td>Aman 100%, Anti Hackback (Garansi Toko)</td>
-            </tr>
-        </table>
-        
-        <!-- HARGA & TOMBOL TRANSAKSI -->
-        <div class="harga-box">
-            <div class="harga-coret">Rp 500.000</div>
-            <div class="harga-asli">Rp 299.000</div>
-            <a href="https://wa.me/6283893239499?text=Halo%20Yuzhou%20Store,%20saya%20tertarik%20beli%20Akun%20ID%20001%20seharga%20Rp%20299k" target="_blank" class="btn-wa">Hubungi Penjual via WhatsApp</a>
+    <!-- NAVBAR ATAS TETEP MEJENG -->
+    <nav class="navbar">
+        <div class="nav-kiri">
+            <!-- Lu klik logo YUZHOU STORE otomatis bakal balik ke halaman depan -->
+            <a href="index.html" class="logo-placeholder">YUZHOU STORE</a>
+            <input type="text" class="search-box" placeholder="Cari produk di sini...">
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Produk</a></li>
+            <li><a href="#">Cek Pesanan</a></li>
+            <li><a href="#">Artikel</a></li>
+            <li><a href="https://yuzhoustore.vcpanel.id/" target="_blank" class="btn-topup-nav">Top Up Game</a></li>
+            <li><a href="index.html" class="btn-beli-nav">Beli Akun</a></li>
+            <li><a href="#">Jual Akun</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENT DETAIL (TULISAN KEMBALI JADUL SUDAH DIHAPUS) -->
+    <div class="wrapper-detail">
+        <div class="main-box">
+            <h1>3 Legend | 2 Aspirants | KOF Chou | Emblem MAX</h1>
+            
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800" class="foto-spek-utama" alt="Spek Akun">
+            
+            <table class="tabel-spek">
+                <tr>
+                    <td>Platform</td>
+                    <td>Android / iOS (Moonton Sepaket)</td>
+                </tr>
+                <tr>
+                    <td>Rank Sekarang</td>
+                    <td>Mythic</td>
+                </tr>
+                <tr>
+                    <td>Winrate Overall</td>
+                    <td>65%</td>
+                </tr>
+                <tr>
+                    <td>Total Hero</td>
+                    <td>120 (Max)</td>
+                </tr>
+                <tr>
+                    <td>Total Skin</td>
+                    <td>150+ Skin</td>
+                </tr>
+                <tr>
+                    <td>Skin Langka</td>
+                    <td>Chou KOF, Lancelot Bren, Gusion Legend, 2 Aspirants</td>
+                </tr>
+                <tr>
+                    <td>Status Akun</td>
+                    <td>Aman 100%, Anti Hackback (Garansi Toko)</td>
+                </tr>
+            </table>
+            
+            <div class="harga-section">
+                <div class="harga-coret">Rp 500.000</div>
+                <div class="harga-asli">Rp 299.000</div>
+                <a href="https://wa.me/6283893239499?text=Halo%20Yuzhou%20Store,%20saya%20tertarik%20beli%20Akun%20ID%20001" target="_blank" class="btn-wa">Hubungi Penjual via WhatsApp</a>
+            </div>
         </div>
     </div>
 
