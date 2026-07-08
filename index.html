@@ -191,6 +191,94 @@
             .faq-layout { flex-direction: column; gap: 20px; }
             .faq-kiri { max-width: 100%; }
         }
+        /* --- FOOTER SYSTEM STYLE --- */
+        .main-footer {
+            background-color: #0c0c0c;
+            border-top: 2px solid #222222;
+            padding: 50px 20px 20px 20px;
+            margin-top: 60px;
+        }
+        .footer-top-text {
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+            text-align: center;
+        }
+        .footer-top-text h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+        .footer-top-text p {
+            font-size: 13px;
+            color: #888888;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #222222;
+        }
+        .footer-brand h4 {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        .footer-brand p {
+            font-size: 13px;
+            color: #888888;
+            line-height: 1.6;
+        }
+        .footer-col h5 {
+            font-size: 15px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .footer-links {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        .footer-links a {
+            font-size: 14px;
+            color: #888888;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: #3b82f6; /* Efek hover biru kalem */
+        }
+        .footer-links span {
+            font-size: 14px;
+            color: #888888;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .copyright-box {
+            max-width: 1200px;
+            margin: 20px auto 0 auto;
+            text-align: center;
+            font-size: 13px;
+            color: #555555;
+        }
+
+        @media (max-width: 992px) {
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 576px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+        }
     </style>
 </head>
 <body>
@@ -417,6 +505,65 @@
             </div>
         </div>
     </div>
+    <!-- FOOTER SECTOR -->
+    <footer class="main-footer">
+        <!-- Teks Deskripsi Atas Footer -->
+        <div class="footer-top-text">
+            <h3>Jual Beli Akun Mobile Legends Aman & Terpercaya di Yuzhou Market!</h3>
+            <p>Mencari tempat beli akun ML Smurf atau Akun Sultan yang aman dari Hackback? Yuzhou Market adalah pilihan tepat! Kami menyediakan platform marketplace terpercaya dengan proses serah terima instan, layanan responsif, dan jaminan keamanan data penuh untuk kenyamanan transaksi lu.</p>
+        </div>
+
+        <div class="footer-grid">
+            <!-- Kolom Brand Logo -->
+            <div class="footer-brand">
+                <h4>YUZHOU MARKET</h4>
+                <p>Platform penyedia layanan Jual Beli Akun Mobile Legends & Top Up Game aman, murah, dan legal di Indonesia. Berkomitmen memberikan pelayanan terbaik anti ribet.</p>
+            </div>
+
+            <!-- Kolom Menu -->
+            <div class="footer-col">
+                <h5>Menu</h5>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Produk</a></li>
+                    <li><a href="#">Cek Pesanan</a></li>
+                    <li><a href="https://yuzhou-store.my.id/" target="_blank">Top Up Game</a></li>
+                    <li><a href="#">Beli Akun</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom Kontak (Auto Direct WA & IG) -->
+            <div class="footer-col">
+                <h5>Kontak Kami</h5>
+                <ul class="footer-links">
+                    <li><a href="mailto:yuzhoumarket@gmail.com">yuzhoumarket@gmail.com</a></li>
+                    <li><a href="https://wa.me/6283893239499" target="_blank" style="color: #ffffff; font-weight: bold;">WhatsApp: +62 838-9323-9499</a></li>
+                    <li>
+                        <span>Instagram Admin:</span>
+                        <a href="https://instagram.com/yuzhoumarket_jbml" target="_blank">@yuzhoumarket_jbml</a><br>
+                        <a href="https://instagram.com/yuzhoustore" target="_blank">@yuzhoustore</a><br>
+                        <a href="https://instagram.com/adrikovxminzhou" target="_blank">@adrikovxminzhou</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Kolom Informasi -->
+            <div class="footer-col">
+                <h5>Informasi</h5>
+                <ul class="footer-links">
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright Sesuai Request Lu -->
+        <div class="copyright-box">
+            &copy; 2026 Yuzhou Project - Yuzhou Store & Yuzhou Market
+        </div>
+    </footer>
     <!-- SCRIPT LOGIKA BACKEND -->
     <script>
         // Carousel Banner
