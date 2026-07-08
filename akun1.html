@@ -273,24 +273,49 @@
             font-size: 12px;
             color: #666666;
         }
+
+        /* --- BOX CHECKOUT DENGAN FORMAT PPN BARU --- */
         .total-checkout-box {
             background-color: #1a1a1a;
-            padding: 15px;
+            padding: 18px;
             border-radius: 8px;
             margin-bottom: 20px;
+            border: 1px dashed #444444;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .checkout-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border: 1px dashed #444444;
         }
-        .total-checkout-box span:first-child {
-            font-size: 14px;
-            color: #888888;
-        }
-        .total-checkout-box .final-price {
-            font-size: 20px;
+        /* Style Baris Utama (Total Pembayaran) */
+        .row-utama span:first-child {
+            font-size: 15px;
             font-weight: bold;
+            color: #ffffff;
         }
+        .row-utama .final-price {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        /* Style Baris Rincian (Harga Akun & PPN) - Dibuat lebih kecil dan lebih redup */
+        .row-rincian {
+            border-top: 1px solid #2a2a2a;
+            padding-top: 8px;
+            flex-direction: column;
+            gap: 6px;
+            display: flex;
+        }
+        .sub-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: #666666; /* Warna redup */
+        }
+
         .modal-buttons {
             display: flex;
             gap: 10px;
@@ -332,7 +357,6 @@
 </head>
 <body>
 
-    <!-- NAVBAR ATAS -->
     <nav class="navbar">
         <div class="nav-kiri">
             <a href="index.html" class="logo-placeholder">YUZHOU MARKET</a>
@@ -349,7 +373,6 @@
         </ul>
     </nav>
 
-    <!-- KONTEN DETAIL UTAMA -->
     <div class="wrapper-detail">
         <div class="main-box">
             
@@ -367,7 +390,6 @@
                 <span class="harga-asli">Rp 299.000</span>
             </div>
             
-            <!-- SEGMEN SPESIFIKASI AKUN -->
             <div class="section-title">Spesifikasi Akun</div>
             <ul class="deskripsi-list">
                 <li>Yuzhou Market, jb akun sipaling aman dan terpercaya</li>
@@ -376,11 +398,10 @@
                 <li><b>Total Hero:</b> 120 Hero (Maksimal)</li>
                 <li><b>Total Skin:</b> 150+ Skin</li>
                 <li><b>Keamanan:</b> Garansi anti-hackback penuh dari Yuzhou Market.</li>
-                <li><b>Durasi Garansi:</b> Proteksi refill penuh selama 1 bulan / 31 hari aman terpercaya.</li>
+                <li><b>Durasi Garansi:</b> Proteksi refill penuh selama 1 month / 31 hari aman terpercaya.</li>
                 <li><b>Nego:</b> Bisa Nego Tipis Langsung Lewat WA CS!</li>
             </ul>
 
-            <!-- SEGMEN LIST SKIN DAN EFEK LAINNYA -->
             <div class="section-title">List Skin dan Efek Lainnya</div>
             <ul class="deskripsi-list">
                 <li><b>Skin Utama:</b> Chou KOF, Lancelot Bren, Gusion Legend, 2 Aspirants</li>
@@ -391,12 +412,10 @@
                 <li><b>Battle Emote:</b> Emote RRQ, Emote Evos, Emote Lemon</li>
             </ul>
             
-            <!-- TOMBOL BELI SEKARANG -->
             <button class="btn-beli" onclick="openModal()">Beli Sekarang</button>
         </div>
     </div>
 
-    <!-- BOX POPUP KONFIRMASI PESANAN -->
     <div class="modal-overlay" id="orderModal">
         <div class="modal-box">
             <h2>Konfirmasi Pesanan</h2>
@@ -405,16 +424,14 @@
             <div class="form-opsi">
                 <p style="margin-bottom: 8px; font-weight: bold; color: #fff;">Pilih Opsi Paket Pembelian:</p>
                 
-                <!-- Opsi 1 -->
                 <label class="radio-group">
                     <input type="radio" name="opsi_paket" value="opsi1" checked onclick="hitungHarga()">
                     <div class="radio-text">
                         <b>Opsi 1: Bonus Diamond</b>
-                        <span>GRATIS</span>
+                        <span>Tanpa biaya tambahan</span>
                     </div>
                 </label>
 
-                <!-- Opsi 2 -->
                 <label class="radio-group">
                     <input type="radio" name="opsi_paket" value="opsi2" onclick="hitungHarga()">
                     <div class="radio-text">
@@ -423,7 +440,6 @@
                     </div>
                 </label>
 
-                <!-- Opsi 3 -->
                 <label class="radio-group">
                     <input type="radio" name="opsi_paket" value="opsi3" onclick="hitungHarga()">
                     <div class="radio-text">
@@ -433,27 +449,37 @@
                 </label>
             </div>
 
-            <!-- TAMPILAN TOTAL HARGA DI POPUP -->
             <div class="total-checkout-box">
-                <span>Total Pembayaran:</span>
-                <span class="final-price" id="finalPriceDisplay">Rp 299.000</span>
+                <div class="checkout-row row-utama">
+                    <span>Total pembayaran :</span>
+                    <span class="final-price" id="finalPriceDisplay">Rp 0</span>
+                </div>
+                <div class="row-rincian">
+                    <div class="sub-row">
+                        <span>Harga akun :</span>
+                        <span id="accountPriceDisplay">Rp 0</span>
+                    </div>
+                    <div class="sub-row">
+                        <span>PPN (11%) :</span>
+                        <span id="ppnPriceDisplay">Rp 0</span>
+                    </div>
+                </div>
             </div>
 
             <div class="modal-buttons">
                 <button class="btn-modal-cancel" onclick="closeModal()">Batal</button>
-                <a href="#" id="waSubmitBtn" target="_blank" class="btn-modal-confirm">Setuju dan Beli</a>
+                <a href="#" id="waSubmitBtn" target="_blank" class="btn-modal-confirm">Lanjutkan ke WA</a>
             </div>
         </div>
     </div>
 
-    <!-- LOGIKA HITUNG HARGA & REDIRECT WA -->
     <script>
-        const hargaAwal = 299000;
+        const hargaBaseAkun = 299000;
         const kodeAkun = "YZ-ML001";
 
         function openModal() {
             document.getElementById('orderModal').classList.add('active');
-            hitungHarga(); // Jalankan kalkulasi awal saat pop up kebuka
+            hitungHarga();
         }
 
         function closeModal() {
@@ -462,30 +488,38 @@
 
         function hitungHarga() {
             const pilihan = document.querySelector('input[name="opsi_paket"]:checked').value;
-            let totalHarga = hargaAwal;
+            let hargaAkunPlusBonus = hargaBaseAkun;
             let paketText = "";
 
             if (pilihan === "opsi1") {
-                totalHarga = hargaAwal;
-                paketText = "Opsi 1 - Bonus Diamond (Gratis)";
+                hargaAkunPlusBonus = hargaBaseAkun;
+                paketText = "Opsi 1 - Bonus Diamond";
             } else if (pilihan === "opsi2") {
-                totalHarga = hargaAwal + 17000;
-                paketText = "Opsi 2 - Bonus WDP (+17k)";
+                hargaAkunPlusBonus = hargaBaseAkun + 17000;
+                paketText = "Opsi 2 - Bonus WDP";
             } else if (pilihan === "opsi3") {
-                totalHarga = hargaAwal + 20000;
-                paketText = "Opsi 3 - Pilih Keduanya (+20k)";
+                hargaAkunPlusBonus = hargaBaseAkun + 20000;
+                paketText = "Opsi 3 - Pilih Keduanya";
             }
 
-            // Ubah format angka biasa ke format mata uang Rupiah Rp XX.XXX
-            document.getElementById('finalPriceDisplay').innerText = "Rp " + totalHarga.toLocaleString('id-ID');
+            // Hitung PPN 11% dari harga akun + bonus
+            const nilaiPPN = Math.round(hargaAkunPlusBonus * 0.11);
+            // Hitung Total Akhir yang harus dibayar pembeli
+            const totalPembayaranAkhir = hargaAkunPlusBonus + nilaiPPN;
 
-            // Set link WhatsApp beserta format text kiriman pesanan otomatisnya
-            const formatHargaWA = "Rp " + totalHarga.toLocaleString('id-ID');
+            // Update isi teks di layar box checkout
+            document.getElementById('accountPriceDisplay').innerText = "Rp " + hargaAkunPlusBonus.toLocaleString('id-ID');
+            document.getElementById('ppnPriceDisplay').innerText = "Rp " + nilaiPPN.toLocaleString('id-ID');
+            document.getElementById('finalPriceDisplay').innerText = "Rp " + totalPembayaranAkhir.toLocaleString('id-ID');
+
+            // Format kiriman data otomatis ke WhatsApp CS
             const waBaseUrl = "https://wa.me/6283893239499";
             const textWA = `Halo Yuzhou Market, saya ingin membeli akun:\n\n` +
                            `• Kode Akun: ${kodeAkun}\n` +
                            `• Paket Dipilih: ${paketText}\n` +
-                           `• Total Harga: ${formatHargaWA}\n\n` +
+                           `• Harga + Paket: Rp ${hargaAkunPlusBonus.toLocaleString('id-ID')}\n` +
+                           `• PPN (11%): Rp ${nilaiPPN.toLocaleString('id-ID')}\n` +
+                           `• Total Pembayaran: Rp ${totalPembayaranAkhir.toLocaleString('id-ID')}\n\n` +
                            `Mohon segera diproses gan!`;
             
             document.getElementById('waSubmitBtn').href = waBaseUrl + "?text=" + encodeURIComponent(textWA);
