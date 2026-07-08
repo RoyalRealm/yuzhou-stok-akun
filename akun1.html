@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Akun #MLYZS-000009 - Yuzhou Market</title>
+    <title>Detail Akun #YZ-ML001 - Yuzhou Store</title>
     <style>
         * {
             margin: 0;
@@ -83,7 +83,7 @@
             font-weight: bold;
         }
 
-        /* --- WRAPPER DETAIL BARU --- */
+        /* --- WRAPPER DETAIL --- */
         .wrapper-detail {
             max-width: 800px;
             margin: 30px auto;
@@ -96,7 +96,6 @@
             padding: 25px;
         }
         
-        /* Foto spek ditaruh paling atas */
         .foto-spek-utama {
             width: 100%;
             border-radius: 10px;
@@ -104,7 +103,6 @@
             margin-bottom: 20px;
         }
 
-        /* Judul & Info Pindah ke Bawah Foto */
         h1 {
             font-size: 24px;
             font-weight: 700;
@@ -112,7 +110,6 @@
             margin-bottom: 12px;
         }
 
-        /* Badge Status Ready / Sold */
         .status-badge {
             display: inline-flex;
             align-items: center;
@@ -129,7 +126,7 @@
         .status-dot {
             width: 8px;
             height: 8px;
-            background-color: #22c55e; /* Hijau menyala menandakan ready */
+            background-color: #22c55e;
             border-radius: 50%;
         }
 
@@ -140,7 +137,6 @@
             margin-bottom: 15px;
         }
 
-        /* --- BOX DETAIL HARGA --- */
         .harga-wrapper {
             display: flex;
             align-items: baseline;
@@ -160,7 +156,7 @@
             color: #ffffff;
         }
 
-        /* --- TEXT LIST DESKRIPSI (GAYA VEXAGAME) --- */
+        /* --- DESKRIPSI LIST POLOS (EMOJI REMOVED) --- */
         .deskripsi-list {
             list-style: none;
             margin-bottom: 30px;
@@ -169,10 +165,8 @@
             font-size: 15px;
             line-height: 1.6;
             margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
             color: #dddddd;
+            padding-left: 5px;
         }
         .section-title {
             font-size: 14px;
@@ -180,7 +174,9 @@
             color: #888888;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin: 20px 0 10px 0;
+            margin: 25px 0 12px 0;
+            border-left: 2px solid #ffffff;
+            padding-left: 8px;
         }
 
         /* --- TOMBOL WA --- */
@@ -203,7 +199,6 @@
             transform: translateY(-2px);
         }
 
-        /* RESPONSIVE LAYAR HP */
         @media (max-width: 768px) {
             .navbar { padding: 15px 20px; flex-direction: column; gap: 15px; }
             .nav-kiri { width: 100%; justify-content: space-between; }
@@ -218,7 +213,7 @@
     <!-- NAVBAR ATAS -->
     <nav class="navbar">
         <div class="nav-kiri">
-            <a href="index.html" class="logo-placeholder">YUZHOU MARKET</a>
+            <a href="index.html" class="logo-placeholder">YUZHOU STORE</a>
             <input type="text" class="search-box" placeholder="Cari produk di sini...">
         </div>
         <ul class="nav-menu">
@@ -236,43 +231,38 @@
     <div class="wrapper-detail">
         <div class="main-box">
             
-            <!-- 1. FOTO SPEK DI PALING ATAS -->
             <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800" class="foto-spek-utama" alt="Spek Akun">
             
-            <!-- 2. JUDUL PINDAH KE BAWAH FOTO -->
             <h1>3 Legend | 2 Aspirants | KOF Chou | Emblem MAX</h1>
             
-            <!-- 3. STATUS UTAMA & KODE AKUN -->
             <div class="status-badge">
                 <span class="status-dot"></span> Akun Ready
             </div>
-            <div class="kode-akun-text">Kode Akun: MLYZS-000009</div>
+            <div class="kode-akun-text">Kode Akun: YZ-ML001</div>
             
-            <!-- 4. HARGA ASLI & CORET -->
             <div class="harga-wrapper">
                 <span class="harga-coret">Rp 500.000</span>
                 <span class="harga-asli">Rp 299.000</span>
             </div>
             
-            <!-- 5. LIST DESKRIPSI GAYA MODERN (TANPA PLAYER ID) -->
+            <!-- LIST DESKRIPSI SANGAR, BERSIH, TANPA EMOJI -->
             <div class="section-title">Spesifikasi Akun</div>
             <ul class="deskripsi-list">
-                <li>👑 <b>Store:</b> Yuzhou JB Akun Si Paling Aman</li>
-                <li>🔑 <b>Login Via:</b> Moonton (Disediakan Sepaket dengan Emailnya)</li>
-                <li>📈 <b>Rank / WR:</b> Mythic (Winrate Overall 65%)</li>
-                <li>⚔️ <b>Total Hero:</b> 120 Hero (Maksimal)</li>
-                <li>✨ <b>Total Skin:</b> 150+ Skin</li>
-                <li>🔥 <b>Skin Spesial:</b> Chou KOF, Lancelot Bren, Gusion Legend, 2 Aspirants</li>
-                <li>🤝 <b>Nego:</b> Bisa Nego Tipis Langsung Lewat WA CS!</li>
+                <li>Yuzhou Market, jb akun sipaling aman dan terpercaya</li>
+                <li><b>Login Via:</b> Moonton (Disediakan Sepaket dengan Emailnya)</li>
+                <li><b>Rank / WR:</b> Mythic (Winrate Overall 65%)</li>
+                <li><b>Total Hero:</b> 120 Hero (Maksimal)</li>
+                <li><b>Total Skin:</b> 150+ Skin</li>
+                <li><b>Skin Spesial:</b> Chou KOF, Lancelot Bren, Gusion Legend, 2 Aspirants</li>
+                <li><b>Nego:</b> Bisa Nego Tipis Langsung Lewat WA CS!</li>
             </ul>
 
             <div class="section-title">Info Jaminan Toko</div>
             <ul class="deskripsi-list">
-                <li>⚠️ <b>Keamanan:</b> Garansi anti-hackback penuh dari Yuzhou Store.</li>
-                <li>🛡️ <b>Durasi Garansi:</b> Proteksi refill penuh selama 1 bulan / 31 hari aman terpercaya.</li>
+                <li><b>Keamanan:</b> Garansi anti-hackback penuh dari Yuzhou Store.</li>
+                <li><b>Durasi Garansi:</b> Proteksi refill penuh selama 1 bulan / 31 hari aman terpercaya.</li>
             </ul>
             
-            <!-- 6. TOMBOL TRANSAKSI -->
             <a href="https://wa.me/6283893239499?text=Halo%20Yuzhou%20Store,%20saya%20tertarik%20beli%20Akun%20Kode%20YZ-ML001" target="_blank" class="btn-wa">Hubungi Penjual via WhatsApp</a>
         </div>
     </div>
