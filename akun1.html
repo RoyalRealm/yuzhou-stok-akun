@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Akun #001 - Yuzhou Store</title>
+    <title>Detail Akun #MLYZS-000009 - Yuzhou Market</title>
     <style>
         * {
             margin: 0;
@@ -12,13 +12,12 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
-            /* Background gradasi monokrom konsisten dengan Beranda */
             background: linear-gradient(180deg, #000000 0%, #1c1c1c 50%, #2e2e2e 100%);
             color: #ffffff;
             min-height: 100vh;
         }
 
-        /* --- NAVBAR TETEP ADA BIAR PROFESSIONAL --- */
+        /* --- NAVBAR ATAS --- */
         .navbar {
             background-color: #121212;
             padding: 15px 40px;
@@ -84,108 +83,142 @@
             font-weight: bold;
         }
 
-        /* --- LAYOUT DETAIL PRODUK MEWAH --- */
+        /* --- WRAPPER DETAIL BARU --- */
         .wrapper-detail {
-            max-width: 1000px;
-            margin: 40px auto;
+            max-width: 800px;
+            margin: 30px auto;
             padding: 0 20px;
         }
         .main-box {
             background-color: #121212;
             border: 1px solid #282828;
             border-radius: 14px;
-            padding: 30px;
+            padding: 25px;
         }
-        h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            line-height: 1.4;
-            font-weight: 700;
-        }
+        
+        /* Foto spek ditaruh paling atas */
         .foto-spek-utama {
             width: 100%;
             border-radius: 10px;
             border: 1px solid #333333;
+            margin-bottom: 20px;
+        }
+
+        /* Judul & Info Pindah ke Bawah Foto */
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+
+        /* Badge Status Ready / Sold */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: #222222;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #22c55e; /* Hijau menyala menandakan ready */
+            border-radius: 50%;
+        }
+
+        .kode-akun-text {
+            font-size: 16px;
+            font-weight: 600;
+            color: #cccccc;
+            margin-bottom: 15px;
+        }
+
+        /* --- BOX DETAIL HARGA --- */
+        .harga-wrapper {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
             margin-bottom: 25px;
-        }
-
-        /* --- TABEL DETAIL --- */
-        .tabel-spek {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 30px;
-        }
-        .tabel-spek td {
-            padding: 14px;
             border-bottom: 1px solid #222222;
-            font-size: 15px;
-        }
-        .tabel-spek tr:hover td {
-            background-color: #181818;
-        }
-        .tabel-spek td:first-child {
-            color: #888888;
-            font-weight: 500;
-            width: 30%;
-        }
-
-        /* --- HARGA DAN TOMBOL WA --- */
-        .harga-section {
-            background-color: #181818;
-            border: 1px solid #282828;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
+            padding-bottom: 15px;
         }
         .harga-coret {
             font-size: 14px;
             color: #555555;
             text-decoration: line-through;
-            margin-bottom: 5px;
         }
         .harga-asli {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: bold;
-            margin-bottom: 20px;
+            color: #ffffff;
         }
+
+        /* --- TEXT LIST DESKRIPSI (GAYA VEXAGAME) --- */
+        .deskripsi-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        .deskripsi-list li {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #dddddd;
+        }
+        .section-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #888888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 20px 0 10px 0;
+        }
+
+        /* --- TOMBOL WA --- */
         .btn-wa {
             display: block;
             background-color: #ffffff;
             color: #000000;
             text-align: center;
-            padding: 14px;
+            padding: 15px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
             font-size: 16px;
             transition: background 0.3s, transform 0.2s;
+            border: 1px solid #ffffff;
         }
         .btn-wa:hover {
-            background-color: #e6e6e6;
+            background-color: #000000;
+            color: #ffffff;
             transform: translateY(-2px);
         }
 
         /* RESPONSIVE LAYAR HP */
         @media (max-width: 768px) {
-            .navbar {
-                padding: 15px 20px;
-                flex-direction: column;
-                gap: 15px;
-            }
+            .navbar { padding: 15px 20px; flex-direction: column; gap: 15px; }
             .nav-kiri { width: 100%; justify-content: space-between; }
             .search-box { display: none; }
             .nav-menu { width: 100%; justify-content: center; flex-wrap: wrap; gap: 12px; }
-            .tabel-spek td { font-size: 14px; padding: 10px; }
+            h1 { font-size: 20px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR ATAS TETEP MEJENG -->
+    <!-- NAVBAR ATAS -->
     <nav class="navbar">
         <div class="nav-kiri">
-            <!-- Lu klik logo YUZHOU STORE otomatis bakal balik ke halaman depan -->
-            <a href="index.html" class="logo-placeholder">YUZHOU STORE</a>
+            <a href="index.html" class="logo-placeholder">YUZHOU MARKET</a>
             <input type="text" class="search-box" placeholder="Cari produk di sini...">
         </div>
         <ul class="nav-menu">
@@ -199,49 +232,48 @@
         </ul>
     </nav>
 
-    <!-- CONTENT DETAIL (TULISAN KEMBALI JADUL SUDAH DIHAPUS) -->
+    <!-- KONTEN DETAIL UTAMA -->
     <div class="wrapper-detail">
         <div class="main-box">
-            <h1>3 Legend | 2 Aspirants | KOF Chou | Emblem MAX</h1>
             
+            <!-- 1. FOTO SPEK DI PALING ATAS -->
             <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800" class="foto-spek-utama" alt="Spek Akun">
             
-            <table class="tabel-spek">
-                <tr>
-                    <td>Platform</td>
-                    <td>Android / iOS (Moonton Sepaket)</td>
-                </tr>
-                <tr>
-                    <td>Rank Sekarang</td>
-                    <td>Mythic</td>
-                </tr>
-                <tr>
-                    <td>Winrate Overall</td>
-                    <td>65%</td>
-                </tr>
-                <tr>
-                    <td>Total Hero</td>
-                    <td>120 (Max)</td>
-                </tr>
-                <tr>
-                    <td>Total Skin</td>
-                    <td>150+ Skin</td>
-                </tr>
-                <tr>
-                    <td>Skin Langka</td>
-                    <td>Chou KOF, Lancelot Bren, Gusion Legend, 2 Aspirants</td>
-                </tr>
-                <tr>
-                    <td>Status Akun</td>
-                    <td>Aman 100%, Anti Hackback (Garansi Toko)</td>
-                </tr>
-            </table>
+            <!-- 2. JUDUL PINDAH KE BAWAH FOTO -->
+            <h1>3 Legend | 2 Aspirants | KOF Chou | Emblem MAX</h1>
             
-            <div class="harga-section">
-                <div class="harga-coret">Rp 500.000</div>
-                <div class="harga-asli">Rp 299.000</div>
-                <a href="https://wa.me/6283893239499?text=Halo%20Yuzhou%20Store,%20saya%20tertarik%20beli%20Akun%20ID%20001" target="_blank" class="btn-wa">Hubungi Penjual via WhatsApp</a>
+            <!-- 3. STATUS UTAMA & KODE AKUN -->
+            <div class="status-badge">
+                <span class="status-dot"></span> Akun Ready
             </div>
+            <div class="kode-akun-text">Kode Akun: MLYZS-000009</div>
+            
+            <!-- 4. HARGA ASLI & CORET -->
+            <div class="harga-wrapper">
+                <span class="harga-coret">Rp 500.000</span>
+                <span class="harga-asli">Rp 299.000</span>
+            </div>
+            
+            <!-- 5. LIST DESKRIPSI GAYA MODERN (TANPA PLAYER ID) -->
+            <div class="section-title">Spesifikasi Akun</div>
+            <ul class="deskripsi-list">
+                <li>👑 <b>Store:</b> Yuzhou JB Akun Si Paling Aman</li>
+                <li>🔑 <b>Login Via:</b> Moonton (Disediakan Sepaket dengan Emailnya)</li>
+                <li>📈 <b>Rank / WR:</b> Mythic (Winrate Overall 65%)</li>
+                <li>⚔️ <b>Total Hero:</b> 120 Hero (Maksimal)</li>
+                <li>✨ <b>Total Skin:</b> 150+ Skin</li>
+                <li>🔥 <b>Skin Spesial:</b> Chou KOF, Lancelot Bren, Gusion Legend, 2 Aspirants</li>
+                <li>🤝 <b>Nego:</b> Bisa Nego Tipis Langsung Lewat WA CS!</li>
+            </ul>
+
+            <div class="section-title">Info Jaminan Toko</div>
+            <ul class="deskripsi-list">
+                <li>⚠️ <b>Keamanan:</b> Garansi anti-hackback penuh dari Yuzhou Store.</li>
+                <li>🛡️ <b>Durasi Garansi:</b> Proteksi refill penuh selama 1 bulan / 31 hari aman terpercaya.</li>
+            </ul>
+            
+            <!-- 6. TOMBOL TRANSAKSI -->
+            <a href="https://wa.me/6283893239499?text=Halo%20Yuzhou%20Store,%20saya%20tertarik%20beli%20Akun%20Kode%20YZ-ML001" target="_blank" class="btn-wa">Hubungi Penjual via WhatsApp</a>
         </div>
     </div>
 
