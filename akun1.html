@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Akun #001 - Yuzhou Store</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(180deg, #000000 0%, #1c1c1c 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #121212;
+            border: 1px solid #333333;
+            border-radius: 12px;
+            padding: 25px;
+        }
+        .btn-kembali {
+            display: inline-block;
+            color: #aaaaaa;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 20px;
+            transition: color 0.2s;
+        }
+        .btn-kembali:hover {
+            color: #ffffff;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #333333;
+            padding-bottom: 10px;
+        }
+        
+        /* --- GALERI FOTO SPEK --- */
+        .foto-spek-utama {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #444444;
+            margin-bottom: 15px;
+        }
+        
+        /* --- TABEL DETAIL SPEK --- */
+        .tabel-spek {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .tabel-spek td {
+            padding: 12px;
+            border-bottom: 1px solid #222222;
+            font-size: 15px;
+        }
+        .tabel-spek td:first-child {
+            color: #aaaaaa;
+            font-weight: 500;
+            width: 30%;
+        }
+        
+        /* --- BOX HARGA & BELI --- */
+        .harga-box {
+            background-color: #181818;
+            border: 1px solid #282828;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .harga-coret {
+            font-size: 14px;
+            color: #555555;
+            text-decoration: line-through;
+            margin-bottom: 5px;
+        }
+        .harga-asli {
+            font-size: 26px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+        .btn-wa {
+            display: block;
+            background-color: #ffffff;
+            color: #000000;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        .btn-wa:hover {
+            background-color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Tombol balik ke halaman utama -->
+        <a href="index.html" class="btn-kembali">&larr; Kembali ke Katalog</a>
+        
+        <h1>3 Legend | 2 Aspirants | KOF Chou | Emblem MAX</h1>
+        
+        <!-- FOTO SPEK AKUN (Nanti kita arahkan ke folder foto lu) -->
+        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800" class="foto-spek-utama" alt="Spek Akun">
+        
+        <!-- DETAIL SPESIFIKASI -->
+        <table class="tabel-spek">
+            <tr>
+                <td>Platform</td>
+                <td>Android / iOS (Moonton Sepaket)</td>
+            </tr>
+            <tr>
+                <td>Rank Sekarang</td>
+                <td>Mythic</td>
+            </tr>
+            <tr>
+                <td>Winrate Overall</td>
+                <td>65%</td>
+            </tr>
+            <tr>
+                <td>Total Hero</td>
+                <td>120 (Max)</td>
+            </tr>
+            <tr>
+                <td>Total Skin</td>
+                <td>150+ Skin</td>
+            </tr>
+            <tr>
+                <td>Skin Langka</td>
+                <td>Chou KOF, Lancelot Bren, Gusion Legend, 2 Aspirants</td>
+            </tr>
+            <tr>
+                <td>Status Akun</td>
+                <td>Aman 100%, Anti Hackback (Garansi Toko)</td>
+            </tr>
+        </table>
+        
+        <!-- HARGA & TOMBOL TRANSAKSI -->
+        <div class="harga-box">
+            <div class="harga-coret">Rp 500.000</div>
+            <div class="harga-asli">Rp 299.000</div>
+            <a href="https://wa.me/6283893239499?text=Halo%20Yuzhou%20Store,%20saya%20tertarik%20beli%20Akun%20ID%20001%20seharga%20Rp%20299k" target="_blank" class="btn-wa">Hubungi Penjual via WhatsApp</a>
+        </div>
+    </div>
+
+</body>
+</html>
