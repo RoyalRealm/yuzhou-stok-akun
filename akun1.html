@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Akun #YZ-ML001 - Yuzhou Store</title>
+    <title>Detail Akun #YZ-ML001 - Yuzhou Market</title>
     <style>
         * {
             margin: 0;
@@ -156,7 +156,7 @@
             color: #ffffff;
         }
 
-        /* --- DESKRIPSI LIST POLOS (EMOJI REMOVED) --- */
+        /* --- DESKRIPSI LIST --- */
         .deskripsi-list {
             list-style: none;
             margin-bottom: 30px;
@@ -179,8 +179,8 @@
             padding-left: 8px;
         }
 
-        /* --- TOMBOL WA --- */
-        .btn-wa {
+        /* --- TOMBOL BELI SEKARANG --- */
+        .btn-beli {
             display: block;
             background-color: #ffffff;
             color: #000000;
@@ -192,11 +192,133 @@
             font-size: 16px;
             transition: background 0.3s, transform 0.2s;
             border: 1px solid #ffffff;
+            cursor: pointer;
+            width: 100%;
         }
-        .btn-wa:hover {
+        .btn-beli:hover {
             background-color: #000000;
             color: #ffffff;
             transform: translateY(-2px);
+        }
+
+        /* --- POPUP MODAL DIALOG STYLE --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .modal-box {
+            background-color: #121212;
+            border: 1px solid #333333;
+            border-radius: 14px;
+            padding: 25px;
+            width: 90%;
+            max-width: 450px;
+            text-align: left;
+            position: relative;
+        }
+        .modal-box h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #222222;
+            padding-bottom: 10px;
+        }
+        .modal-box p {
+            font-size: 14px;
+            color: #aaaaaa;
+            margin-bottom: 15px;
+        }
+        .form-opsi {
+            margin-bottom: 20px;
+        }
+        .radio-group {
+            background-color: #1a1a1a;
+            border: 1px solid #282828;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+        .radio-group:hover {
+            border-color: #555555;
+        }
+        .radio-group input {
+            cursor: pointer;
+            accent-color: #ffffff;
+        }
+        .radio-text {
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+        }
+        .radio-text span {
+            font-size: 12px;
+            color: #666666;
+        }
+        .total-checkout-box {
+            background-color: #1a1a1a;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px dashed #444444;
+        }
+        .total-checkout-box span:first-child {
+            font-size: 14px;
+            color: #888888;
+        }
+        .total-checkout-box .final-price {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-modal-cancel {
+            flex: 1;
+            background-color: #222222;
+            border: 1px solid #444444;
+            color: #ffffff;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .btn-modal-confirm {
+            flex: 2;
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #ffffff;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+        .btn-modal-confirm:hover {
+            background-color: #e6e6e6;
         }
 
         @media (max-width: 768px) {
@@ -213,7 +335,7 @@
     <!-- NAVBAR ATAS -->
     <nav class="navbar">
         <div class="nav-kiri">
-            <a href="index.html" class="logo-placeholder">YUZHOU STORE</a>
+            <a href="index.html" class="logo-placeholder">YUZHOU MARKET</a>
             <input type="text" class="search-box" placeholder="Cari produk di sini...">
         </div>
         <ul class="nav-menu">
@@ -245,7 +367,7 @@
                 <span class="harga-asli">Rp 299.000</span>
             </div>
             
-            <!-- LIST DESKRIPSI SANGAR, BERSIH, TANPA EMOJI -->
+            <!-- SEGMEN SPESIFIKASI AKUN -->
             <div class="section-title">Spesifikasi Akun</div>
             <ul class="deskripsi-list">
                 <li>Yuzhou Market, jb akun sipaling aman dan terpercaya</li>
@@ -253,19 +375,122 @@
                 <li><b>Rank / WR:</b> Mythic (Winrate Overall 65%)</li>
                 <li><b>Total Hero:</b> 120 Hero (Maksimal)</li>
                 <li><b>Total Skin:</b> 150+ Skin</li>
-                <li><b>Skin Spesial:</b> Chou KOF, Lancelot Bren, Gusion Legend, 2 Aspirants</li>
+                <li><b>Keamanan:</b> Garansi anti-hackback penuh dari Yuzhou Market.</li>
+                <li><b>Durasi Garansi:</b> Proteksi refill penuh selama 1 bulan / 31 hari aman terpercaya.</li>
                 <li><b>Nego:</b> Bisa Nego Tipis Langsung Lewat WA CS!</li>
             </ul>
 
-            <div class="section-title">Info Jaminan Toko</div>
+            <!-- SEGMEN LIST SKIN DAN EFEK LAINNYA -->
+            <div class="section-title">List Skin dan Efek Lainnya</div>
             <ul class="deskripsi-list">
-                <li><b>Keamanan:</b> Garansi anti-hackback penuh dari Yuzhou Store.</li>
-                <li><b>Durasi Garansi:</b> Proteksi refill penuh selama 1 bulan / 31 hari aman terpercaya.</li>
+                <li><b>Skin Utama:</b> Chou KOF, Lancelot Bren, Gusion Legend, 2 Aspirants</li>
+                <li><b>Efek Recall:</b> Recall Tas Merah, Fire Crown</li>
+                <li><b>Efek Spawn:</b> Efek Spawn M3, Efek Spawn MSC</li>
+                <li><b>Efek Eliminasi:</b> Efek Eliminasi KOF, Efek Eliminasi Evos</li>
+                <li><b>Notifikasi Eliminasi:</b> Notifikasi Lightborn, Notifikasi Aspirants</li>
+                <li><b>Battle Emote:</b> Emote RRQ, Emote Evos, Emote Lemon</li>
             </ul>
             
-            <a href="https://wa.me/6283893239499?text=Halo%20Yuzhou%20Store,%20saya%20tertarik%20beli%20Akun%20Kode%20YZ-ML001" target="_blank" class="btn-wa">Hubungi Penjual via WhatsApp</a>
+            <!-- TOMBOL BELI SEKARANG -->
+            <button class="btn-beli" onclick="openModal()">Beli Sekarang</button>
         </div>
     </div>
+
+    <!-- BOX POPUP KONFIRMASI PESANAN -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal-box">
+            <h2>Konfirmasi Pesanan</h2>
+            <p>Akun: <b>#YZ-ML001</b></p>
+            
+            <div class="form-opsi">
+                <p style="margin-bottom: 8px; font-weight: bold; color: #fff;">Pilih Opsi Paket Pembelian:</p>
+                
+                <!-- Opsi 1 -->
+                <label class="radio-group">
+                    <input type="radio" name="opsi_paket" value="opsi1" checked onclick="hitungHarga()">
+                    <div class="radio-text">
+                        <b>Opsi 1: Bonus Diamond</b>
+                        <span>Gratis, Harga Tetap</span>
+                    </div>
+                </label>
+
+                <!-- Opsi 2 -->
+                <label class="radio-group">
+                    <input type="radio" name="opsi_paket" value="opsi2" onclick="hitungHarga()">
+                    <div class="radio-text">
+                        <b>Opsi 2: Bonus WDP</b>
+                        <span>Dikenakan biaya tambahan +Rp 17.000</span>
+                    </div>
+                </label>
+
+                <!-- Opsi 3 -->
+                <label class="radio-group">
+                    <input type="radio" name="opsi_paket" value="opsi3" onclick="hitungHarga()">
+                    <div class="radio-text">
+                        <b>Opsi 3: Pilih Keduanya</b>
+                        <span>Dikenakan biaya tambahan +Rp 20.000</span>
+                    </div>
+                </label>
+            </div>
+
+            <!-- TAMPILAN TOTAL HARGA DI POPUP -->
+            <div class="total-checkout-box">
+                <span>Total Pembayaran:</span>
+                <span class="final-price" id="finalPriceDisplay">Rp 299.000</span>
+            </div>
+
+            <div class="modal-buttons">
+                <button class="btn-modal-cancel" onclick="closeModal()">Batal</button>
+                <a href="#" id="waSubmitBtn" target="_blank" class="btn-modal-confirm">Lanjutkan ke WA</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- LOGIKA HITUNG HARGA & REDIRECT WA -->
+    <script>
+        const hargaAwal = 299000;
+        const kodeAkun = "YZ-ML001";
+
+        function openModal() {
+            document.getElementById('orderModal').classList.add('active');
+            hitungHarga(); // Jalankan kalkulasi awal saat pop up kebuka
+        }
+
+        function closeModal() {
+            document.getElementById('orderModal').classList.remove('active');
+        }
+
+        function hitungHarga() {
+            const pilihan = document.querySelector('input[name="opsi_paket"]:checked').value;
+            let totalHarga = hargaAwal;
+            let paketText = "";
+
+            if (pilihan === "opsi1") {
+                totalHarga = hargaAwal;
+                paketText = "Opsi 1 - Bonus Diamond (Gratis)";
+            } else if (pilihan === "opsi2") {
+                totalHarga = hargaAwal + 17000;
+                paketText = "Opsi 2 - Bonus WDP (+17k)";
+            } else if (pilihan === "opsi3") {
+                totalHarga = hargaAwal + 20000;
+                paketText = "Opsi 3 - Pilih Keduanya (+20k)";
+            }
+
+            // Ubah format angka biasa ke format mata uang Rupiah Rp XX.XXX
+            document.getElementById('finalPriceDisplay').innerText = "Rp " + totalHarga.toLocaleString('id-ID');
+
+            // Set link WhatsApp beserta format text kiriman pesanan otomatisnya
+            const formatHargaWA = "Rp " + totalHarga.toLocaleString('id-ID');
+            const waBaseUrl = "https://wa.me/6283893239499";
+            const textWA = `Halo Yuzhou Market, saya ingin membeli akun:\n\n` +
+                           `• Kode Akun: ${kodeAkun}\n` +
+                           `• Paket Dipilih: ${paketText}\n` +
+                           `• Total Harga: ${formatHargaWA}\n\n` +
+                           `Mohon segera diproses gan!`;
+            
+            document.getElementById('waSubmitBtn').href = waBaseUrl + "?text=" + encodeURIComponent(textWA);
+        }
+    </script>
 
 </body>
 </html>
