@@ -102,29 +102,29 @@
             width: 100%;
         }
         .foto-spek-utama {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 5; /* Mengikuti rasio foto asli */
-    object-fit: cover;
-    border-radius: 10px;
-    border: 1px solid #333333;
-    margin-bottom: 12px;
-}
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 5; /* Mengikuti rasio foto asli */
+            object-fit: cover;
+            border-radius: 10px;
+            border: 1px solid #333333;
+            margin-bottom: 12px;
+        }
         .thumbnails-wrapper {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
         }
         .thumb-img {
-    width: 100%;
-    aspect-ratio: 4 / 5; /* Mengikuti rasio foto asli */
-    object-fit: cover;
-    border-radius: 6px;
-    border: 1px solid #282828;
-    cursor: pointer;
-    transition: border-color 0.2s, opacity 0.2s;
-    opacity: 0.6;
-}
+            width: 100%;
+            aspect-ratio: 4 / 5; /* Mengikuti rasio foto asli */
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #282828;
+            cursor: pointer;
+            transition: border-color 0.2s, opacity 0.2s;
+            opacity: 0.6;
+        }
         .thumb-img:hover, .thumb-img.active {
             border-color: #ffffff;
             opacity: 1;
@@ -219,11 +219,87 @@
             border: 1px solid #ffffff;
             cursor: pointer;
             width: 100%;
+            margin-bottom: 20px;
         }
         .btn-beli:hover {
             background-color: #000000;
             color: #ffffff;
             transform: translateY(-2px);
+        }
+
+        /* --- SEKSI ADITIONAL REQUEST (WARNA TEMA HOT SALE MATCH) --- */
+        .info-tambahan-text {
+            font-size: 14px;
+            color: #cccccc;
+            line-height: 1.6;
+            margin: 25px 0;
+        }
+        .info-tambahan-text span {
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .btn-ss-admin {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            /* Gradasi Biru Tua ke Hitam persis box Hot Sale */
+            background: linear-gradient(90deg, #1e3a8a 0%, #111827 100%);
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: opacity 0.2s, transform 0.2s;
+            /* Border biru menyala tipis biar makin tegas */
+            border: 1px solid #1d4ed8;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(29, 78, 216, 0.2);
+            margin-bottom: 30px;
+        }
+        .btn-ss-admin:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+            border-color: #3b82f6;
+        }
+        .tags-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .tag-item {
+            background-color: #1a1a1a;
+            border: 1px solid #3b82f6;
+            color: #93c5fd;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .tag-item:hover {
+            background-color: #3b82f6;
+            color: #ffffff;
+        }
+        .lihat-selengkapnya {
+            display: inline-block;
+            font-size: 13px;
+            color: #aaaaaa;
+            text-decoration: underline;
+            margin-top: 10px;
+            transition: color 0.2s;
+        }
+        .lihat-selengkapnya:hover {
+            color: #ffffff;
         }
 
         /* --- POPUP MODAL --- */
@@ -375,15 +451,14 @@
 </head>
 <body>
 
-    <!-- NAVBAR ATAS -->
     <nav class="navbar">
         <div class="nav-kiri">
-    <a href="/" class="logo-wrapper" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-        <img src="logo.png" alt="Logo Yuzhou Market" style="height: 32px; width: auto; object-fit: contain;">
-        <span style="font-weight: bold; font-size: 20px; color: #ffffff; text-transform: uppercase; letter-spacing: 1px;">YUZHOU MARKET</span>
-    </a>
-    <input type="text" class="search-box" placeholder="Cari produk di sini...">
-</div>
+            <a href="/" class="logo-wrapper" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="logo.png" alt="Logo Yuzhou Market" style="height: 32px; width: auto; object-fit: contain;">
+                <span style="font-weight: bold; font-size: 20px; color: #ffffff; text-transform: uppercase; letter-spacing: 1px;">YUZHOU MARKET</span>
+            </a>
+            <input type="text" class="search-box" placeholder="Cari produk di sini...">
+        </div>
         <ul class="nav-menu">
             <li><a href="https://market.yuzhouproject.my.id/">Home</a></li>
             <li><a href="index.html">Produk</a></li>
@@ -395,21 +470,19 @@
         </ul>
     </nav>
 
-    <!-- KONTEN DETAIL UTAMA -->
     <div class="wrapper-detail">
         <div class="main-box">
             
-            <!-- SISTEM MULTI FOTO (4 FOTO) -->
-<div class="galeri-container">
-    <img src="produk/mlyzs-000005_1.png" id="mainPhoto" class="foto-spek-utama" alt="Spek Akun Utama">
-    
-    <div class="thumbnails-wrapper">
-        <img src="produk/mlyzs-000005_1.png" class="thumb-img active" onclick="gantiFoto(this)" alt="Spek 1">
-        <img src="produk/mlyzs-000005_2.png" class="thumb-img" onclick="gantiFoto(this)" alt="Spek 2">
-        <img src="produk/mlyzs-000005_3.png" class="thumb-img" onclick="gantiFoto(this)" alt="Spek 3">
-        <img src="produk/mlyzs-000005_4.png" class="thumb-img" onclick="gantiFoto(this)" alt="Spek 4">
-    </div>
-</div>
+            <div class="galeri-container">
+                <img src="produk/mlyzs-000005_1.png" id="mainPhoto" class="foto-spek-utama" alt="Spek Akun Utama">
+                
+                <div class="thumbnails-wrapper">
+                    <img src="produk/mlyzs-000005_1.png" class="thumb-img active" onclick="gantiFoto(this)" alt="Spek 1">
+                    <img src="produk/mlyzs-000005_2.png" class="thumb-img" onclick="gantiFoto(this)" alt="Spek 2">
+                    <img src="produk/mlyzs-000005_3.png" class="thumb-img" onclick="gantiFoto(this)" alt="Spek 3">
+                    <img src="produk/mlyzs-000005_4.png" class="thumb-img" onclick="gantiFoto(this)" alt="Spek 4">
+                </div>
+            </div>
             
             <h1>Legend Jhonson | Kalea Sakura | Prime Granger | 2 Sanrio | Akun Smurf Owner Yuzhou Store/Yuzhou Market</h1>
             
@@ -423,7 +496,6 @@
                 <span class="harga-asli">Rp 1.565.500</span>
             </div>
             
-            <!-- SEGMEN SPESIFIKASI AKUN -->
             <div class="section-title">Spesifikasi Akun</div>
             <ul class="deskripsi-list">
                 <li>Yuzhou Market, jb akun sipaling aman dan terpercaya</li>
@@ -432,11 +504,10 @@
                 <li><b>Total Hero:</b> 116 Hero</li>
                 <li><b>Total Skin:</b> 373 Skin</li>
                 <li><b>Keamanan:</b> Garansi anti-hackback penuh dari Yuzhou Market.</li>
-                <li><b>Durasi Garansi:</b> Proteksi refill penuh selama 1 bulan / 31 hari aman terpercaya.</li>
+                <li><b>Durasi Garansi:</b> Proteksi refill penuh selama 1 month / 31 hari aman terpercaya.</li>
                 <li><b>Nego:</b> Bisa Nego Tipis Langsung Lewat WA CS!</li>
             </ul>
 
-            <!-- SEGMEN LIST SKIN DAN EFEK LAINNYA -->
             <div class="section-title">List Skin dan Efek Lainnya</div>
             <ul class="deskripsi-list">
                 <li><b>Skin Utama:</b> Jhonson Legend, Sakura Kalea, Granger Prime, Moskov All Star, Chang'e dan Floryn Sanrio, Tigreal Collector, Lancelot Collector Valentine Couple, Chou Luckybox, Alice Luckybox, Saber Luckybox, Uranus Luckybox, Jhonson Luckybox, Karina Luckybox, Alice Epic Limit, Full Lightborn, Full Zodiac</li>
@@ -448,10 +519,35 @@
             </ul>
             
             <button class="btn-beli" onclick="openModal()">Beli Sekarang</button>
-        </div>
+
+            <div class="info-tambahan-text">
+                🔍 <b>Sedang cari Jhonson Legend, Sakura Kalea, Granger Prime, Moskov All Star, Sanrio, Collector & Luckybox komplit dengan Emblem Max?</b> Inilah tempatnya! Detail lengkap, harga transparan, dan dukungan 24/7 siap mendampingi kamu. Stok terbatas — pesan sekarang!
+            </div>
+
+            <a href="https://wa.me/6283893239499?text=Halo%20Admin%20Yuzhou%20Market%2C%20bisa%20minta%20Full%20Screenshot%20bukti%20chat%20aman%20dan%20detail%20untuk%20akun%20MLYZS-000005%3F" target="_blank" class="btn-ss-admin">
+                💬 Full Screenshot Chat Admin
+            </a>
+
+            <div class="tags-title">Tags</div>
+            <div class="tags-container">
+                <a onclick="cariTag('Gusion')" class="tag-item">Gusion Legend</a>
+                <a onclick="cariTag('Valir')" class="tag-item">Valir Legend</a>
+                <a onclick="cariTag('Granger')" class="tag-item">Granger Legend</a>
+                <a onclick="cariTag('Akai')" class="tag-item">Akai Kungfu Panda</a>
+                <a onclick="cariTag('Layla')" class="tag-item">Layla Aspirants</a>
+                <a onclick="cariTag('Hayabusa')" class="tag-item">Hayabusa 11.11</a>
+                <a onclick="cariTag('Ruby')" class="tag-item">Ruby Aspirants</a>
+                <a onclick="cariTag('Popol')" class="tag-item">Popol Kupa Transformer</a>
+                <a onclick="cariTag('Emblem')" class="tag-item">Emblem Max</a>
+                <a onclick="cariTag('Hero')" class="tag-item">Hero Max</a>
+                <a onclick="cariTag('Immortal')" class="tag-item">Ex Immortal</a>
+                <a onclick="cariTag('Recall')" class="tag-item">Recall Merah Tas Tas</a>
+            </div>
+            <a href="index.html" class="lihat-selengkapnya">Lihat Selengkapnya</a>
+            
+            </div>
     </div>
 
-    <!-- BOX POPUP KONFIRMASI PESANAN -->
     <div class="modal-overlay" id="orderModal">
         <div class="modal-box">
             <h2>Konfirmasi Pesanan</h2>
@@ -506,7 +602,6 @@
         </div>
     </div>
 
-    <!-- LOGIKA JAVASCRIPT GALERI & HITUNG HARGA -->
     <script>
         function gantiFoto(element) {
             document.getElementById('mainPhoto').src = element.src;
@@ -562,6 +657,11 @@
                            `Mohon segera diproses gan!`;
             
             document.getElementById('waSubmitBtn').href = waBaseUrl + "?text=" + encodeURIComponent(textWA);
+        }
+
+        // --- SISTEM AUTOMATIC TAGS REDIRECT ROUTING ---
+        function cariTag(namaTag) {
+            window.location.href = "index.html?search=" + encodeURIComponent(namaTag);
         }
     </script>
 
