@@ -29,7 +29,7 @@
             padding-bottom: 80px; 
         }
 
-        /* --- NAVBAR ATAS --- */
+        /* --- NAVBAR (SINKRON DENGAN INDEX) --- */
         .navbar {
             background-color: #121212;
             padding: 15px 40px;
@@ -41,59 +41,28 @@
             z-index: 100;
             border-bottom: 2px solid #333333;
         }
-        .nav-kiri {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            flex: 1;
+        .nav-kiri { display: flex; align-items: center; gap: 20px; flex: 1; position: relative; }
+        
+        /* LIVE SEARCH STYLING FIXED */
+        .search-container { position: relative; width: 250px; }
+        .search-box { background-color: #222222; border: 1px solid #444444; padding: 8px 15px; border-radius: 6px; color: #fff; width: 100%; font-size: 14px; }
+        .search-suggestions {
+            position: absolute; top: 105%; left: 0; width: 100%; background-color: #121212;
+            border: 1px solid #3b82f6; border-radius: 6px; z-index: 1000; max-height: 200px;
+            overflow-y: auto; display: none; box-shadow: 0 4px 15px rgba(0,0,0,0.6);
         }
-        .logo-placeholder {
-            font-weight: bold;
-            font-size: 20px;
-            color: #ffffff;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-decoration: none;
-        }
-        .search-box {
-            background-color: #222222;
-            border: 1px solid #444444;
-            padding: 8px 15px;
-            border-radius: 6px;
-            color: #fff;
-            width: 250px;
-            font-size: 14px;
-        }
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            list-style: none;
-        }
-        .nav-menu a {
-            color: #aaaaaa;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-        .nav-menu a:hover {
-            color: #ffffff;
-        }
-        .btn-beli-nav {
-            background-color: #ffffff;
-            color: #000000 !important;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-weight: bold;
-        }
-        .btn-topup-nav {
-            background-color: #cccccc;
-            color: #000000 !important;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-weight: bold;
-        }
+        .suggestion-item { padding: 10px 15px; font-size: 13px; color: #cccccc; cursor: pointer; border-bottom: 1px solid #222222; transition: background 0.2s; }
+        .suggestion-item:hover { background-color: #1e3a8a; color: #ffffff; }
+
+        .nav-menu { display: flex; align-items: center; gap: 20px; list-style: none; }
+        .nav-menu a { color: #aaaaaa; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+        .nav-menu a:hover { color: #ffffff; }
+        .btn-topup-nav { background-color: #cccccc; color: #000000 !important; padding: 6px 12px; border-radius: 6px; font-weight: bold; transition: background 0.2s; }
+        .btn-topup-nav:hover { background-color: #ffffff; }
+        
+        /* TOMBOL NAV JUAL AKUN STYLE */
+        .btn-jual-nav { background: linear-gradient(90deg, #1d4ed8, #2563eb); color: #ffffff; border: none; padding: 6px 14px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 14px; transition: opacity 0.2s; }
+        .btn-jual-nav:hover { opacity: 0.9; }
 
         /* --- WRAPPER DETAIL --- */
         .wrapper-detail {
@@ -523,7 +492,48 @@
         .faq-item.active .faq-body { max-height: 500px; }
         .faq-item.active { border-color: #3b82f6; }
 
-        /* --- MAIN FOOTER --- */
+        /* --- STYLING MODAL FORMULIR JUAL AKUN NEW (SINKRON DENGAN INDEX) --- */
+        .modal-jual-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.85); display: none;
+            align-items: center; justify-content: center; z-index: 2000; padding: 20px;
+        }
+        .modal-jual-box {
+            background-color: #121212; border: 1px solid #1d4ed8; border-radius: 14px;
+            padding: 25px; width: 100%; max-width: 500px; max-height: 90vh;
+            overflow-y: auto; box-shadow: 0 4px 25px rgba(29, 78, 216, 0.3); position: relative;
+        }
+        .btn-modal-close {
+            position: absolute; top: 15px; right: 15px; background: none; border: none;
+            color: #888888; font-size: 22px; font-weight: bold; cursor: pointer; transition: color 0.2s; line-height: 1;
+        }
+        .btn-modal-close:hover { color: #3b82f6; }
+        .modal-jual-box h2 { font-size: 20px; font-weight: bold; margin-bottom: 5px; text-align: center; }
+        .text-merah-tegas { color: #ef4444; font-size: 12px; font-weight: bold; text-align: center; margin-bottom: 20px; display: block; }
+        .form-row-flex { display: flex; gap: 15px; margin-bottom: 15px; }
+        .form-group { margin-bottom: 15px; display: flex; flex-direction: column; gap: 6px; }
+        .form-group label { font-size: 13px; font-weight: 600; color: #cccccc; }
+        .form-group input, .form-group select { background-color: #1a1a1a; border: 1px solid #333333; border-radius: 6px; padding: 10px; color: #ffffff; font-size: 14px; width: 100%; }
+        .form-group input:focus, .form-group select:focus { border-color: #3b82f6; outline: none; }
+        .input-with-symbol { position: relative; display: flex; align-items: center; }
+        .input-with-symbol input { padding-right: 30px; }
+        .input-symbol { position: absolute; right: 12px; font-size: 14px; color: #888888; }
+        
+        .verif-container { display: flex; align-items: flex-start; gap: 10px; background-color: #161616; padding: 12px; border-radius: 6px; border: 1px dashed #444444; margin: 20px 0; cursor: pointer; }
+        .verif-container input { cursor: pointer; accent-color: #3b82f6; margin-top: 3px; }
+        .verif-container span { font-size: 13px; color: #cccccc; user-select: none; }
+        
+        .btn-jual-submit { display: block; width: 100%; padding: 12px; border-radius: 8px; font-weight: bold; font-size: 15px; cursor: pointer; text-align: center; border: none; transition: all 0.2s; }
+        .btn-jual-submit:disabled { background-color: #333333; color: #666666; cursor: not-allowed; }
+        .btn-jual-submit:not(:disabled) { background-color: #ffffff; color: #000000; }
+        .btn-jual-submit:not(:disabled):hover { background: linear-gradient(90deg, #1d4ed8, #2563eb); color: #ffffff; }
+
+        .photo-sample-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 15px; }
+        .photo-sample-item { background-color: #161616; border: 1px solid #282828; border-radius: 6px; overflow: hidden; text-align: center; }
+        .photo-sample-item img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+        .photo-label { font-size: 11px; color: #888888; padding: 5px; display: block; }
+
+        /* --- MAIN FOOTER (SINKRON DENGAN INDEX) --- */
         .main-footer { background-color: #0c0c0c; border-top: 2px solid #222222; padding: 50px 20px 20px 20px; margin-top: 60px; text-align: left; }
         .footer-top-text { max-width: 1200px; margin: 0 auto 40px auto; text-align: center; }
         .footer-top-text h3 { font-size: 20px; font-weight: bold; margin-bottom: 12px; color: #ffffff; }
@@ -539,7 +549,7 @@
         .footer-links span { font-size: 14px; color: #888888; display: block; margin-bottom: 8px; }
         .copyright-box { max-width: 1200px; margin: 20px auto 0 auto; text-align: center; font-size: 13px; color: #555555; }
 
-        /* MODAL POPUP */
+        /* MODAL POPUP CHECKOUT */
         .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); display: flex; align-items: center; justify-content: center; z-index: 1000; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
         .modal-overlay.active { opacity: 1; pointer-events: auto; }
         .modal-box { background-color: #121212; border: 1px solid #333333; border-radius: 14px; padding: 25px; width: 90%; max-width: 450px; text-align: left; position: relative; }
@@ -571,7 +581,7 @@
         @media (max-width: 768px) {
             .navbar { padding: 15px 20px; flex-direction: column; gap: 15px; }
             .nav-kiri { width: 100%; justify-content: space-between; }
-            .search-box { display: none; }
+            .search-container { display: none; }
             .nav-menu { width: 100%; justify-content: center; flex-wrap: wrap; gap: 12px; }
             h1 { font-size: 20px; }
             .faq-layout { flex-direction: column; gap: 20px; }
@@ -584,23 +594,25 @@
 </head>
 <body>
 
-    <!-- NAVBAR ATAS -->
+    <!-- NAVBAR ATAS (SINKRON TOTAL DENGAN INDEX.HTML) -->
     <nav class="navbar">
         <div class="nav-kiri">
             <a href="index.html" class="logo-wrapper" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
                 <img src="logo.png" alt="Logo Yuzhou Market" style="height: 32px; width: auto; object-fit: contain;">
                 <span style="font-weight: bold; font-size: 20px; color: #ffffff; text-transform: uppercase; letter-spacing: 1px;">YUZHOU MARKET</span>
             </a>
-            <input type="text" class="search-box" placeholder="Cari produk di sini...">
+            <!-- LIVE SEARCH CONTAINER -->
+            <div class="search-container">
+                <input type="text" id="searchNavbar" class="search-box" placeholder="Cari produk di sini..." oninput="jalankanLiveSearch()">
+                <div id="searchSuggestions" class="search-suggestions"></div>
+            </div>
         </div>
         <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html">Produk</a></li>
-            <li><a href="#">Cek Pesanan</a></li>
+            <li><a href="joki.html">Joki</a></li>
             <li><a href="#">Artikel</a></li>
             <li><a href="https://yuzhou-store.my.id/" target="_blank" class="btn-topup-nav">Top Up Game</a></li>
-            <li><a href="index.html" class="btn-beli-nav">Beli Akun</a></li>
-            <li><a href="#">Jual Akun</a></li>
+            <li><button class="btn-jual-nav" onclick="bukaModalJualStep1()">Jual Akun</button></li>
         </ul>
     </nav>
 
@@ -757,7 +769,7 @@
                 </div>
 
                 <div class="grid-box">
-                    <h3>⚡ Beli akunnya sekarang juga!</h3>
+                    <h3>¼ Beli akunnya sekarang juga!</h3>
                     <div class="info-list-item"><h4>1. Langsung Siap Main</h4><p>Login via Moonton—cukup bind ke akunmu dan langsung mainkan!</p></div>
                     <div class="info-list-item"><h4>2. Skin & Hero Lengkap</h4><p>Koleksi ratusan skin spesial dan puluhan hero mata uang terkini.</p></div>
                     <div class="info-list-item"><h4>3. Harga Kompetitif</h4><p>Penawaran terbaik dengan harga paling transparan untuk kategori akun sekelasnya.</p></div>
@@ -823,6 +835,10 @@
                         <div class="faq-header" onclick="toggleFaq(this)"><div>Bagaimana proses serah terima akun setelah pembayaran?</div><div class="faq-icon">+</div></div>
                         <div class="faq-body"><div class="faq-content">Setelah pembayaran terverifikasi, admin kami akan langsung menghubungi via WhatsApp untuk memberikan data login akun. Admin juga bakal memandu langkah demi langkah sampai akun teramankan penuh di HP lu.</div></div>
                     </div>
+                    <div class="faq-item">
+                        <div class="faq-header" onclick="toggleFaq(this)"><div>Apakah harga akun di katalog masih bisa dinego?</div><div class="faq-icon">+</div></div>
+                        <div class="faq-body"><div class="faq-content">Sebagian besar akun bertanda status "Nego Tipis" bisa lu tanyakan langsung ke admin untuk potongan harganya bre. Hubungi kontak WA resmi kami yang tertera untuk melakukan penawaran secara langsung.</div></div>
+                    </div>
                 </div>
             </div>
 
@@ -836,6 +852,108 @@
             <span class="sticky-price-amount">Rp 1.565.500</span>
         </div>
         <button class="btn-sticky-action" onclick="openModal()">Beli Sekarang</button>
+    </div>
+
+    <!-- ==================================================== -->
+    <!-- INTERACTIVE TWO-STEP FORMULIR JUAL AKUN MODALS       -->
+    <!-- ==================================================== -->
+    
+    <!-- STEP 1: FORM PENGISIAN DATA SELLER -->
+    <div class="modal-jual-overlay" id="modalJualStep1">
+        <div class="modal-jual-box">
+            <button type="button" class="btn-modal-close" onclick="tutupSemuaModal()">&times;</button>
+            <h2>Formulir Jual Akun</h2>
+            <span class="text-merah-tegas">*mohon di isi seakurat mungkin!</span>
+            
+            <div class="form-row-flex">
+                <div class="form-group" style="flex: 2;">
+                    <label>ID Akun</label>
+                    <input type="text" id="jualId" placeholder="Masukkan ID">
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label>Server</label>
+                    <input type="text" id="jualServer" placeholder="(1234)">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Highest Rank</label>
+                <select id="jualHighestRank">
+                    <option value="Epic III">Epic III</option><option value="Epic II">Epic II</option><option value="Epic I">Epic I</option>
+                    <option value="Legend V">Legend V</option><option value="Legend IV">Legend IV</option><option value="Legend III">Legend III</option><option value="Legend II">Legend II</option><option value="Legend I">Legend I</option>
+                    <option value="Mythic Romawi">Mythic Romawi</option><option value="Mythic Honor">Mythic Honor</option><option value="Mythic Glory">Mythic Glory</option><option value="Mythic Immortal">Mythic Immortal</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Bintang Tertinggi</label>
+                <input type="number" id="jualBintang" placeholder="Contoh: 75">
+            </div>
+
+            <div class="form-row-flex">
+                <div class="form-group" style="flex: 1;">
+                    <label>Win Rate All Season</label>
+                    <div class="input-with-symbol">
+                        <input type="number" id="jualWr" placeholder="58">
+                        <span class="input-symbol">%</span>
+                    </div>
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label>Total Hero</label>
+                    <input type="number" id="jualHero" placeholder="116">
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label>Total Skin</label>
+                    <input type="number" id="jualSkin" placeholder="320">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Tier Koleksi</label>
+                <select id="jualTierKoleksi">
+                    <option value="Kolektor Amatir">Kolektor Amatir</option><option value="Kolektor Junior">Kolektor Junior</option><option value="Kolektor Senior">Kolektor Senior</option>
+                    <option value="Kolektor Ahli">Kolektor Ahli</option><option value="Kolektor Ternama">Kolektor Ternama</option><option value="Kolektor Terhormat">Kolektor Terhormat</option>
+                    <option value="Kolektor Juragan">Kolektor Juragan</option><option value="Kolektor Sultan">Kolektor Sultan</option><option value="Kolektor Galaksi">Kolektor Galaksi</option>
+                </select>
+            </div>
+
+            <label class="verif-container" for="checkVerif1">
+                <input type="checkbox" id="checkVerif1" onchange="toggleBtnStep1()">
+                <span>semua data sudah benar dan saya yakin ingin menjual akun ini</span>
+            </label>
+
+            <button type="button" class="btn-jual-submit" id="btnNextStep1" disabled onclick="bukaModalJualStep2()">Setuju dan Lanjutkan</button>
+        </div>
+    </div>
+
+    <!-- STEP 2: PREVIEW CONTOH SCREENSHOT BERGARANSI FIT -->
+    <div class="modal-jual-overlay" id="modalJualStep2">
+        <div class="modal-jual-box">
+            <button type="button" class="btn-modal-close" onclick="tutupSemuaModal()">&times;</button>
+            <h2>Formulir Jual Akun</h2>
+            <span class="text-merah-tegas">tolong siapkan screenshot akun seperti contoh dibawah ini.</span>
+
+            <div class="photo-sample-grid">
+                <div class="photo-sample-item"><img src="./asset/profilesample.jpg" alt="Profile"><span class="photo-label">Profile Akun</span></div>
+                <div class="photo-sample-item"><img src="./asset/collectionsample.jpg" alt="Collection"><span class="photo-label">Sistem Koleksi</span></div>
+                <div class="photo-sample-item"><img src="./asset/skinsample.jpg" alt="Skin"><span class="photo-label">Skin Utama</span></div>
+                <div class="photo-sample-item"><img src="./asset/recallsample.jpg" alt="Recall"><span class="photo-label">Efek Recall</span></div>
+                <div class="photo-sample-item"><img src="./asset/elliminationsample.jpg" alt="Elimination"><span class="photo-label">Efek Eliminasi</span></div>
+                <div class="photo-sample-item"><img src="./asset/notifsample.jpg" alt="Notif"><span class="photo-label">Notifikasi Eliminasi</span></div>
+                <div class="photo-sample-item"><img src="./asset/spawnsample.jpg" alt="Spawn"><span class="photo-label">Efek Spawn</span></div>
+                <div class="photo-sample-item"><img src="./asset/emotesample.jpg" alt="Emote"><span class="photo-label">Battle Emote</span></div>
+            </div>
+
+            <label class="verif-container" for="checkVerif2">
+                <input type="checkbox" id="checkVerif2" onchange="toggleBtnStep2()">
+                <span>saya sudah menyiapkan semua screenshot seperti contoh</span>
+            </label>
+
+            <div class="form-row-flex">
+                <button type="button" class="btn-jual-submit" style="background-color: #222; color: #fff; flex: 1;" onclick="backToStep1()">Kembali</button>
+                <button type="button" class="btn-jual-submit" id="btnFinalJual" disabled style="flex: 2;" onclick="kirimDataKeWA()">SIAP JUAL</button>
+            </div>
+        </div>
     </div>
 
     <!-- BOX POPUP KONFIRMASI PESANAN -->
@@ -869,53 +987,48 @@
         </div>
     </div>
 
-    <!-- MAIN FOOTER SECTOR -->
+    <!-- MAIN FOOTER SECTOR (SINKRON DENGAN INDEX.HTML) -->
     <footer class="main-footer">
         <div class="footer-top-text">
             <h3>Jual Beli Akun Mobile Legends Aman & Terpercaya di Yuzhou Market!</h3>
-            <p>Mencari tempat beli akun ML Smurf atau Akun Sultan yang aman dari Hackback? Yuzhou Market adalah pilihan tepat! Kami menyediakan platform marketplace terpercaya dengan proses serah terima instan, layanan responsif, and jaminan keamanan data penuh untuk kenyamanan transaksi lu.</p>
+            <p>Mencari tempat beli akun ML Sultan bergaransi penuh? Yuzhou Market adalah platform andalan yang aman, cepat, dan legal di Indonesia.</p>
         </div>
         <div class="footer-grid">
             <div class="footer-brand">
                 <h4>YUZHOU MARKET</h4>
-                <p>Platform penyedia layanan Jual Beli Akun Mobile Legends & Top Up Game aman, murah, dan legal di Indonesia. Berkomitmen memberikan pelayanan terbaik anti ribet.</p>
+                <p>Platform penyedia layanan Jual Beli Akun Mobile Legends & Top Up Game aman, murah, dan legal di Indonesia.</p>
             </div>
             <div class="footer-col">
                 <h5>Menu</h5>
                 <ul class="footer-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html">Produk</a></li>
-                    <li><a href="#">Cek Pesanan</a></li>
+                    <li><a href="joki.html">Joki</a></li>
                     <li><a href="https://yuzhou-store.my.id/" target="_blank">Top Up Game</a></li>
-                    <li><a href="index.html">Beli Akun</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h5>Kontak Kami</h5>
                 <ul class="footer-links">
                     <li><a href="mailto:yuzhoumarket@gmail.com">yuzhoumarket@gmail.com</a></li>
-                    <li><a href="https://wa.me/6283893239499" target="_blank" style="color: #ffffff; font-weight: bold;">WhatsApp: +62 838-9323-9499</a></li>
+                    <li><a href="https://wa.me/6283893239499" target="_blank" style="color:#ffffff; font-weight:bold;">WhatsApp: +62 838-9323-9499</a></li>
                     <li>
                         <span>Instagram Admin:</span>
                         <a href="https://instagram.com/yuzhoumarket_jbml" target="_blank">@yuzhoumarket_jbml</a><br>
-                        <a href="https://instagram.com/yuzhoustore" target="_blank">@yuzhoustore</a><br>
-                        <a href="https://instagram.com/adrikovxminzhou" target="_blank">@adrikovxminzhou</a>
+                        <a href="https://instagram.com/yuzhoustore" target="_blank">@yuzhoustore</a>
                     </li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h5>Informasi</h5>
                 <ul class="footer-links">
-                    <li><a href="#">Tentang Kami</a></li>
-                    <li><a href="#">Syarat & Ketentuan</a></li>
-                    <li><a href="#">Kebijakan Privasi</a></li>
-                    <li><a href="#">Affiliate Program</a></li>
+                    <li><a href="#">Tentang Kami</a></li><li><a href="#">Syarat & Ketentuan</a></li>
                 </ul>
             </div>
         </div>
         <div class="copyright-box">&copy; 2026 Yuzhou Project - Yuzhou Store & Yuzhou Market</div>
     </footer>
 
+    <!-- LOGIKA CORE JAVASCRIPT SYSTEM ENGINE -->
     <script>
         function gantiFoto(element) {
             document.getElementById('mainPhoto').src = element.src;
@@ -966,6 +1079,64 @@
             }
             setInterval(showNextGroup, 4000);
         });
+
+        // --- SISTEM LIVE SEARCH DROPDOWN NAVBAR (SINKRON INDEX) ---
+        const listProdukNavbar = [
+            { nama: "Jhonson Legend", url: "mlyzs-000005.html" },
+            { nama: "Granger Prime", url: "mlyzs-000005.html" },
+            { nama: "Gusion Epic", url: "mlyzs-000006.html" },
+            { nama: "Akun Smurf Murah", url: "mlyzs-000006.html" }
+        ];
+
+        function jalankanLiveSearch() {
+            const input = document.getElementById('searchNavbar').value.toLowerCase();
+            const boxSuggestion = document.getElementById('searchSuggestions');
+            boxSuggestion.innerHTML = "";
+            if (input.trim() === "") { boxSuggestion.style.display = "none"; return; }
+            const hasilFilter = listProdukNavbar.filter(item => item.nama.toLowerCase().includes(input));
+            if (hasilFilter.length > 0) {
+                hasilFilter.forEach(item => {
+                    const div = document.createElement('div'); div.className = "suggestion-item"; div.innerText = item.nama;
+                    div.onclick = () => { window.location.href = item.url; }; boxSuggestion.appendChild(div);
+                });
+                boxSuggestion.style.display = "block";
+            } else { boxSuggestion.style.display = "none"; }
+        }
+        document.addEventListener('click', (e) => { if (!e.target.closest('.search-container')) { document.getElementById('searchSuggestions').style.display = "none"; } });
+
+        // --- SISTEM POP-UP TWO-STEP JUAL AKUN SYSTEM (SINKRON INDEX) ---
+        function bukaModalJualStep1() { document.getElementById('modalJualStep1').style.display = "flex"; }
+        function tutupSemuaModal() { document.getElementById('modalJualStep1').style.display = "none"; document.getElementById('modalJualStep2').style.display = "none"; }
+        function toggleBtnStep1() { const check = document.getElementById('checkVerif1').checked; document.getElementById('btnNextStep1').disabled = !check; }
+        function bukaModalJualStep2() { document.getElementById('modalJualStep1').style.display = "none"; document.getElementById('modalJualStep2').style.display = "flex"; }
+        function backToStep1() { document.getElementById('modalJualStep2').style.display = "none"; document.getElementById('modalJualStep1').style.display = "flex"; }
+        function toggleBtnStep2() { const check = document.getElementById('checkVerif2').checked; document.getElementById('btnFinalJual').disabled = !check; }
+
+        function kirimDataKeWA() {
+            const idAkun = document.getElementById('jualId').value || "-";
+            const serverAkun = document.getElementById('jualServer').value || "-";
+            const highestRank = document.getElementById('jualHighestRank').value;
+            const bintangMax = document.getElementById('jualBintang').value || "0";
+            const winrate = document.getElementById('jualWr').value || "0";
+            const totalHero = document.getElementById('jualHero').value || "0";
+            const totalSkin = document.getElementById('jualSkin').value || "0";
+            const tierKoleksi = document.getElementById('jualTierKoleksi').value;
+
+            const textFormat = 
+                `Min aku mau jual akun dengan spesifikasi sebagai berikut :\n\n` +
+                `• ID Akun: ${idAkun}\n` +
+                `• Server: ${serverAkun}\n` +
+                `• Highest Rank: ${highestRank}\n` +
+                `• Bintang Tertinggi: ${bintangMax}\n` +
+                `• Win Rate All Season: ${winrate}%\n` +
+                `• Total Hero: ${totalHero}\n` +
+                `• Total Skin: ${totalSkin}\n` +
+                `• Tier Koleksi: ${tierKoleksi}\n\n` +
+                `tolong diproses min!`;
+
+            tutupSemuaModal();
+            window.open(`https://wa.me/6283893239499?text=${encodeURIComponent(textFormat)}`, '_blank');
+        }
     </script>
 
 </body>
