@@ -85,7 +85,7 @@
 
         /* --- WRAPPER DETAIL --- */
         .wrapper-detail {
-            max-width: 1200px; /* Diperlebar sedikit biar grid menyampingnya lega */
+            max-width: 1200px;
             margin: 30px auto;
             padding: 0 20px;
         }
@@ -284,19 +284,21 @@
             color: #ffffff;
         }
 
-        /* --- GRID SYSTEM MENYAMPING (HORIZONTAL 3 KOLOM) --- */
+        /* --- GRID SYSTEM MENYAMPING --- */
         .bottom-grid-layout {
             display: grid;
-            grid-template-columns: 1fr 1.2fr 1.2fr;
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 20px;
             margin-top: 30px;
         }
         .grid-box {
             background-color: #121212;
-            border: 1px solid #1d4ed8; /* Border biru menyala kalem */
+            border: 1px solid #1d4ed8;
             border-radius: 12px;
             padding: 20px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
         }
         .grid-box h3 {
             font-size: 16px;
@@ -308,7 +310,7 @@
             color: #ffffff;
         }
 
-        /* Styling Ulasan (Kolom 1) */
+        /* --- BOX RATING & GRAFIK --- */
         .rating-summary {
             display: flex;
             align-items: center;
@@ -331,6 +333,9 @@
             display: flex;
             flex-direction: column;
             gap: 6px;
+            border-bottom: 1px dashed #222222;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
         }
         .bar-item {
             display: flex;
@@ -352,7 +357,62 @@
             border-radius: 3px;
         }
 
-        /* Styling List Info (Kolom 2 & 3) */
+        /* --- CAROUSEL FEEDBACK PEMBELI --- */
+        .feedback-slider-container {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            min-height: 250px;
+        }
+        .feedback-item {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transform: translateY(15px);
+            transition: all 0.5s ease-in-out;
+            pointer-events: none;
+            border-bottom: 1px solid #1a1a1a;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        .feedback-item.show {
+            position: relative;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        .customer-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+        .customer-name {
+            font-size: 13px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .customer-stars {
+            color: #f59e0b;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+        .customer-comment {
+            font-size: 12px;
+            color: #aaaaaa;
+            line-height: 1.4;
+            font-style: italic;
+        }
+        .customer-date {
+            font-size: 10px;
+            color: #444444;
+            margin-top: 4px;
+            text-align: right;
+        }
+
+        /* Styling List Info */
         .info-list-item {
             margin-bottom: 15px;
         }
@@ -506,7 +566,6 @@
             background-color: #e6e6e6;
         }
 
-        /* Penanganan Responsif Layar HP */
         @media (max-width: 992px) {
             .bottom-grid-layout {
                 grid-template-columns: 1fr;
@@ -622,10 +681,10 @@
                 <a onclick="cariTag('Recall')" class="tag-item">Recall Merah Tas Tas</a>
             </div>
 
-            <!-- --- SISTEM GRID 3 KOLOM MENYAMPING DI BAWAH TAGS --- -->
+            <!-- --- GRID 3 KOLOM PREMIUM --- -->
             <div class="bottom-grid-layout">
                 
-                <!-- KOLOM 1: ULASAN DUMMY -->
+                <!-- KOLOM 1: ULASAN + SLIDER CAROUSEL JAVASCRIPT -->
                 <div class="grid-box">
                     <h3>⭐ Ulasan</h3>
                     <div class="rating-summary">
@@ -641,6 +700,72 @@
                         <div class="bar-item"><span>3 ★</span><div class="bar-line-bg"><div class="bar-line-fill" style="width: 2%;"></div></div><span>2%</span></div>
                         <div class="bar-item"><span>2 ★</span><div class="bar-line-bg"><div class="bar-line-fill" style="width: 0%;"></div></div><span>0%</span></div>
                         <div class="bar-item"><span>1 ★</span><div class="bar-line-bg"><div class="bar-line-fill" style="width: 0%;"></div></div><span>0%</span></div>
+                    </div>
+
+                    <!-- AREA AUTOMATIC ROLLING ULASAN -->
+                    <div class="feedback-slider-container" id="feedbackContainer">
+                        <!-- Grup Halaman 1 (Tampil 3 Pertama) -->
+                        <div class="feedback-item show">
+                            <div class="customer-meta"><span class="customer-name">Di*****s Ca****a</span><span class="customer-stars">★★★★★</span></div>
+                            <div class="customer-comment">"Proses serah terima kilat banget gokil, adminnya ramah nuntun sampai aman sepaket!"</div>
+                            <div class="customer-date">2026-07-01</div>
+                        </div>
+                        <div class="feedback-item show">
+                            <div class="customer-meta"><span class="customer-name">Re*****n S*****a</span><span class="customer-stars">★★★★★</span></div>
+                            <div class="customer-comment">"Akunnya sesuai deskripsi, mantap dapet bonus diamond lagi. Recommended seller."</div>
+                            <div class="customer-date">2026-07-03</div>
+                        </div>
+                        <div class="feedback-item show">
+                            <div class="customer-meta"><span class="customer-name">An*****a P*****i</span><span class="customer-stars">★★★★☆</span></div>
+                            <div class="customer-comment">"Harga miring abis dibanding lapak sebelah, amannya dapet garansi sebulan penuh."</div>
+                            <div class="customer-date">2026-07-04</div>
+                        </div>
+
+                        <!-- Grup Halaman 2 -->
+                        <div class="feedback-item">
+                            <div class="customer-meta"><span class="customer-name">Fa*****l A*****i</span><span class="customer-stars">★★★★★</span></div>
+                            <div class="customer-comment">"Awalnya ragu, pas nyoba transaksi ternyata seaman itu, gak nyesel beli di yuzhou market!"</div>
+                            <div class="customer-date">2026-07-05</div>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="customer-meta"><span class="customer-name">Mu*****d R*****i</span><span class="customer-stars">★★★★★</span></div>
+                            <div class="customer-comment">"Gak sampai 10 menit data login udah dikasih semua. Top markotop kinerjanya bos."</div>
+                            <div class="customer-date">2026-07-05</div>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="customer-meta"><span class="customer-name">Ri*****o H*****t</span><span class="customer-stars">★★★★☆</span></div>
+                            <div class="customer-comment">"Winrate-nya beneran aman, skin heronya lengkap kap sesuai SS, gass push glory."</div>
+                            <div class="customer-date">2026-07-06</div>
+                        </div>
+
+                        <!-- Grup Halaman 3 -->
+                        <div class="feedback-item">
+                            <div class="customer-meta"><span class="customer-name">He*****a W*****n</span><span class="customer-stars">★★★★★</span></div>
+                            <div class="customer-comment">"Respon admin wa cepet banget padahal gw chat jam 2 subuh wkwk, sukses terus marketnya!"</div>
+                            <div class="customer-date">2026-07-07</div>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="customer-meta"><span class="customer-name">Ad*****t Nu*****o</span><span class="customer-stars">★★★★★</span></div>
+                            <div class="customer-comment">"Udah langganan topup di yuzhou store, sekarang nyoba beli akun di yuzhou market emang ttp terbaik."</div>
+                            <div class="customer-date">2026-07-08</div>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="customer-meta"><span class="customer-name">Bintang S*****o</span><span class="customer-stars">★★★★★</span></div>
+                            <div class="customer-comment">"Emblem beneran max semua gampang bgt maennya, dapet bonus mingguan pula, mantap bre!"</div>
+                            <div class="customer-date">2026-07-09</div>
+                        </div>
+
+                        <!-- Grup Halaman 4 -->
+                        <div class="feedback-item">
+                            <div class="customer-meta"><span class="customer-name">Ke*****n Vi*****i</span><span class="customer-stars">★★★★★</span></div>
+                            <div class="customer-comment">"Suka sama UI webnya simple, transaksinya juga anti ribet, tinggal klik langsung ke wa."</div>
+                            <div class="customer-date">2026-07-09</div>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="customer-meta"><span class="customer-name">Gu*****n Sm*****f</span><span class="customer-stars">★★★★☆</span></div>
+                            <div class="customer-comment">"Mantap dapet akun idaman murah, nanya nego dikit langsung dikasih sama adminnya."</div>
+                            <div class="customer-date">2026-07-09</div>
+                        </div>
                     </div>
                 </div>
 
@@ -803,6 +928,36 @@
         function cariTag(namaTag) {
             window.location.href = "index.html?search=" + encodeURIComponent(namaTag);
         }
+
+        // --- SCRIPT UTAMA ROLLING AUTOMATIC CAROUSEL TESTIMONIAL ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const allFeedbacks = document.querySelectorAll('.feedback-item');
+            const totalItems = allFeedbacks.length;
+            const itemsPerPage = 3;
+            let currentGroupIndex = 0;
+
+            function showNextGroup() {
+                // Sembunyikan seluruh ulasan terlebih dahulu
+                allFeedbacks.forEach(item => item.classList.remove('show'));
+                
+                // Hitung batas indeks grup ulasan selanjutnya
+                const start = currentGroupIndex * itemsPerPage;
+                let end = start + itemsPerPage;
+                
+                // Hidupkan 3 ulasan terpilih sesuai halaman grupnya
+                for (let i = start; i < end; i++) {
+                    if (allFeedbacks[i % totalItems]) {
+                        allFeedbacks[i % totalItems].classList.add('show');
+                    }
+                }
+                
+                // Gulirkan index grup berikutnya, jika habis maka reset balik ke 0
+                currentGroupIndex = (currentGroupIndex + 1) % Math.ceil(totalItems / itemsPerPage);
+            }
+
+            // Jalankan perputaran otomatis ulasan setiap 4000 milidetik (4 detik)
+            setInterval(showNextGroup, 4000);
+        });
     </script>
 
 </body>
