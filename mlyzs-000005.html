@@ -25,6 +25,8 @@
             background: linear-gradient(180deg, #000000 0%, #1c1c1c 50%, #2e2e2e 100%);
             color: #ffffff;
             min-height: 100vh;
+            /* Tambah padding bawah biar konten paling bawah gak ketutup sticky button di HP */
+            padding-bottom: 80px; 
         }
 
         /* --- NAVBAR ATAS --- */
@@ -216,6 +218,7 @@
             padding-left: 8px;
         }
 
+        /* Tombol Normal Beli Sekarang */
         .btn-beli {
             display: block;
             background-color: #ffffff;
@@ -236,6 +239,55 @@
             background-color: #000000;
             color: #ffffff;
             transform: translateY(-2px);
+        }
+
+        /* --- SINKRONISASI STICKY BUY BUTTON UNTUK HP/MOBILE --- */
+        .sticky-button-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #121212;
+            border-top: 1px solid #282828;
+            padding: 12px 20px;
+            box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.8);
+            z-index: 999;
+            display: none; /* Default tersembunyi di layar PC */
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+        .sticky-price-box {
+            display: flex;
+            flex-direction: column;
+        }
+        .sticky-price-title {
+            font-size: 11px;
+            color: #888888;
+            text-transform: uppercase;
+        }
+        .sticky-price-amount {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .btn-sticky-action {
+            flex: 1;
+            max-width: 200px;
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #ffffff;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: center;
+            transition: background 0.2s;
+        }
+        .btn-sticky-action:hover {
+            background-color: #000000;
+            color: #ffffff;
         }
 
         .info-tambahan-text {
@@ -509,9 +561,12 @@
         .btn-modal-confirm { flex: 2; background-color: #ffffff; color: #000000; border: 1px solid #ffffff; padding: 12px; border-radius: 8px; font-weight: bold; cursor: pointer; text-align: center; text-decoration: none; }
         .btn-modal-confirm:hover { background-color: #e6e6e6; }
 
+        /* Media Query Khusus HP */
         @media (max-width: 992px) {
             .bottom-grid-layout, .katalog-rekomendasi-grid { grid-template-columns: 1fr; gap: 20px; }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            /* AKTIFKAN STICKY BAR DI LAYAR HP */
+            .sticky-button-container { display: flex; } 
         }
         @media (max-width: 768px) {
             .navbar { padding: 15px 20px; flex-direction: column; gap: 15px; }
@@ -774,6 +829,15 @@
         </div>
     </div>
 
+    <!-- --- SEKSI STICKY BUY BUTTON FIXED DI HP --- -->
+    <div class="sticky-button-container">
+        <div class="sticky-price-box">
+            <span class="sticky-price-title">Total Harga (Base)</span>
+            <span class="sticky-price-amount">Rp 1.565.500</span>
+        </div>
+        <button class="btn-sticky-action" onclick="openModal()">Beli Sekarang</button>
+    </div>
+
     <!-- BOX POPUP KONFIRMASI PESANAN -->
     <div class="modal-overlay" id="orderModal">
         <div class="modal-box">
@@ -809,7 +873,7 @@
     <footer class="main-footer">
         <div class="footer-top-text">
             <h3>Jual Beli Akun Mobile Legends Aman & Terpercaya di Yuzhou Market!</h3>
-            <p>Mencari tempat beli akun ML Smurf atau Akun Sultan yang aman dari Hackback? Yuzhou Market adalah pilihan tepat! Kami menyediakan platform marketplace terpercaya dengan proses serah terima instan, layanan responsif, dan jaminan keamanan data penuh untuk kenyamanan transaksi lu.</p>
+            <p>Mencari tempat beli akun ML Smurf atau Akun Sultan yang aman dari Hackback? Yuzhou Market adalah pilihan tepat! Kami menyediakan platform marketplace terpercaya dengan proses serah terima instan, layanan responsif, and jaminan keamanan data penuh untuk kenyamanan transaksi lu.</p>
         </div>
         <div class="footer-grid">
             <div class="footer-brand">
