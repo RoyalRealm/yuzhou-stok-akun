@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <!-- FIX FAVICON LOGO TAB BROWSER AGAR TIDAK BALIK JADI LOGO BUMI -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Akun #MLYZS-000005 - Yuzhou Market</title>
+
+    <!-- PREVIEW SHARE PREMIUM (SEO / OPEN GRAPH) UNTUK SOSMED -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://market.yuzhouproject.my.id/mlyzs-000005.html">
+    <meta property="og:title" content="Detail Akun #MLYZS-000005 - Yuzhou Market">
+    <meta property="og:description" content="Ready Akun Sultan: Legend Johnson, Prime Granger, Sakura Kalea, 2 Sanrio & 373 Skin GG lainnya! Garansi full refill 1 bulan anti-hackback. Sikat sekarang bre!">
+    <meta property="og:image" content="produk/mlyzs-000005_1.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(180deg, #000000 0%, #1c1c1c 50%, #2e2e2e 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            /* Tambah padding bawah biar konten paling bawah gak ketutup sticky button di HP */
+            padding-bottom: 80px; 
+        }
+
+        /* --- NAVBAR (SINKRON DENGAN INDEX) --- */
+        .navbar {
+            background-color: #121212;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid #333333;
+        }
+        .nav-kiri { display: flex; align-items: center; gap: 20px; flex: 1; position: relative; }
+        
+        /* LIVE SEARCH STYLING FIXED */
+        .search-container { position: relative; width: 250px; }
+        .search-box { background-color: #222222; border: 1px solid #444444; padding: 8px 15px; border-radius: 6px; color: #fff; width: 100%; font-size: 14px; }
+        .search-suggestions {
+            position: absolute; top: 105%; left: 0; width: 100%; background-color: #121212;
+            border: 1px solid #3b82f6; border-radius: 6px; z-index: 1000; max-height: 200px;
+            overflow-y: auto; display: none; box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+        }
+        .suggestion-item { padding: 10px 15px; font-size: 13px; color: #cccccc; cursor: pointer; border-bottom: 1px solid #222222; transition: background 0.2s; }
+        .suggestion-item:hover { background-color: #1e3a8a; color: #ffffff; }
+
+        .nav-menu { display: flex; align-items: center; gap: 20px; list-style: none; }
+        .nav-menu a { color: #aaaaaa; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+        .nav-menu a:hover { color: #ffffff; }
+        .btn-topup-nav { background-color: #cccccc; color: #000000 !important; padding: 6px 12px; border-radius: 6px; font-weight: bold; transition: background 0.2s; }
+        .btn-topup-nav:hover { background-color: #ffffff; }
+        
+        /* TOMBOL NAV JUAL AKUN STYLE */
+        .btn-jual-nav { background: linear-gradient(90deg, #1d4ed8, #2563eb); color: #ffffff; border: none; padding: 6px 14px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 14px; transition: opacity 0.2s; }
+        .btn-jual-nav:hover { opacity: 0.9; }
+
+        /* --- WRAPPER DETAIL --- */
+        .wrapper-detail {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .main-box {
+            background-color: #121212;
+            border: 1px solid #282828;
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 40px;
+        }
+        
+        /* --- SISTEM GALERI INTERAKTIF --- */
+        .galeri-container {
+            margin-bottom: 25px;
+            width: 100%;
+        }
+        .foto-spek-utama {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 1px solid #333333;
+            margin-bottom: 12px;
+        }
+        .thumbnails-wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .thumb-img {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #282828;
+            cursor: pointer;
+            transition: border-color 0.2s, opacity 0.2s;
+            opacity: 0.6;
+        }
+        .thumb-img:hover, .thumb-img.active {
+            border-color: #ffffff;
+            opacity: 1;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: #222222;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #22c55e;
+            border-radius: 50%;
+        }
+
+        .kode-akun-text {
+            font-size: 16px;
+            font-weight: 600;
+            color: #cccccc;
+            margin-bottom: 15px;
+        }
+
+        .harga-wrapper {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #222222;
+            padding-bottom: 15px;
+        }
+        .harga-coret {
+            font-size: 14px;
+            color: #555555;
+            text-decoration: line-through;
+        }
+        .harga-asli {
+            font-size: 26px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .deskripsi-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        .deskripsi-list li {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            color: #dddddd;
+            padding-left: 5px;
+        }
+        .section-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #888888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 25px 0 12px 0;
+            border-left: 2px solid #ffffff;
+            padding-left: 8px;
+        }
+
+        /* Tombol Normal Beli Sekarang */
+        .btn-beli {
+            display: block;
+            background-color: #ffffff;
+            color: #000000;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background 0.3s, transform 0.2s;
+            border: 1px solid #ffffff;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .btn-beli:hover {
+            background-color: #000000;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* --- SINKRONISASI STICKY BUY BUTTON UNTUK HP/MOBILE --- */
+        .sticky-button-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #121212;
+            border-top: 1px solid #282828;
+            padding: 12px 20px;
+            box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.8);
+            z-index: 999;
+            display: none; /* Default tersembunyi di layar PC */
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+        .sticky-price-box {
+            display: flex;
+            flex-direction: column;
+        }
+        .sticky-price-title {
+            font-size: 11px;
+            color: #888888;
+            text-transform: uppercase;
+        }
+        .sticky-price-amount {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .btn-sticky-action {
+            flex: 1;
+            max-width: 200px;
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #ffffff;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: center;
+            transition: background 0.2s;
+        }
+        .btn-sticky-action:hover {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        .info-tambahan-text {
+            font-size: 14px;
+            color: #cccccc;
+            line-height: 1.6;
+            margin: 25px 0;
+        }
+        .btn-ss-admin {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(90deg, #1e3a8a 0%, #111827 100%);
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: opacity 0.2s, transform 0.2s;
+            border: 1px solid #1d4ed8;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(29, 78, 216, 0.2);
+            margin-bottom: 30px;
+        }
+        .btn-ss-admin:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+            border-color: #3b82f6;
+        }
+        .tags-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .tag-item {
+            background-color: #1a1a1a;
+            border: 1px solid #3b82f6;
+            color: #93c5fd;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .tag-item:hover {
+            background-color: #3b82f6;
+            color: #ffffff;
+        }
+
+        /* --- GRID SYSTEM MENYAMPING --- */
+        .bottom-grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+        .grid-box {
+            background-color: #121212;
+            border: 1px solid #1d4ed8;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+        }
+        .grid-box h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #ffffff;
+        }
+
+        /* --- BOX RATING --- */
+        .rating-summary {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+        .star-large {
+            font-size: 32px;
+            color: #f59e0b;
+        }
+        .rating-number {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .rating-max {
+            font-size: 14px;
+            color: #666666;
+        }
+        .bar-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            border-bottom: 1px dashed #222222;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        .bar-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: #aaaaaa;
+        }
+        .bar-line-bg {
+            flex: 1;
+            height: 6px;
+            background-color: #222222;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .bar-line-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #1d4ed8, #3b82f6);
+            border-radius: 3px;
+        }
+
+        /* --- CAROUSEL FEEDBACK TESTIMONI --- */
+        .feedback-slider-container {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            min-height: 250px;
+        }
+        .feedback-item {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transform: translateY(15px);
+            transition: all 0.5s ease-in-out;
+            pointer-events: none;
+            border-bottom: 1px solid #1a1a1a;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        .feedback-item.show {
+            position: relative;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        .customer-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+        .customer-name {
+            font-size: 13px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .customer-stars {
+            color: #f59e0b;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+        .customer-comment {
+            font-size: 12px;
+            color: #aaaaaa;
+            line-height: 1.4;
+            font-style: italic;
+        }
+        .customer-date {
+            font-size: 10px;
+            color: #444444;
+            margin-top: 4px;
+            text-align: right;
+        }
+        .info-list-item {
+            margin-bottom: 15px;
+        }
+        .info-list-item h4 {
+            font-size: 14px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+        .info-list-item p {
+            font-size: 13px;
+            color: #aaaaaa;
+            line-height: 1.5;
+        }
+
+        /* --- REKOMENDASI KATALOG --- */
+        .katalog-rekomendasi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+        .card-link { text-decoration: none; color: inherit; display: block; }
+        .card { background-color: #181818; border-radius: 12px; overflow: hidden; border: 1px solid #282828; transition: transform 0.3s, border-color 0.3s; height: 100%; }
+        .card:hover { transform: translateY(-5px); border-color: #3b82f6; }
+        .card img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+        .card-body { padding: 12px; }
+        .badge-status { background-color: #ffffff; color: #000000; font-size: 10px; padding: 2px 7px; border-radius: 20px; display: inline-block; margin-bottom: 8px; font-weight: bold; }
+        .judul-akun { font-size: 14px; font-weight: bold; margin-bottom: 8px; height: 40px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+        .detail-akun { font-size: 12px; color: #888888; margin-bottom: 12px; height: 32px; overflow: hidden; }
+        .harga-asli-card { font-size: 16px; font-weight: bold; }
+
+        /* --- FAQ SECTION ACCORDION --- */
+        .faq-layout { display: flex; gap: 40px; margin-top: 20px; margin-bottom: 60px; text-align: left; }
+        .faq-kiri { flex: 1; max-width: 350px; }
+        .faq-kiri h2 { font-size: 28px; font-weight: bold; line-height: 1.3; }
+        .faq-kiri span { color: #3b82f6; }
+        .faq-kanan { flex: 1; display: flex; flex-direction: column; gap: 12px; }
+        .faq-item { background-color: #121212; border: 1px solid #282828; border-radius: 8px; overflow: hidden; transition: border-color 0.3s; }
+        .faq-item:hover { border-color: #3b82f6; }
+        .faq-header { padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; font-weight: bold; font-size: 14px; }
+        .faq-icon { font-size: 18px; transition: transform 0.3s; color: #aaaaaa; }
+        .faq-body { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background-color: #181818; }
+        .faq-content { padding: 20px; font-size: 13px; color: #cccccc; line-height: 1.6; border-top: 1px solid #282828; }
+        .faq-item.active .faq-body { max-height: 500px; }
+        .faq-item.active { border-color: #3b82f6; }
+
+        /* --- STYLING MODAL FORMULIR JUAL AKUN NEW (SINKRON DENGAN INDEX) --- */
+        .modal-jual-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.85); display: none;
+            align-items: center; justify-content: center; z-index: 2000; padding: 20px;
+        }
+        .modal-jual-box {
+            background-color: #121212; border: 1px solid #1d4ed8; border-radius: 14px;
+            padding: 25px; width: 100%; max-width: 500px; max-height: 90vh;
+            overflow-y: auto; box-shadow: 0 4px 25px rgba(29, 78, 216, 0.3); position: relative;
+        }
+        .btn-modal-close {
+            position: absolute; top: 15px; right: 15px; background: none; border: none;
+            color: #888888; font-size: 22px; font-weight: bold; cursor: pointer; transition: color 0.2s; line-height: 1;
+        }
+        .btn-modal-close:hover { color: #3b82f6; }
+        .modal-jual-box h2 { font-size: 20px; font-weight: bold; margin-bottom: 5px; text-align: center; }
+        .text-merah-tegas { color: #ef4444; font-size: 12px; font-weight: bold; text-align: center; margin-bottom: 20px; display: block; }
+        .form-row-flex { display: flex; gap: 15px; margin-bottom: 15px; }
+        .form-group { margin-bottom: 15px; display: flex; flex-direction: column; gap: 6px; }
+        .form-group label { font-size: 13px; font-weight: 600; color: #cccccc; }
+        .form-group input, .form-group select { background-color: #1a1a1a; border: 1px solid #333333; border-radius: 6px; padding: 10px; color: #ffffff; font-size: 14px; width: 100%; }
+        .form-group input:focus, .form-group select:focus { border-color: #3b82f6; outline: none; }
+        .input-with-symbol { position: relative; display: flex; align-items: center; }
+        .input-with-symbol input { padding-right: 30px; }
+        .input-symbol { position: absolute; right: 12px; font-size: 14px; color: #888888; }
+        
+        .verif-container { display: flex; align-items: flex-start; gap: 10px; background-color: #161616; padding: 12px; border-radius: 6px; border: 1px dashed #444444; margin: 20px 0; cursor: pointer; }
+        .verif-container input { cursor: pointer; accent-color: #3b82f6; margin-top: 3px; }
+        .verif-container span { font-size: 13px; color: #cccccc; user-select: none; }
+        
+        .btn-jual-submit { display: block; width: 100%; padding: 12px; border-radius: 8px; font-weight: bold; font-size: 15px; cursor: pointer; text-align: center; border: none; transition: all 0.2s; }
+        .btn-jual-submit:disabled { background-color: #333333; color: #666666; cursor: not-allowed; }
+        .btn-jual-submit:not(:disabled) { background-color: #ffffff; color: #000000; }
+        .btn-jual-submit:not(:disabled):hover { background: linear-gradient(90deg, #1d4ed8, #2563eb); color: #ffffff; }
+
+        .photo-sample-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 15px; }
+        .photo-sample-item { background-color: #161616; border: 1px solid #282828; border-radius: 6px; overflow: hidden; text-align: center; }
+        .photo-sample-item img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+        .photo-label { font-size: 11px; color: #888888; padding: 5px; display: block; }
+
+        /* --- MAIN FOOTER (SINKRON DENGAN INDEX) --- */
+        .main-footer { background-color: #0c0c0c; border-top: 2px solid #222222; padding: 50px 20px 20px 20px; margin-top: 60px; text-align: left; }
+        .footer-top-text { max-width: 1200px; margin: 0 auto 40px auto; text-align: center; }
+        .footer-top-text h3 { font-size: 20px; font-weight: bold; margin-bottom: 12px; color: #ffffff; }
+        .footer-top-text p { font-size: 13px; color: #888888; line-height: 1.6; max-width: 900px; margin: 0 auto; }
+        .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1.5fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid #222222; }
+        .footer-brand h4 { font-size: 20px; font-weight: bold; letter-spacing: 1px; margin-bottom: 15px; }
+        .footer-brand p { font-size: 13px; color: #888888; line-height: 1.6; }
+        .footer-col h5 { font-size: 15px; font-weight: bold; color: #ffffff; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { font-size: 14px; color: #888888; text-decoration: none; transition: color 0.2s; }
+        .footer-links a:hover { color: #3b82f6; }
+        .footer-links span { font-size: 14px; color: #888888; display: block; margin-bottom: 8px; }
+        .copyright-box { max-width: 1200px; margin: 20px auto 0 auto; text-align: center; font-size: 13px; color: #555555; }
+
+        /* MODAL POPUP CHECKOUT */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); display: flex; align-items: center; justify-content: center; z-index: 1000; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+        .modal-overlay.active { opacity: 1; pointer-events: auto; }
+        .modal-box { background-color: #121212; border: 1px solid #333333; border-radius: 14px; padding: 25px; width: 90%; max-width: 450px; text-align: left; position: relative; }
+        .modal-box h2 { font-size: 20px; margin-bottom: 15px; border-bottom: 1px solid #222222; padding-bottom: 10px; }
+        .modal-box p { font-size: 14px; color: #aaaaaa; margin-bottom: 15px; }
+        .form-opsi { margin-bottom: 20px; }
+        .radio-group { background-color: #1a1a1a; border: 1px solid #282828; border-radius: 8px; padding: 12px; margin-bottom: 10px; display: flex; align-items: center; gap: 12px; cursor: pointer; transition: border-color 0.2s; }
+        .radio-group:hover { border-color: #555555; }
+        .radio-group input { cursor: pointer; accent-color: #ffffff; }
+        .radio-text { font-size: 14px; display: flex; flex-direction: column; }
+        .total-checkout-box { background-color: #1a1a1a; padding: 18px; border-radius: 8px; margin-bottom: 20px; border: 1px dashed #444444; display: flex; flex-direction: column; gap: 10px; }
+        .checkout-row { display: flex; justify-content: space-between; align-items: center; }
+        .row-utama span:first-child { font-size: 15px; font-weight: bold; color: #ffffff; }
+        .row-utama .final-price { font-size: 22px; font-weight: bold; color: #ffffff; }
+        .row-rincian { border-top: 1px solid #2a2a2a; padding-top: 8px; flex-direction: column; gap: 6px; display: flex; }
+        .sub-row { display: flex; justify-content: space-between; font-size: 13px; color: #666666; }
+        .modal-buttons { display: flex; gap: 10px; }
+        .btn-modal-cancel { flex: 1; background-color: #222222; border: 1px solid #444444; color: #ffffff; padding: 12px; border-radius: 8px; font-weight: bold; cursor: pointer; }
+        .btn-modal-confirm { flex: 2; background-color: #ffffff; color: #000000; border: 1px solid #ffffff; padding: 12px; border-radius: 8px; font-weight: bold; cursor: pointer; text-align: center; text-decoration: none; }
+        .btn-modal-confirm:hover { background-color: #e6e6e6; }
+
+        /* Media Query Khusus HP */
+        @media (max-width: 992px) {
+            .bottom-grid-layout, .katalog-rekomendasi-grid { grid-template-columns: 1fr; gap: 20px; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            /* AKTIFKAN STICKY BAR DI LAYAR HP */
+            .sticky-button-container { display: flex; } 
+        }
+        @media (max-width: 768px) {
+            .navbar { padding: 15px 20px; flex-direction: column; gap: 15px; }
+            .nav-kiri { width: 100%; justify-content: space-between; }
+            .search-container { display: none; }
+            .nav-menu { width: 100%; justify-content: center; flex-wrap: wrap; gap: 12px; }
+            h1 { font-size: 20px; }
+            .faq-layout { flex-direction: column; gap: 20px; }
+            .faq-kiri { max-width: 100%; }
+        }
+        @media (max-width: 576px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR ATAS (SINKRON TOTAL DENGAN INDEX.HTML) -->
+    <nav class="navbar">
+        <div class="nav-kiri">
+            <a href="/" class="logo-wrapper" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="logo.png" alt="Logo Yuzhou Market" style="height: 32px; width: auto; object-fit: contain;">
+                <span style="font-weight: bold; font-size: 20px; color: #ffffff; text-transform: uppercase; letter-spacing: 1px;">YUZHOU MARKET</span>
+            </a>
+            <!-- LIVE SEARCH CONTAINER -->
+            <div class="search-container">
+                <input type="text" id="searchNavbar" class="search-box" placeholder="Cari produk di sini..." oninput="jalankanLiveSearch()">
+                <div id="searchSuggestions" class="search-suggestions"></div>
+            </div>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="joki.html">Joki</a></li>
+            <li><a href="#">Artikel</a></li>
+            <li><a href="https://yuzhou-store.my.id/" target="_blank" class="btn-topup-nav">Top Up Game</a></li>
+            <li><button class="btn-jual-nav" onclick="bukaModalJualStep1()">Jual Akun</button></li>
+        </ul>
+    </nav>
+
+    <!-- KONTEN DETAIL UTAMA -->
+    <div class="wrapper-detail">
+        <div class="main-box">
+            
+            <!-- SISTEM MULTI FOTO -->
+            <div class="galeri-container">
+                <img src="produk/mlyzs-000005_1.png" id="mainPhoto" class="foto-spek-utama" alt="Spek Akun Utama">
+                
+                <div class="thumbnails-wrapper">
+                    <img src="produk/mlyzs-000005_1.png" class="thumb-img active" onclick="gantiFoto(this)" alt="Spek 1">
+                    <img src="produk/mlyzs-000005_2.png" class="thumb-img" onclick="gantiFoto(this)" alt="Spek 2">
+                    <img src="produk/mlyzs-000005_3.png" class="thumb-img" onclick="gantiFoto(this)" alt="Spek 3">
+                    <img src="produk/mlyzs-000005_4.png" class="thumb-img" onclick="gantiFoto(this)" alt="Spek 4">
+                </div>
+            </div>
+            
+            <h1>Legend Jhonson | Kalea Sakura | Prime Granger | 2 Sanrio | Akun Smurf Owner Yuzhou Store/Yuzhou Market</h1>
+            
+            <div class="status-badge">
+                <span class="status-dot"></span> Akun Ready
+            </div>
+            <div class="kode-akun-text">Kode Akun: MLYZS-000005</div>
+            
+            <div class="harga-wrapper">
+                <span class="harga-coret">Rp 1.850.000</span>
+                <span class="harga-asli">Rp 1.565.500</span>
+            </div>
+            
+            <!-- SEGMEN SPESIFIKASI AKUN -->
+            <div class="section-title">Spesifikasi Akun</div>
+            <ul class="deskripsi-list">
+                <li>Yuzhou Market, jb akun sipaling aman dan terpercaya</li>
+                <li><b>Login Via:</b> Moonton (Email dari buyer langsung)</li>
+                <li><b>Rank / WR:</b> Mythical Glory 70 (Winrate Overall 54%)</li>
+                <li><b>Total Hero:</b> 116 Hero</li>
+                <li><b>Total Skin:</b> 373 Skin</li>
+                <li><b>Keamanan:</b> Garansi anti-hackback penuh dari Yuzhou Market.</li>
+                <li><b>Durasi Garansi:</b> Proteksi refill penuh selama 1 month / 31 hari aman terpercaya.</li>
+                <li><b>Nego:</b> Bisa Nego Tipis Langsung Lewat WA CS!</li>
+            </ul>
+
+            <!-- SEGMEN LIST SKIN DAN EFEK LAINNYA -->
+            <div class="section-title">List Skin dan Efek Lainnya</div>
+            <ul class="deskripsi-list">
+                <li><b>Skin Utama:</b> Jhonson Legend, Sakura Kalea, Granger Prime, Moskov All Star, Chang'e dan Floryn Sanrio, Tigreal Collector, Lancelot Collector Valentine Couple, Chou Luckybox, Alice Luckybox, Saber Luckybox, Uranus Luckybox, Jhonson Luckybox, Karina Luckybox, Alice Epic Limit, Full Lightborn, Full Zodiac</li>
+                <li><b>Efek Recall:</b> Recall Metro Zero, Recall Neobeasts Fase II, Recall Eternal Season, Recall Thunder Ascendant, Recall Wings of Judgement, Recall Sparkle</li>
+                <li><b>Efek Spawn:</b> Spawn M7 Glory, Spawn Metro Zero, Spawn Neobeasts Fase II, Spawn Cosmic Blaze, Spawn Kishin Densetsu, Spawn HXH, Spawn Beyond The Cloud</li>
+                <li><b>Efek Eliminasi:</b> Eliminasi Thunder Ascendant, Eliminasi Soul Vessel Fase II, Eliminasi Metro Zero, Eliminasi AoT, Eliminasi Cyber Dragon, Eliminasi Sanrio</li>
+                <li><b>Notifikasi Eliminasi:</b> Notifikasi Dinamis Soul Vessel, Notifikasi Metro Zero, Notifikasi Naruto, Notifikasi Kishin Densetsu, Notifikasi AoT</li>
+                <li><b>Battle Emote:</b> Emote Dyroth Angry, Emote Aurora Avalanche, Emote Spongebob Patrick Squidward Komplit, Emote Metro Zero Komplit, Emote Neobeasts Komplit, dll</li>
+            </ul>
+            
+            <button class="btn-beli" onclick="openModal()">Beli Sekarang</button>
+            
+            <div class="info-tambahan-text">
+                🔍 <b>Sedang cari Jhonson Legend, Sakura Kalea, Granger Prime, Moskov All Star, Sanrio, Collector & Luckybox komplit dengan Emblem Max?</b> Inilah tempatnya! Detail lengkap, harga transparan, dan dukungan 24/7 siap mendampingi kamu. Stok terbatas — pesan sekarang!
+            </div>
+
+            <a href="https://wa.me/6283893239499?text=Halo%20Admin%20Yuzhou%20Market%2C%20bisa%20minta%20Full%20Screenshot%20bukti%20chat%20aman%20dan%20detail%20untuk%20akun%20MLYZS-000005%3F" target="_blank" class="btn-ss-admin">
+                💬 Full Screenshot Chat Admin
+            </a>
+
+            <div class="tags-title">Tags</div>
+            <div class="tags-container">
+                <a onclick="cariTag('Gusion')" class="tag-item">Gusion Legend</a>
+                <a onclick="cariTag('Valir')" class="tag-item">Valir Legend</a>
+                <a onclick="cariTag('Granger')" class="tag-item">Granger Legend</a>
+                <a onclick="cariTag('Akai')" class="tag-item">Akai Kungfu Panda</a>
+                <a onclick="cariTag('Layla')" class="tag-item">Layla Aspirants</a>
+                <a onclick="cariTag('Hayabusa')" class="tag-item">Hayabusa 11.11</a>
+                <a onclick="cariTag('Ruby')" class="tag-item">Ruby Aspirants</a>
+                <a onclick="cariTag('Popol')" class="tag-item">Popol Kupa Transformer</a>
+                <a onclick="cariTag('Emblem')" class="tag-item">Emblem Max</a>
+                <a onclick="cariTag('Hero')" class="tag-item">Hero Max</a>
+                <a onclick="cariTag('Immortal')" class="tag-item">Ex Immortal</a>
+                <a onclick="cariTag('Recall')" class="tag-item">Recall Merah Tas Tas</a>
+            </div>
+
+            <!-- --- GRID 3 KOLOM PREMIUM --- -->
+            <div class="bottom-grid-layout">
+                <div class="grid-box">
+                    <h3>⭐ Ulasan</h3>
+                    <div class="rating-summary">
+                        <span class="star-large">★</span>
+                        <div><span class="rating-number">4.9</span><span class="rating-max">/ 5.0</span></div>
+                    </div>
+                    <div class="bar-list">
+                        <div class="bar-item"><span>5 ★</span><div class="bar-line-bg"><div class="bar-line-fill" style="width: 92%;"></div></div><span>92%</span></div>
+                        <div class="bar-item"><span>4 ★</span><div class="bar-line-bg"><div class="bar-line-fill" style="width: 6%;"></div></div><span>6%</span></div>
+                        <div class="bar-item"><span>3 ★</span><div class="bar-line-bg"><div class="bar-line-fill" style="width: 2%;"></div></div><span>2%</span></div>
+                        <div class="bar-item"><span>2 ★</span><div class="bar-line-bg"><div class="bar-line-fill" style="width: 0%;"></div></div><span>0%</span></div>
+                        <div class="bar-item"><span>1 ★</span><div class="bar-line-bg"><div class="bar-line-fill" style="width: 0%;"></div></div><span>0%</span></div>
+                    </div>
+                    <div class="feedback-slider-container" id="feedbackContainer">
+                        <div class="feedback-item show">
+                            <div class="customer-meta"><span class="customer-name">Di*****s Ca****a</span><span class="customer-stars">★★★★★</span></div>
+                            <div class="customer-comment">"Proses serah terima kilat banget gokil, adminnya ramah nuntun sampai aman sepaket!"</div>
+                            <div class="customer-date">2026-07-01</div>
+                        </div>
+                        <div class="feedback-item show">
+                            <div class="customer-meta"><span class="customer-name">Re*****n S*****a</span><span class="customer-stars">★★★★★</span></div>
+                            <div class="customer-comment">"Akunnya sesuai deskripsi, mantap dapet bonus diamond lagi. Recommended seller."</div>
+                            <div class="customer-date">2026-07-03</div>
+                        </div>
+                        <div class="feedback-item show">
+                            <div class="customer-meta"><span class="customer-name">An*****a P*****i</span><span class="customer-stars">★★★★☆</span></div>
+                            <div class="customer-comment">"Harga miring abis dibanding lapak sebelah, amannya dapet garansi sebulan penuh."</div>
+                            <div class="customer-date">2026-07-04</div>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="customer-meta"><span class="customer-name">Fa*****l A*****i</span><span class="customer-stars">★★★★★</span></div>
+                            <div class="customer-comment">"Awalnya ragu, pas nyoba transaksi ternyata seaman itu, gak nyesel beli di yuzhou market!"</div>
+                            <div class="customer-date">2026-07-05</div>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="customer-meta"><span class="customer-name">Mu*****d R*****i</span><span class="customer-stars">★★★★★</span></div>
+                            <div class="customer-comment">"Gak sampai 10 menit data login udah dikasih semua. Top markotop kinerjanya bos."</div>
+                            <div class="customer-date">2026-07-05</div>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="customer-meta"><span class="customer-name">Ri*****o H*****t</span><span class="customer-stars">★★★★☆</span></div>
+                            <div class="customer-comment">"Winrate-nya beneran aman, skin heronya lengkap kap sesuai SS, gass push glory."</div>
+                            <div class="customer-date">2026-07-06</div>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="customer-meta"><span class="customer-name">He*****a W*****n</span><span class="customer-stars">★★★★★</span></div>
+                            <div class="customer-comment">"Respon admin wa cepet banget padahal gw chat jam 2 subuh wkwk, sukses terus marketnya!"</div>
+                            <div class="customer-date">2026-07-07</div>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="customer-meta"><span class="customer-name">Ad*****t Nu*****o</span><span class="customer-stars">★★★★★</span></div>
+                            <div class="customer-comment">"Udah langganan topup di yuzhou store, sekarang nyoba beli akun di yuzhou market emang ttp terbaik."</div>
+                            <div class="customer-date">2026-07-08</div>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="customer-meta"><span class="customer-name">Bintang S*****o</span><span class="customer-stars">★★★★★</span></div>
+                            <div class="customer-comment">"Emblem beneran max semua gampang bgt maennya, dapet bonus mingguan pula, mantap bre!"</div>
+                            <div class="customer-date">2026-07-09</div>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="customer-meta"><span class="customer-name">Ke*****n Vi*****i</span><span class="customer-stars">★★★★★</span></div>
+                            <div class="customer-comment">"Suka sama UI webnya simple, transaksinya juga anti ribet, tinggal klik langsung ke wa."</div>
+                            <div class="customer-date">2026-07-09</div>
+                        </div>
+                        <div class="feedback-item">
+                            <div class="customer-meta"><span class="customer-name">Gu*****n Sm*****f</span><span class="customer-stars">★★★★☆</span></div>
+                            <div class="customer-comment">"Mantap dapet akun idaman murah, nanya nego dikit langsung dikasih sama adminnya."</div>
+                            <div class="customer-date">2026-07-09</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-box">
+                    <h3>¼ Beli akunnya sekarang juga!</h3>
+                    <div class="info-list-item"><h4>1. Langsung Siap Main</h4><p>Login via Moonton—cukup bind ke akunmu dan langsung mainkan!</p></div>
+                    <div class="info-list-item"><h4>2. Skin & Hero Lengkap</h4><p>Koleksi ratusan skin spesial dan puluhan hero mata uang terkini.</p></div>
+                    <div class="info-list-item"><h4>3. Harga Kompetitif</h4><p>Penawaran terbaik dengan harga paling transparan untuk kategori akun sekelasnya.</p></div>
+                    <div class="info-list-item"><h4>4. Anti-Hackback Guarantee</h4><p>Jaminan akun aman penuh dari risiko reclaim dengan dukungan penuh garansi resmi.</p></div>
+                </div>
+
+                <div class="grid-box">
+                    <h3>🛡️ Kenapa Beli Akun di Yuzhou Market</h3>
+                    <div class="info-list-item"><h4>1. Berpengalaman Berhari-hari</h4><p>Marketplace game terpercaya yang berkomitmen penuh menjaga kepuasan setiap gamer.</p></div>
+                    <div class="info-list-item"><h4>2. Layanan Pelanggan Responsif</h4><p>Hubungi WA CS kami yang aktif melayani bantuan teknis dan negosiasi secara instan.</p></div>
+                    <div class="info-list-item"><h4>3. Pembayaran Fleksibel</h4><p>Mendukung metode transfer Bank lokal, E-Wallet, hingga scan QRIS tanpa biaya tersembunyi.</p></div>
+                </div>
+            </div>
+
+            <!-- KATALOG REKOMENDASI PRODUK AKUN LAINNYA -->
+            <div class="section-title-box" style="background: linear-gradient(90deg, #111827 0%, #1f2937 100%); border-left: 4px solid #3b82f6; border-radius: 4px; padding: 12px 20px; font-weight: bold; font-size: 16px; margin-bottom: 20px; text-align: left;">🌟 Rekomendasi Akun Lainnya</div>
+            <div class="katalog-rekomendasi-grid">
+                <a href="index.html" class="card-link">
+                    <div class="card">
+                        <img src="produk/mlyzs-000006.png" alt="Akun ML">
+                        <div class="card-body">
+                            <span class="badge-status">Hot Item</span>
+                            <div class="judul-akun">Akun Smurf Murah | Gusion Epic | Pas buat Gendong Solo</div>
+                            <div class="detail-akun">Winrate: 80% | 20+ Skin | Rank: Epic</div>
+                            <div class="harga-asli-card">Rp 49.000</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="index.html" class="card-link">
+                    <div class="card">
+                        <img src="banner/banner2.png" alt="Akun ML">
+                        <div class="card-body">
+                            <span class="badge-status">Ready</span>
+                            <div class="judul-akun">Slot Premium Alternatif 2 | KOF Chou | Gusion Cosmic</div>
+                            <div class="detail-akun">Winrate: 62% | 150+ Skin | Rank: Legend</div>
+                            <div class="harga-asli-card">Rp 450.000</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="index.html" class="card-link">
+                    <div class="card">
+                        <img src="banner/banner3.png" alt="Akun ML">
+                        <div class="card-body">
+                            <span class="badge-status">Nego</span>
+                            <div class="judul-akun">Slot Sultan Akun Alternatif 3 | 3 Hero Collector | Full Lightborn</div>
+                            <div class="detail-akun">Winrate: 58% | 240+ Skin | Rank: Mythic</div>
+                            <div class="harga-asli-card">Rp 890.000</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- SECTION FAQ ACCORDION -->
+            <div class="section-title-box" style="background: linear-gradient(90deg, #111827 0%, #1f2937 100%); border-left: 4px solid #3b82f6; border-radius: 4px; padding: 12px 20px; font-weight: bold; font-size: 16px; margin-bottom: 20px; text-align: left;">❓ FAQ</div>
+            <div class="faq-layout">
+                <div class="faq-kiri"><h2>Punya Pertanyaan?<br>Kami Punya<br><span>Jawabannya</span></h2></div>
+                <div class="faq-kanan">
+                    <div class="faq-item">
+                        <div class="faq-header" onclick="toggleFaq(this)"><div>Apakah Beli Akun MLBB di Yuzhou Market aman?</div><div class="faq-icon">+</div></div>
+                        <div class="faq-body"><div class="faq-content">Sangat aman! Setiap transaksi jual beli akun Mobile Legends di Yuzhou Market dilengkapi dengan jaminan 100% Anti Hackback. Kami memastikan seluruh data login diserahkan sepenuhnya setelah proses administrasi selesai.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-header" onclick="toggleFaq(this)"><div>Bagaimana proses serah terima akun setelah pembayaran?</div><div class="faq-icon">+</div></div>
+                        <div class="faq-body"><div class="faq-content">Setelah pembayaran terverifikasi, admin kami akan langsung menghubungi via WhatsApp untuk memberikan data login akun. Admin juga bakal memandu langkah demi langkah sampai akun teramankan penuh di HP lu.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-header" onclick="toggleFaq(this)"><div>Apakah harga akun di katalog masih bisa dinego?</div><div class="faq-icon">+</div></div>
+                        <div class="faq-body"><div class="faq-content">Sebagian besar akun bertanda status "Nego Tipis" bisa lu tanyakan langsung ke admin untuk potongan harganya bre. Hubungi kontak WA resmi kami yang tertera untuk melakukan penawaran secara langsung.</div></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- --- SEKSI STICKY BUY BUTTON FIXED DI HP --- -->
+    <div class="sticky-button-container">
+        <div class="sticky-price-box">
+            <span class="sticky-price-title">Total Harga (Base)</span>
+            <span class="sticky-price-amount">Rp 1.565.500</span>
+        </div>
+        <button class="btn-sticky-action" onclick="openModal()">Beli Sekarang</button>
+    </div>
+
+    <!-- ==================================================== -->
+    <!-- INTERACTIVE TWO-STEP FORMULIR JUAL AKUN MODALS       -->
+    <!-- ==================================================== -->
+    
+    <!-- STEP 1: FORM PENGISIAN DATA SELLER -->
+    <div class="modal-jual-overlay" id="modalJualStep1">
+        <div class="modal-jual-box">
+            <button type="button" class="btn-modal-close" onclick="tutupSemuaModal()">&times;</button>
+            <h2>Formulir Jual Akun</h2>
+            <span class="text-merah-tegas">*mohon di isi seakurat mungkin!</span>
+            
+            <div class="form-row-flex">
+                <div class="form-group" style="flex: 2;">
+                    <label>ID Akun</label>
+                    <input type="text" id="jualId" placeholder="Masukkan ID">
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label>Server</label>
+                    <input type="text" id="jualServer" placeholder="(1234)">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Highest Rank</label>
+                <select id="jualHighestRank">
+                    <option value="Epic III">Epic III</option><option value="Epic II">Epic II</option><option value="Epic I">Epic I</option>
+                    <option value="Legend V">Legend V</option><option value="Legend IV">Legend IV</option><option value="Legend III">Legend III</option><option value="Legend II">Legend II</option><option value="Legend I">Legend I</option>
+                    <option value="Mythic Romawi">Mythic Romawi</option><option value="Mythic Honor">Mythic Honor</option><option value="Mythic Glory">Mythic Glory</option><option value="Mythic Immortal">Mythic Immortal</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Bintang Tertinggi</label>
+                <input type="number" id="jualBintang" placeholder="Contoh: 75">
+            </div>
+
+            <div class="form-row-flex">
+                <div class="form-group" style="flex: 1;">
+                    <label>Win Rate All Season</label>
+                    <div class="input-with-symbol">
+                        <input type="number" id="jualWr" placeholder="58">
+                        <span class="input-symbol">%</span>
+                    </div>
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label>Total Hero</label>
+                    <input type="number" id="jualHero" placeholder="116">
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label>Total Skin</label>
+                    <input type="number" id="jualSkin" placeholder="320">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Tier Koleksi</label>
+                <select id="jualTierKoleksi">
+                    <option value="Kolektor Amatir">Kolektor Amatir</option><option value="Kolektor Junior">Kolektor Junior</option><option value="Kolektor Senior">Kolektor Senior</option>
+                    <option value="Kolektor Ahli">Kolektor Ahli</option><option value="Kolektor Ternama">Kolektor Ternama</option><option value="Kolektor Terhormat">Kolektor Terhormat</option>
+                    <option value="Kolektor Juragan">Kolektor Juragan</option><option value="Kolektor Sultan">Kolektor Sultan</option><option value="Kolektor Galaksi">Kolektor Galaksi</option>
+                </select>
+            </div>
+
+            <label class="verif-container" for="checkVerif1">
+                <input type="checkbox" id="checkVerif1" onchange="toggleBtnStep1()">
+                <span>semua data sudah benar dan saya yakin ingin menjual akun ini</span>
+            </label>
+
+            <button type="button" class="btn-jual-submit" id="btnNextStep1" disabled onclick="bukaModalJualStep2()">Setuju dan Lanjutkan</button>
+        </div>
+    </div>
+
+    <!-- STEP 2: PREVIEW CONTOH SCREENSHOT BERGARANSI FIT -->
+    <div class="modal-jual-overlay" id="modalJualStep2">
+        <div class="modal-jual-box">
+            <button type="button" class="btn-modal-close" onclick="tutupSemuaModal()">&times;</button>
+            <h2>Formulir Jual Akun</h2>
+            <span class="text-merah-tegas">tolong siapkan screenshot akun seperti contoh dibawah ini.</span>
+
+            <div class="photo-sample-grid">
+                <div class="photo-sample-item"><img src="./asset/profilesample.jpg" alt="Profile"><span class="photo-label">Profile Akun</span></div>
+                <div class="photo-sample-item"><img src="./asset/collectionsample.jpg" alt="Collection"><span class="photo-label">Sistem Koleksi</span></div>
+                <div class="photo-sample-item"><img src="./asset/skinsample.jpg" alt="Skin"><span class="photo-label">Skin Utama</span></div>
+                <div class="photo-sample-item"><img src="./asset/recallsample.jpg" alt="Recall"><span class="photo-label">Efek Recall</span></div>
+                <div class="photo-sample-item"><img src="./asset/elliminationsample.jpg" alt="Elimination"><span class="photo-label">Efek Eliminasi</span></div>
+                <div class="photo-sample-item"><img src="./asset/notifsample.jpg" alt="Notif"><span class="photo-label">Notifikasi Eliminasi</span></div>
+                <div class="photo-sample-item"><img src="./asset/spawnsample.jpg" alt="Spawn"><span class="photo-label">Efek Spawn</span></div>
+                <div class="photo-sample-item"><img src="./asset/emotesample.jpg" alt="Emote"><span class="photo-label">Battle Emote</span></div>
+            </div>
+
+            <label class="verif-container" for="checkVerif2">
+                <input type="checkbox" id="checkVerif2" onchange="toggleBtnStep2()">
+                <span>saya sudah menyiapkan semua screenshot seperti contoh</span>
+            </label>
+
+            <div class="form-row-flex">
+                <button type="button" class="btn-jual-submit" style="background-color: #222; color: #fff; flex: 1;" onclick="backToStep1()">Kembali</button>
+                <button type="button" class="btn-jual-submit" id="btnFinalJual" disabled style="flex: 2;" onclick="kirimDataKeWA()">SIAP JUAL</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOX POPUP KONFIRMASI PESANAN -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal-box">
+            <h2>Konfirmasi Pesanan</h2>
+            <p>Akun: <b>#MLYZS-000005</b></p>
+            <div class="form-opsi">
+                <p style="margin-bottom: 8px; font-weight: bold; color: #fff;">Pilih Opsi Paket Pembelian:</p>
+                <label class="radio-group">
+                    <input type="radio" name="opsi_paket" value="opsi1" checked onclick="hitungHarga()"><div class="radio-text"><b>Opsi 1: Bonus Diamond</b><span style="font-size: 12px; color: #666666;">Tanpa biaya tambahan</span></div>
+                </label>
+                <label class="radio-group">
+                    <input type="radio" name="opsi_paket" value="opsi2" onclick="hitungHarga()"><div class="radio-text"><b>Opsi 2: Bonus WDP</b><span style="font-size: 12px; color: #666666;">Dikenakan biaya tambahan</span></div>
+                </label>
+                <label class="radio-group">
+                    <input type="radio" name="opsi_paket" value="opsi3" onclick="hitungHarga()"><div class="radio-text"><b>Opsi 3: Pilih Keduanya</b><span style="font-size: 12px; color: #666666;">Dikenakan biaya tambahan</span></div>
+                </label>
+            </div>
+            <div class="total-checkout-box">
+                <div class="checkout-row row-utama"><span>Total pembayaran :</span><span class="final-price" id="finalPriceDisplay">Rp 0</span></div>
+                <div class="row-rincian">
+                    <div class="sub-row"><span>Harga akun :</span><span id="accountPriceDisplay">Rp 0</span></div>
+                    <div class="sub-row"><span>PPN (11%) :</span><span id="ppnPriceDisplay">Rp 0</span></div>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn-modal-cancel" onclick="closeModal()">Batal</button>
+                <a href="#" id="waSubmitBtn" target="_blank" class="btn-modal-confirm">Selesai dan Beli</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN FOOTER SECTOR (SINKRON DENGAN INDEX.HTML) -->
+    <footer class="main-footer">
+        <div class="footer-top-text">
+            <h3>Jual Beli Akun Mobile Legends Aman & Terpercaya di Yuzhou Market!</h3>
+            <p>Mencari tempat beli akun ML Sultan bergaransi penuh? Yuzhou Market adalah platform andalan yang aman, cepat, dan legal di Indonesia.</p>
+        </div>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h4>YUZHOU MARKET</h4>
+                <p>Platform penyedia layanan Jual Beli Akun Mobile Legends & Top Up Game aman, murah, dan legal di Indonesia.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Menu</h5>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="joki.html">Joki</a></li>
+                    <li><a href="https://yuzhou-store.my.id/" target="_blank">Top Up Game</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Kontak Kami</h5>
+                <ul class="footer-links">
+                    <li><a href="mailto:yuzhoumarket@gmail.com">yuzhoumarket@gmail.com</a></li>
+                    <li><a href="https://wa.me/6283893239499" target="_blank" style="color:#ffffff; font-weight:bold;">WhatsApp: +62 838-9323-9499</a></li>
+                    <li>
+                        <span>Instagram Admin:</span>
+                        <a href="https://instagram.com/yuzhoumarket_jbml" target="_blank">@yuzhoumarket_jbml</a><br>
+                        <a href="https://instagram.com/yuzhoustore" target="_blank">@yuzhoustore</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Informasi</h5>
+                <ul class="footer-links">
+                    <li><a href="#">Tentang Kami</a></li><li><a href="#">Syarat & Ketentuan</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright-box">&copy; 2026 Yuzhou Project - Yuzhou Store & Yuzhou Market</div>
+    </footer>
+
+    <!-- LOGIKA CORE JAVASCRIPT SYSTEM ENGINE -->
+    <script>
+        function gantiFoto(element) {
+            document.getElementById('mainPhoto').src = element.src;
+            const thumbnails = document.getElementsByClassName('thumb-img');
+            for (let i = 0; i < thumbnails.length; i++) { thumbnails[i].classList.remove('active'); }
+            element.classList.add('active');
+        }
+
+        const hargaBaseAkun = 1565500;
+        const kodeAkun = "MLYZS-000005";
+
+        function openModal() { document.getElementById('orderModal').classList.add('active'); hitungHarga(); }
+        function closeModal() { document.getElementById('orderModal').classList.remove('active'); }
+
+        function hitungHarga() {
+            const pilihan = document.querySelector('input[name="opsi_paket"]:checked').value;
+            let hargaAkunPlusBonus = hargaBaseAkun; let paketText = "";
+            if (pilihan === "opsi1") { hargaAkunPlusBonus = hargaBaseAkun; paketText = "Opsi 1 - Bonus Diamond"; } 
+            else if (pilihan === "opsi2") { hargaAkunPlusBonus = hargaBaseAkun + 17000; paketText = "Opsi 2 - Bonus WDP"; } 
+            else if (pilihan === "opsi3") { hargaAkunPlusBonus = hargaBaseAkun + 20000; paketText = "Opsi 3 - Pilih Keduanya"; }
+            const nilaiPPN = Math.round(hargaAkunPlusBonus * 0.11); const totalPembayaranAkhir = hargaAkunPlusBonus + nilaiPPN;
+            document.getElementById('accountPriceDisplay').innerText = "Rp " + hargaAkunPlusBonus.toLocaleString('id-ID');
+            document.getElementById('ppnPriceDisplay').innerText = "Rp " + nilaiPPN.toLocaleString('id-ID');
+            document.getElementById('finalPriceDisplay').innerText = "Rp " + totalPembayaranAkhir.toLocaleString('id-ID');
+            const waBaseUrl = "https://wa.me/6283893239499";
+            const textWA = `Halo Yuzhou Market, saya ingin membeli akun:\n\n• Kode Akun: ${kodeAkun}\n• Paket Dipilih: ${paketText}\n• Harga + Paket: Rp ${hargaAkunPlusBonus.toLocaleString('id-ID')}\n• PPN (11%): Rp ${nilaiPPN.toLocaleString('id-ID')}\n• Total Pembayaran: Rp ${totalPembayaranAkhir.toLocaleString('id-ID')}\n\nMohon segera diproses gan!`;
+            document.getElementById('waSubmitBtn').href = waBaseUrl + "?text=" + encodeURIComponent(textWA);
+        }
+
+        function cariTag(namaTag) { window.location.href = "index.html?search=" + encodeURIComponent(namaTag); }
+
+        function toggleFaq(headerElement) {
+            const faqItem = headerElement.parentElement; const icon = headerElement.querySelector('.faq-icon');
+            const isOpen = faqItem.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(item => { item.classList.remove('active'); item.querySelector('.faq-icon').innerText = '+'; });
+            if (!isOpen) { faqItem.classList.add('active'); icon.innerText = '−'; }
+        }
+
+        // AUTOMATIC ROLLING CAROUSEL TESTIMONIAL
+        document.addEventListener('DOMContentLoaded', () => {
+            const allFeedbacks = document.querySelectorAll('.feedback-item'); const totalItems = allFeedbacks.length;
+            const itemsPerPage = 3; let currentGroupIndex = 0;
+            function showNextGroup() {
+                allFeedbacks.forEach(item => item.classList.remove('show'));
+                const start = currentGroupIndex * itemsPerPage; let end = start + itemsPerPage;
+                for (let i = start; i < end; i++) { if (allFeedbacks[i % totalItems]) { allFeedbacks[i % totalItems].classList.add('show'); } }
+                currentGroupIndex = (currentGroupIndex + 1) % Math.ceil(totalItems / itemsPerPage);
+            }
+            setInterval(showNextGroup, 4000);
+        });
+
+        // --- SISTEM LIVE SEARCH DROPDOWN NAVBAR (SINKRON INDEX) ---
+        const listProdukNavbar = [
+            { nama: "Jhonson Legend", url: "mlyzs-000005.html" },
+            { nama: "Granger Prime", url: "mlyzs-000005.html" },
+            { nama: "Gusion Epic", url: "mlyzs-000006.html" },
+            { nama: "Akun Smurf Murah", url: "mlyzs-000006.html" }
+        ];
+
+        function jalankanLiveSearch() {
+            const input = document.getElementById('searchNavbar').value.toLowerCase();
+            const boxSuggestion = document.getElementById('searchSuggestions');
+            boxSuggestion.innerHTML = "";
+            if (input.trim() === "") { boxSuggestion.style.display = "none"; return; }
+            const hasilFilter = listProdukNavbar.filter(item => item.nama.toLowerCase().includes(input));
+            if (hasilFilter.length > 0) {
+                hasilFilter.forEach(item => {
+                    const div = document.createElement('div'); div.className = "suggestion-item"; div.innerText = item.nama;
+                    div.onclick = () => { window.location.href = item.url; }; boxSuggestion.appendChild(div);
+                });
+                boxSuggestion.style.display = "block";
+            } else { boxSuggestion.style.display = "none"; }
+        }
+        document.addEventListener('click', (e) => { if (!e.target.closest('.search-container')) { document.getElementById('searchSuggestions').style.display = "none"; } });
+
+        // --- SISTEM POP-UP TWO-STEP JUAL AKUN SYSTEM (SINKRON INDEX) ---
+        function bukaModalJualStep1() { document.getElementById('modalJualStep1').style.display = "flex"; }
+        function tutupSemuaModal() { document.getElementById('modalJualStep1').style.display = "none"; document.getElementById('modalJualStep2').style.display = "none"; }
+        function toggleBtnStep1() { const check = document.getElementById('checkVerif1').checked; document.getElementById('btnNextStep1').disabled = !check; }
+        function bukaModalJualStep2() { document.getElementById('modalJualStep1').style.display = "none"; document.getElementById('modalJualStep2').style.display = "flex"; }
+        function backToStep1() { document.getElementById('modalJualStep2').style.display = "none"; document.getElementById('modalJualStep1').style.display = "flex"; }
+        function toggleBtnStep2() { const check = document.getElementById('checkVerif2').checked; document.getElementById('btnFinalJual').disabled = !check; }
+
+        function kirimDataKeWA() {
+            const idAkun = document.getElementById('jualId').value || "-";
+            const serverAkun = document.getElementById('jualServer').value || "-";
+            const highestRank = document.getElementById('jualHighestRank').value;
+            const bintangMax = document.getElementById('jualBintang').value || "0";
+            const winrate = document.getElementById('jualWr').value || "0";
+            const totalHero = document.getElementById('jualHero').value || "0";
+            const totalSkin = document.getElementById('jualSkin').value || "0";
+            const tierKoleksi = document.getElementById('jualTierKoleksi').value;
+
+            const textFormat = 
+                `Min aku mau jual akun dengan spesifikasi sebagai berikut :\n\n` +
+                `• ID Akun: ${idAkun}\n` +
+                `• Server: ${serverAkun}\n` +
+                `• Highest Rank: ${highestRank}\n` +
+                `• Bintang Tertinggi: ${bintangMax}\n` +
+                `• Win Rate All Season: ${winrate}%\n` +
+                `• Total Hero: ${totalHero}\n` +
+                `• Total Skin: ${totalSkin}\n` +
+                `• Tier Koleksi: ${tierKoleksi}\n\n` +
+                `tolong diproses min!`;
+
+            tutupSemuaModal();
+            window.open(`https://wa.me/6283893239499?text=${encodeURIComponent(textFormat)}`, '_blank');
+        }
+    </script>
+
+</body>
+</html>
