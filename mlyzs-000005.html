@@ -2,12 +2,10 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <!-- FIX FAVICON LOGO TAB BROWSER AGAR TIDAK BALIK JADI LOGO BUMI -->
     <link rel="icon" type="image/png" href="logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Akun #MLYZS-000005 - Yuzhou Market</title>
 
-    <!-- PREVIEW SHARE PREMIUM (SEO / OPEN GRAPH) UNTUK SOSMED -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://market.yuzhouproject.my.id/mlyzs-000005.html">
     <meta property="og:title" content="Detail Akun #MLYZS-000005 - Yuzhou Market">
@@ -594,14 +592,12 @@
 </head>
 <body>
 
-    <!-- NAVBAR ATAS (SINKRON TOTAL DENGAN INDEX.HTML) -->
     <nav class="navbar">
         <div class="nav-kiri">
             <a href="/" class="logo-wrapper" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
                 <img src="logo.png" alt="Logo Yuzhou Market" style="height: 32px; width: auto; object-fit: contain;">
                 <span style="font-weight: bold; font-size: 20px; color: #ffffff; text-transform: uppercase; letter-spacing: 1px;">YUZHOU MARKET</span>
             </a>
-            <!-- LIVE SEARCH CONTAINER -->
             <div class="search-container">
                 <input type="text" id="searchNavbar" class="search-box" placeholder="Cari produk di sini..." oninput="jalankanLiveSearch()">
                 <div id="searchSuggestions" class="search-suggestions"></div>
@@ -612,15 +608,13 @@
             <li><a href="joki.html">Joki</a></li>
             <li><a href="#">Artikel</a></li>
             <li><a href="https://yuzhou-store.my.id/" target="_blank" class="btn-topup-nav">Top Up Game</a></li>
-            <li><button class="btn-jual-nav" onclick="bukaModalJualStep1()">Jual Akun</button></li>
+            <li><button class="btn-jual-nav" onclick="bukaModalJualStep1()">Titip/Jual Akun</button></li>
         </ul>
     </nav>
 
-    <!-- KONTEN DETAIL UTAMA -->
     <div class="wrapper-detail">
         <div class="main-box">
             
-            <!-- SISTEM MULTI FOTO -->
             <div class="galeri-container">
                 <img src="produk/mlyzs-000005_1.png" id="mainPhoto" class="foto-spek-utama" alt="Spek Akun Utama">
                 
@@ -644,7 +638,6 @@
                 <span class="harga-asli">Rp 1.565.500</span>
             </div>
             
-            <!-- SEGMEN SPESIFIKASI AKUN -->
             <div class="section-title">Spesifikasi Akun</div>
             <ul class="deskripsi-list">
                 <li>Yuzhou Market, jb akun sipaling aman dan terpercaya</li>
@@ -657,7 +650,6 @@
                 <li><b>Nego:</b> Bisa Nego Tipis Langsung Lewat WA CS!</li>
             </ul>
 
-            <!-- SEGMEN LIST SKIN DAN EFEK LAINNYA -->
             <div class="section-title">List Skin dan Efek Lainnya</div>
             <ul class="deskripsi-list">
                 <li><b>Skin Utama:</b> Jhonson Legend, Sakura Kalea, Granger Prime, Moskov All Star, Chang'e dan Floryn Sanrio, Tigreal Collector, Lancelot Collector Valentine Couple, Chou Luckybox, Alice Luckybox, Saber Luckybox, Uranus Luckybox, Jhonson Luckybox, Karina Luckybox, Alice Epic Limit, Full Lightborn, Full Zodiac</li>
@@ -694,7 +686,6 @@
                 <a onclick="cariTag('Recall')" class="tag-item">Recall Merah Tas Tas</a>
             </div>
 
-            <!-- --- GRID 3 KOLOM PREMIUM --- -->
             <div class="bottom-grid-layout">
                 <div class="grid-box">
                     <h3>⭐ Ulasan</h3>
@@ -784,7 +775,6 @@
                 </div>
             </div>
 
-            <!-- KATALOG REKOMENDASI PRODUK AKUN LAINNYA -->
             <div class="section-title-box" style="background: linear-gradient(90deg, #111827 0%, #1f2937 100%); border-left: 4px solid #3b82f6; border-radius: 4px; padding: 12px 20px; font-weight: bold; font-size: 16px; margin-bottom: 20px; text-align: left;">🌟 Rekomendasi Akun Lainnya</div>
             <div class="katalog-rekomendasi-grid">
                 <a href="index.html" class="card-link">
@@ -822,7 +812,6 @@
                 </a>
             </div>
 
-            <!-- SECTION FAQ ACCORDION -->
             <div class="section-title-box" style="background: linear-gradient(90deg, #111827 0%, #1f2937 100%); border-left: 4px solid #3b82f6; border-radius: 4px; padding: 12px 20px; font-weight: bold; font-size: 16px; margin-bottom: 20px; text-align: left;">❓ FAQ</div>
             <div class="faq-layout">
                 <div class="faq-kiri"><h2>Punya Pertanyaan?<br>Kami Punya<br><span>Jawabannya</span></h2></div>
@@ -845,7 +834,6 @@
         </div>
     </div>
 
-    <!-- --- SEKSI STICKY BUY BUTTON FIXED DI HP --- -->
     <div class="sticky-button-container">
         <div class="sticky-price-box">
             <span class="sticky-price-title">Total Harga (Base)</span>
@@ -854,17 +842,20 @@
         <button class="btn-sticky-action" onclick="openModal()">Beli Sekarang</button>
     </div>
 
-    <!-- ==================================================== -->
-    <!-- INTERACTIVE TWO-STEP FORMULIR JUAL AKUN MODALS       -->
-    <!-- ==================================================== -->
-    
-    <!-- STEP 1: FORM PENGISIAN DATA SELLER -->
     <div class="modal-jual-overlay" id="modalJualStep1">
         <div class="modal-jual-box">
             <button type="button" class="btn-modal-close" onclick="tutupSemuaModal()">&times;</button>
             <h2>Formulir Jual Akun</h2>
             <span class="text-merah-tegas">*mohon di isi seakurat mungkin!</span>
             
+            <div class="form-group">
+                <label>Pilihan Layanan</label>
+                <select id="jualTipeLayanan">
+                    <option value="Jual">Jual</option>
+                    <option value="Titip">Titip</option>
+                </select>
+            </div>
+
             <div class="form-row-flex">
                 <div class="form-group" style="flex: 2;">
                     <label>ID Akun</label>
@@ -919,14 +910,13 @@
 
             <label class="verif-container" for="checkVerif1">
                 <input type="checkbox" id="checkVerif1" onchange="toggleBtnStep1()">
-                <span>semua data sudah benar dan saya yakin ingin menjual akun ini</span>
+                <span>semua data sudah benar dan saya yakin ingin memproses akun ini</span>
             </label>
 
             <button type="button" class="btn-jual-submit" id="btnNextStep1" disabled onclick="bukaModalJualStep2()">Setuju dan Lanjutkan</button>
         </div>
     </div>
 
-    <!-- STEP 2: PREVIEW CONTOH SCREENSHOT BERGARANSI FIT -->
     <div class="modal-jual-overlay" id="modalJualStep2">
         <div class="modal-jual-box">
             <button type="button" class="btn-modal-close" onclick="tutupSemuaModal()">&times;</button>
@@ -951,12 +941,11 @@
 
             <div class="form-row-flex">
                 <button type="button" class="btn-jual-submit" style="background-color: #222; color: #fff; flex: 1;" onclick="backToStep1()">Kembali</button>
-                <button type="button" class="btn-jual-submit" id="btnFinalJual" disabled style="flex: 2;" onclick="kirimDataKeWA()">SIAP JUAL</button>
+                <button type="button" class="btn-jual-submit" id="btnFinalJual" disabled style="flex: 2;" onclick="kirimDataKeWA()">SIAP PROSES</button>
             </div>
         </div>
     </div>
 
-    <!-- BOX POPUP KONFIRMASI PESANAN -->
     <div class="modal-overlay" id="orderModal">
         <div class="modal-box">
             <h2>Konfirmasi Pesanan</h2>
@@ -987,11 +976,10 @@
         </div>
     </div>
 
-    <!-- MAIN FOOTER SECTOR (SINKRON DENGAN INDEX.HTML) -->
     <footer class="main-footer">
         <div class="footer-top-text">
             <h3>Jual Beli Akun Mobile Legends Aman & Terpercaya di Yuzhou Market!</h3>
-            <p>Mencari tempat beli akun ML Sultan bergaransi penuh? Yuzhou Market adalah platform andalan yang aman, cepat, dan legal di Indonesia.</p>
+            <p>Mencari tempat beli akun ML Sultan bergaransi penuh? Yuzhou Market adalah platform andalan yang aman, cepat, and legal di Indonesia.</p>
         </div>
         <div class="footer-grid">
             <div class="footer-brand">
@@ -1028,7 +1016,6 @@
         <div class="copyright-box">&copy; 2026 Yuzhou Project - Yuzhou Store & Yuzhou Market</div>
     </footer>
 
-    <!-- LOGIKA CORE JAVASCRIPT SYSTEM ENGINE -->
     <script>
         function gantiFoto(element) {
             document.getElementById('mainPhoto').src = element.src;
@@ -1080,12 +1067,17 @@
             setInterval(showNextGroup, 4000);
         });
 
-        // --- SISTEM LIVE SEARCH DROPDOWN NAVBAR (SINKRON INDEX) ---
+        // --- SISTEM LIVE SEARCH DROPDOWN NAVBAR (SINKRON INDEX TOTAL DENGAN ITEM BARU) ---
         const listProdukNavbar = [
             { nama: "Jhonson Legend", url: "mlyzs-000005.html" },
             { nama: "Granger Prime", url: "mlyzs-000005.html" },
-            { nama: "Gusion Epic", url: "mlyzs-000006.html" },
-            { nama: "Akun Smurf Murah", url: "mlyzs-000006.html" }
+            { nama: "Balmond Epic", url: "mlyzs-000006.html" },
+            { nama: "Leomord Halloween", url: "mlyzs-000006.html" },
+            { nama: "Akun Smurf Murah", url: "mlyzs-000006.html" },
+            { nama: "Cyclops S.A.B.E.R", url: "mlyzs-000007.html" },
+            { nama: "Kadita MPL", url: "mlyzs-000007.html" },
+            { nama: "Yi Sun-Shin Epic", url: "mlyzs-000008.html" },
+            { nama: "Saber S.A.B.E.R", url: "mlyzs-000009.html" }
         ];
 
         function jalankanLiveSearch() {
@@ -1113,6 +1105,8 @@
         function toggleBtnStep2() { const check = document.getElementById('checkVerif2').checked; document.getElementById('btnFinalJual').disabled = !check; }
 
         function kirimDataKeWA() {
+            // INTEGRASI DATA PILIHAN LAYANAN BARU
+            const tipeLayanan = document.getElementById('jualTipeLayanan').value;
             const idAkun = document.getElementById('jualId').value || "-";
             const serverAkun = document.getElementById('jualServer').value || "-";
             const highestRank = document.getElementById('jualHighestRank').value;
@@ -1123,7 +1117,8 @@
             const tierKoleksi = document.getElementById('jualTierKoleksi').value;
 
             const textFormat = 
-                `Min aku mau jual akun dengan spesifikasi sebagai berikut :\n\n` +
+                `Min aku mau ${tipeLayanan.toLowerCase()} akun dengan spesifikasi sebagai berikut :\n\n` +
+                `• Pilihan Layanan: ${tipeLayanan} Akun\n` +
                 `• ID Akun: ${idAkun}\n` +
                 `• Server: ${serverAkun}\n` +
                 `• Highest Rank: ${highestRank}\n` +
