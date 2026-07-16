@@ -209,14 +209,12 @@
 </head>
 <body>
 
-    <!-- NAVBAR ATAS -->
     <nav class="navbar">
         <div class="nav-kiri">
             <a href="/" class="logo-wrapper">
                 <img src="logo.png" alt="Logo Yuzhou Market" style="height: 32px; width: auto; object-fit: contain;">
                 <span style="font-weight: bold; font-size: 20px; color: #ffffff; text-transform: uppercase; letter-spacing: 1px;">YUZHOU MARKET</span>
             </a>
-            <!-- LIVE SEARCH CONTAINER -->
             <div class="search-container">
                 <input type="text" id="searchNavbar" class="search-box" placeholder="Cari produk di sini..." oninput="jalankanLiveSearch()">
                 <div id="searchSuggestions" class="search-suggestions"></div>
@@ -227,17 +225,15 @@
             <li><a href="joki.html">Joki</a></li>
             <li><a href="#">Artikel</a></li>
             <li><a href="https://yuzhou-store.my.id/" target="_blank" class="btn-topup-nav">Top Up Game</a></li>
-            <li><button class="btn-jual-nav" onclick="bukaModalJualStep1()">Jual Akun</button></li>
+            <li><button class="btn-jual-nav" onclick="bukaModalJualStep1()">Titip/Jual Akun</button></li>
         </ul>
     </nav>
 
-    <!-- HERO SECTION -->
     <div class="hero-section">
         <div class="hero-title">Jual Beli Akun Mobile Legends Murah & Aman</div>
         <div class="hero-desc">Mau cari Akun ML Premium atau Akun Smurf GG? Yuzhou Market tempatnya! Tersedia berbagai macam jenis akun dengan jaminan Anti Hackback dan pelayanan terpercaya.</div>
     </div>
 
-    <!-- CAROUSEL SLIDER -->
     <div class="carousel-container">
         <div class="carousel-wrapper">
             <div class="carousel-slide" id="slider">
@@ -248,7 +244,6 @@
         </div>
     </div>
 
-    <!-- HOT SALE HEADER -->
     <div class="hotsale-container">
         <div class="hotsale-header">
             <div class="hotsale-title">Hot Sale</div>
@@ -256,7 +251,6 @@
         </div>
     </div>
 
-    <!-- HOT SALE ITEMS GRID -->
     <div class="grid-hotsale">
         <a href="mlyzs-000005.html" class="card-link">
             <div class="card">
@@ -315,10 +309,8 @@
         </a>
     </div>
 
-    <!-- MAIN INTERACTIVE LAYOUT -->
     <div class="main-layout">
         
-        <!-- SIDEBAR FILTERS -->
         <div class="sidebar-filter">
             <div class="filter-group">
                 <label>Rank Tertinggi</label>
@@ -347,7 +339,6 @@
             <button class="btn-reset" onclick="resetFilters()">Reset Filter</button>
         </div>
 
-        <!-- MAIN ACCOUNT DISPLAY AREA -->
         <div class="content-area">
             <div class="section-title-box">🔍 Temukan Akun Lainnya</div>
             
@@ -355,7 +346,6 @@
                 <input type="text" class="search-input-main" id="searchMain" placeholder="Cari Judul Akun, Skin, Effect Recall dll..." onkeyup="applyFilters()">
             </div>
 
-            <!-- KATALOG UTAMA 40 SLOT -->
             <div class="grid-main-akun" id="mainAccountGrid">
                 <a href="mlyzs-000005.html" class="card-link product-item" data-rank="mythic" data-harga="1565500"><div class="card"><img src="produk/mlyzs-000005_1.png"><div class="card-body"><span class="badge-status">Nego Tipis</span><div class="judul-akun">Legend Jhonson | Kalea Sakura | Prime Granger | 2 Sanrio</div><div class="detail-akun">373 Skin | Rank: Mythic</div><div class="harga-asli">Rp 1.565.500</div></div></div></a>
                 <a href="mlyzs-000006.html" class="card-link product-item" data-rank="epic" data-harga="15000"><div class="card"><img src="produk/mlyzs-000006.png"><div class="card-body"><span class="badge-status">Akun Smurf</span><div class="judul-akun">Balmond Epic | Leomord Halloween | Akai Elite | Akun Smurf Murah Server Brazil</div><div class="detail-akun">17+ Skin | Rank: Epic</div><div class="harga-asli">Rp 15.000</div></div></div></a>
@@ -399,12 +389,10 @@
                 <a href="#" class="card-link product-item" data-rank="legend" data-harga="145000"><div class="card"><img src="banner/banner2.png"><div class="card-body"><div class="judul-akun">Slot Akun Katalog 40</div><div class="harga-asli">Rp 145.000</div></div></div></a>
             </div>
 
-            <!-- PAGINATION DISPLAY CONTROLLER -->
             <div class="pagination-container" id="paginationBox"></div>
         </div>
     </div>
 
-    <!-- FAQ ACCORDION SECTION -->
     <div class="faq-wrapper">
         <div class="section-title-box">❓ FAQ</div>
         <div class="faq-layout">
@@ -427,17 +415,20 @@
     </div>
 
 
-    <!-- ==================================================== -->
-    <!-- INTERACTIVE TWO-STEP FORMULIR JUAL AKUN MODALS      -->
-    <!-- ==================================================== -->
-    
-    <!-- STEP 1: FORM PENGISIAN DATA SELLER -->
     <div class="modal-jual-overlay" id="modalJualStep1">
         <div class="modal-jual-box">
             <button type="button" class="btn-modal-close" onclick="tutupSemuaModal()">&times;</button>
             <h2>Formulir Jual Akun</h2>
             <span class="text-merah-tegas">*mohon di isi seakurat mungkin!</span>
             
+            <div class="form-group">
+                <label>Pilihan Layanan</label>
+                <select id="jualTipeLayanan">
+                    <option value="Jual">Jual</option>
+                    <option value="Titip">Titip</option>
+                </select>
+            </div>
+
             <div class="form-row-flex">
                 <div class="form-group" style="flex: 2;">
                     <label>ID Akun</label>
@@ -492,14 +483,13 @@
 
             <label class="verif-container" for="checkVerif1">
                 <input type="checkbox" id="checkVerif1" onchange="toggleBtnStep1()">
-                <span>semua data sudah benar dan saya yakin ingin menjual akun ini</span>
+                <span>semua data sudah benar dan saya yakin ingin memproses akun ini</span>
             </label>
 
             <button type="button" class="btn-jual-submit" id="btnNextStep1" disabled onclick="bukaModalJualStep2()">Setuju dan Lanjutkan</button>
         </div>
     </div>
 
-    <!-- STEP 2: PREVIEW CONTOH SCREENSHOT BERGARANSI FIT -->
     <div class="modal-jual-overlay" id="modalJualStep2">
         <div class="modal-jual-box">
             <button type="button" class="btn-modal-close" onclick="tutupSemuaModal()">&times;</button>
@@ -524,13 +514,12 @@
 
             <div class="form-row-flex">
                 <button type="button" class="btn-jual-submit" style="background-color: #222; color: #fff; flex: 1;" onclick="backToStep1()">Kembali</button>
-                <button type="button" class="btn-jual-submit" id="btnFinalJual" disabled style="flex: 2;" onclick="kirimDataKeWA()">SIAP JUAL</button>
+                <button type="button" class="btn-jual-submit" id="btnFinalJual" disabled style="flex: 2;" onclick="kirimDataKeWA()">SIAP PROSES</button>
             </div>
         </div>
     </div>
 
 
-    <!-- MAIN FOOTER PENUTUP -->
     <footer class="main-footer">
         <div class="footer-top-text">
             <h3>Jual Beli Akun Mobile Legends Aman & Terpercaya di Yuzhou Market!</h3>
@@ -572,7 +561,6 @@
     </footer>
 
 
-    <!-- LOGIKA CORE JAVASCRIPT SYSTEM ENGINE -->
     <script>
         // Carousel Slider System
         const slider = document.getElementById('slider'); let index = 0;
@@ -667,12 +655,17 @@
             if (!isOpen) { faqItem.classList.add('active'); icon.innerText = '−'; }
         }
 
-        // --- SISTEM LIVE SEARCH DROPDOWN NAVBAR ---
+        // --- SISTEM LIVE SEARCH DROPDOWN NAVBAR (INKLUSIF PRODUK BARU) ---
         const listProdukNavbar = [
             { nama: "Jhonson Legend", url: "mlyzs-000005.html" },
             { nama: "Granger Prime", url: "mlyzs-000005.html" },
-            { nama: "Gusion Epic", url: "mlyzs-000006.html" },
-            { nama: "Akun Smurf Murah", url: "mlyzs-000006.html" }
+            { nama: "Balmond Epic", url: "mlyzs-000006.html" },
+            { nama: "Leomord Halloween", url: "mlyzs-000006.html" },
+            { nama: "Akun Smurf Murah", url: "mlyzs-000006.html" },
+            { nama: "Cyclops S.A.B.E.R", url: "mlyzs-000007.html" },
+            { nama: "Kadita MPL", url: "mlyzs-000007.html" },
+            { nama: "Yi Sun-Shin Epic", url: "mlyzs-000008.html" },
+            { nama: "Saber S.A.B.E.R", url: "mlyzs-000009.html" }
         ];
 
         function jalankanLiveSearch() {
@@ -700,6 +693,8 @@
         function toggleBtnStep2() { const check = document.getElementById('checkVerif2').checked; document.getElementById('btnFinalJual').disabled = !check; }
 
         function kirimDataKeWA() {
+            // INTEGRASI DATA PILIHAN LAYANAN BARU
+            const tipeLayanan = document.getElementById('jualTipeLayanan').value;
             const idAkun = document.getElementById('jualId').value || "-";
             const serverAkun = document.getElementById('jualServer').value || "-";
             const highestRank = document.getElementById('jualHighestRank').value;
@@ -710,7 +705,8 @@
             const tierKoleksi = document.getElementById('jualTierKoleksi').value;
 
             const textFormat = 
-                `Min aku mau jual akun dengan spesifikasi sebagai berikut :\n\n` +
+                `Min aku mau ${tipeLayanan.toLowerCase()} akun dengan spesifikasi sebagai berikut :\n\n` +
+                `• Pilihan Layanan: ${tipeLayanan} Akun\n` +
                 `• ID Akun: ${idAkun}\n` +
                 `• Server: ${serverAkun}\n` +
                 `• Highest Rank: ${highestRank}\n` +
